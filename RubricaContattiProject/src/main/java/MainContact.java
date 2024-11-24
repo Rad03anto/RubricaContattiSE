@@ -6,7 +6,7 @@
 
 /**
  *
- * @author anton
+ * @author Gruppo23 Classe I-Z
  */
 public class MainContact {
 
