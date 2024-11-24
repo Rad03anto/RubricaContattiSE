@@ -16,7 +16,7 @@ public class MainContact {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        System.out.println("Prova aggiornata 2");
+        System.out.println("Prova aggiornata 3");
         
     }
     
