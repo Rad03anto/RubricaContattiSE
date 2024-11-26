@@ -22,5 +22,5 @@ Applicazione per la gestione dei contatti di una rubrica contenente numeri di te
 
 ## Requirements Engineering
 Documento che contiene la parte di requirements engineering. Il documento viene aggiornato periodicamente.
-Versione Google docs: (https://docs.google.com/document/d/1MDm4la_1o6gIQldOg1BEq0qnv3TnoQvKccPqpV-QgV8/edit?tab=t.0)
-## Nota le modifiche sono ancora in corso
+Link Google Docs: (https://docs.google.com/document/d/1MDm4la_1o6gIQldOg1BEq0qnv3TnoQvKccPqpV-QgV8/edit?tab=t.0)
+Le modifiche sono ancora in corso
