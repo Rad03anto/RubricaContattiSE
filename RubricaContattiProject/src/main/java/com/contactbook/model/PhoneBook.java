@@ -15,6 +15,16 @@ public class PhoneBook {
     private EmergencyList eList;
     private BlockedList bList;
     private Bin bin;
+
+    public PhoneBook(ContactBook contactBook, FavList fList, EmergencyList eList, BlockedList bList, Bin bin) {
+        this.contactBook = contactBook;
+        this.fList = fList;
+        this.eList = eList;
+        this.bList = bList;
+        this.bin = bin;
+    }
     
    
+    
+    
 }
