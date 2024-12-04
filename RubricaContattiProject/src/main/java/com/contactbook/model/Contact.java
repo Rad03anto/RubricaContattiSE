@@ -20,8 +20,7 @@ public class Contact {
     private List<String> emails;
     private String address;
     private String notes;
-    private ImageIcon image;
-    private boolean isFavourite; 
+    private ImageIcon image; 
 
     public Contact(String name, String surname) {
         
