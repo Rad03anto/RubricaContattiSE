@@ -13,7 +13,7 @@ import java.util.List;
  */
 public abstract class ContactList {
     
-    private List<Contact> contactList = new ArrayList<>();
+    protected List<Contact> contactList = new ArrayList<>();
     
     public void addContact(Contact contact){
         contactList.add(contact);
@@ -29,7 +29,5 @@ public abstract class ContactList {
     public List<Contact> getContacts() {
         return contactList;
     }
-    
-    
-    
+  
 }
