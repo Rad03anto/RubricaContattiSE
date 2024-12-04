@@ -6,6 +6,7 @@ package com.contactbook.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -19,15 +20,68 @@ public class Contact {
     private List<String> emails;
     private String address;
     private String notes;
+    private ImageIcon image;
 
-    public Contact(String name, String surname, List phoneNumbers, List emails, String address, String notes) {
+    public Contact(String name, String surname) {
+        
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public List<String> getPhoneNumbers() {
+        return phoneNumbers;
+    }
+
+    public List<String> getEmails() {
+        return emails;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getNotes() {
+        return notes;
+    }
+
+    public ImageIcon getImage() {
+        return image;
+    }
+
+    public void setName(String name) {
         this.name = name;
+    }
+
+    public void setSurname(String surname) {
         this.surname = surname;
-        this.phoneNumbers = new ArrayList<>();
-        this.emails = new ArrayList<>();
+    }
+
+    public void setPhoneNumbers(List<String> phoneNumbers) {
+        this.phoneNumbers = phoneNumbers;
+    }
+
+    public void setEmails(List<String> emails) {
+        this.emails = emails;
+    }
+
+    public void setAddress(String address) {
         this.address = address;
+    }
+
+    public void setNotes(String notes) {
         this.notes = notes;
     }
+
+    public void setImage(ImageIcon image) {
+        this.image = image;
+    }
+    
     
     
 }
