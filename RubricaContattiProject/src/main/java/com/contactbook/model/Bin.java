@@ -4,13 +4,18 @@
  */
 package com.contactbook.model;
 
-import java.io.Serializable;
 
 /**
  *
- * @author miche
+ * @author Antonio Radesca, Luca Nazzaro, Alessandro Scandone, Michele Savino
  */
-public class Bin extends ContactList implements Serializable {
+public class Bin extends ContactList {
+
+    public Bin() {
+    }
     
+    public void restoreContact(Contact contact){
+       
+    }
     
 }
