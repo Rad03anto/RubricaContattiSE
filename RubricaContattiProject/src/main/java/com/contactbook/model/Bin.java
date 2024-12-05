@@ -4,10 +4,13 @@
  */
 package com.contactbook.model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author miche
  */
-public class Bin extends ContactList {
+public class Bin extends ContactList implements Serializable {
+    
     
 }
