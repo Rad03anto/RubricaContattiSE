@@ -4,18 +4,30 @@
  */
 package com.contactbook.model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author miche
  */
-public class ContactBook extends ContactList {
+public class ContactBook extends ContactList implements Serializable {
     
-    public void importFile() {
+    private static final int MAX_CONTACTS = 1000;
+    private static int globalContactCount = 0;
+    
+    @Override 
+    public void addContact(Contact contact) {
+  
+    }
+    
+    @Override
+    public void removeContact(Contact contact){
         
     }
     
-    public void exportFile() {
-        
+    public static int getGlobalContactCount() {
+    
+        return globalContactCount;
     }
     
 }

@@ -4,27 +4,36 @@
  */
 package com.contactbook.model;
 
+import java.io.Serializable;
+import java.util.List;
+
 /**
  *
  * @author miche
  */
-public class PhoneBook {
+public class PhoneBook implements Serializable { 
     
     private ContactBook contactBook;
-    private FavList fList;
     private EmergencyList eList;
-    private BlockedList bList;
     private Bin bin;
+    private List<Group> groups;
 
-    public PhoneBook(ContactBook contactBook, FavList fList, EmergencyList eList, BlockedList bList, Bin bin) {
+    public PhoneBook(ContactBook contactBook, EmergencyList eList, Bin bin, List<Group> groups) {
         this.contactBook = contactBook;
-        this.fList = fList;
         this.eList = eList;
-        this.bList = bList;
         this.bin = bin;
+        this.groups = groups;
     }
     
-   
+    
+   public static PhoneBook loadFromFile(String filename) {
+       
+     return null;
+    }
+    
+    public void saveToFile(String filename) {
+        
+    }
     
     
 }

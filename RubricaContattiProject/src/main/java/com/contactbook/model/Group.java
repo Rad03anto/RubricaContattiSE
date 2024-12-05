@@ -4,10 +4,12 @@
  */
 package com.contactbook.model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author miche
  */
-public class Group extends ContactList {
+public class Group extends ContactList implements Serializable{
     
 }

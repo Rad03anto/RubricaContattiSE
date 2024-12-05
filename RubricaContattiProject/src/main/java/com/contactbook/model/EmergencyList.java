@@ -4,11 +4,13 @@
  */
 package com.contactbook.model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author miche
  */
-public class EmergencyList extends ContactList {
+public class EmergencyList extends ContactList implements Serializable {
     
     private static final int MAX_SIZE = 15;
     @Override

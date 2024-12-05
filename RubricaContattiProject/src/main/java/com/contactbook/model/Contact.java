@@ -21,7 +21,8 @@ public class Contact {
     private String address;
     private String notes;
     private ImageIcon image; 
-
+    private Boolean isFavorite;
+    
     public Contact(String name, String surname) {
         
     }
@@ -53,12 +54,8 @@ public class Contact {
     public ImageIcon getImage() {
         return image;
     }
-
-    public boolean isIsFavourite() {
-        return isFavourite;
-    }
-    
-    public void setName(String name) {
+ 
+     public void setName(String name) {
         this.name = name;
     }
 
@@ -86,8 +83,12 @@ public class Contact {
         this.image = image;
     }
 
-    public void setIsFavourite(boolean isFavourite) {
-        this.isFavourite = isFavourite;
+    public Boolean getIsFavorite() {
+        return isFavorite;
+    }
+
+    public void setIsFavorite(Boolean isFavorite) {
+        this.isFavorite = isFavorite;
     }
     
 }
