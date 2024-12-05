@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  *
- * @author miche
+ * @authors Antonio Radesca, Luca Nazzaro, Alessandro Scandone, Michele Savino
  */
 public class PhoneBook implements Serializable { 
     
@@ -24,11 +24,11 @@ public class PhoneBook implements Serializable {
         this.bin = bin;
         this.groups = groups;
     }
+   
     
-    
-   public static PhoneBook loadFromFile(String filename) {
+    public static PhoneBook loadFromFile(String filename) {
        
-     return null;
+    return null;
     }
     
     public void saveToFile(String filename) {
