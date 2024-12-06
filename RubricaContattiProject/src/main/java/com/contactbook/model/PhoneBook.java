@@ -5,7 +5,6 @@
 package com.contactbook.model;
 
 import java.io.Serializable;
-import java.util.List;
 
 /**
  *
@@ -16,13 +15,12 @@ public class PhoneBook implements Serializable {
     private ContactBook contactBook;
     private EmergencyList eList;
     private Bin bin;
-    private List<Group> groups;
+    
 
-    public PhoneBook(ContactBook contactBook, EmergencyList eList, Bin bin, List<Group> groups) {
+    public PhoneBook(ContactBook contactBook, EmergencyList eList, Bin bin) {
         this.contactBook = contactBook;
         this.eList = eList;
         this.bin = bin;
-        this.groups = groups;
     }
    
     
@@ -34,14 +32,5 @@ public class PhoneBook implements Serializable {
     public void saveToFile(String filename) {
         
     }
-    
-    public void addGroup(Group group) {
-        
-    }
-    
-    public void removeGroup(Group group) {
-        
-    }
-    
     
 }
