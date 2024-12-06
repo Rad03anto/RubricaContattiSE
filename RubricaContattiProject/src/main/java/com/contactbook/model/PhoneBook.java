@@ -35,5 +35,13 @@ public class PhoneBook implements Serializable {
         
     }
     
+    public void addGroup(Group group) {
+        
+    }
+    
+    public void removeGroup(Group group) {
+        
+    }
+    
     
 }

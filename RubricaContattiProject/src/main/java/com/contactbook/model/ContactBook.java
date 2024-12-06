@@ -17,12 +17,28 @@ public class ContactBook extends ContactList implements Serializable {
     
     @Override 
     public void addContact(Contact contact) {
-  
+        if (globalContactCount >= MAX_CONTACTS) {
+            throw new IllegalStateException("La rubrica ha raggiunto il numero massimo di contatti!");
+        }
+        super.addContact(contact);
+        globalContactCount++;
     }
     
     @Override
     public void removeContact(Contact contact){
-        
+        super.removeContact(contact);
+        globalContactCount--;
+    }
+    
+    public void moveToBin(Contact contact, Bin bin){
+          if (contactList.contains(contact)) {
+            removeContact(contact);
+            bin.addContact(contact);
+        } 
+    }
+    
+    public void moveToEmergencyList(Contact contact, EmergencyList eList){
+        eList.addContact(contact);
     }
     
     public static int getGlobalContactCount() {

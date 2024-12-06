@@ -15,7 +15,7 @@ public class EmergencyList extends ContactList implements Serializable {
     private static final int MAX_SIZE = 15;
     @Override
     public void addContact(Contact contact) {
-        if(contactList.size()!=15){
+        if(contactList.size()!=MAX_SIZE){
             contactList.add(contact);
         }
         else System.out.println("Il Gruppo di Emergenza può contenere al massimo 15 contatti");

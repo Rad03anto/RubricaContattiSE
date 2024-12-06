@@ -12,4 +12,15 @@ import java.io.Serializable;
  */
 public class Group extends ContactList implements Serializable{
     
+    private String groupName;
+    
+    public Group(String groupName) {
+        this.groupName = groupName;
+    }
+
+    public String getGroupName() {
+        return groupName;
+    }
+    
+    
 }
