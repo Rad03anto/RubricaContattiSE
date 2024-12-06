@@ -10,7 +10,7 @@ import java.io.Serializable;
  *
  * @author miche
  */
-public class EmergencyList extends ContactList implements Serializable {
+public class EmergencyList extends ContactList {
     
     private static final int MAX_SIZE = 15;
     @Override
@@ -19,6 +19,11 @@ public class EmergencyList extends ContactList implements Serializable {
             contactList.add(contact);
         }
         else System.out.println("Il Gruppo di Emergenza può contenere al massimo 15 contatti");
+    }
+    
+    @Override
+    public void removeContact(Contact contact){
+        
     }
 }
 

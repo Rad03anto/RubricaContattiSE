@@ -4,6 +4,7 @@
  */
 package com.contactbook.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,9 +12,10 @@ import java.util.List;
  * 
  * @author miche
  */
-public abstract class ContactList {
+public abstract class ContactList implements Serializable{
     
     protected List<Contact> contactList = new ArrayList<>();
+    
     
     public void addContact(Contact contact){
         contactList.add(contact);

@@ -7,7 +7,7 @@ package com.gruppo23.rubricacontattiproject.phonebook.exceptions;
 
 /**
  *
- * @author anton
+ * @authors Antonio Radesca, Luca Nazzaro, Alessandro Scandone, Michele Savino
  */
 public class InvalidContactException extends Exception {
 

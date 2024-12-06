@@ -12,10 +12,15 @@ package com.contactbook.model;
 public class Bin extends ContactList {
 
     public Bin() {
+        
     }
     
     public void restoreContact(Contact contact){
        
+    }
+ 
+    public void autodeleteFromBin(){
+        
     }
     
 }
