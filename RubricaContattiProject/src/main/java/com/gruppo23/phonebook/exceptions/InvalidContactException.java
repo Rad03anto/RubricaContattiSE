@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.gruppo23.rubricacontattiproject.phonebook.exceptions;
+package com.gruppo23.phonebook.exceptions;
 
 /**
  *
