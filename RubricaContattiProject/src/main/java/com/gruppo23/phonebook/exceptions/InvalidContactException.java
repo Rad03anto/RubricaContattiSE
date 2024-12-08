@@ -6,8 +6,9 @@
 package com.gruppo23.phonebook.exceptions;
 
 /**
- *
- * @authors Antonio Radesca, Luca Nazzaro, Alessandro Scandone, Michele Savino
+ * @brief Eccezione lanciata quando un contatto non è valido
+ * (ad esempio quando nella sua creazione o modifica non viene inserito né nome né cognome)
+ * @author gruppo23
  */
 public class InvalidContactException extends Exception {
 

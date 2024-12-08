@@ -11,13 +11,14 @@ import javafx.fxml.Initializable;
 
 /**
  * FXML Controller class
- *
- * @author anton
+ * Classe che gestisce il controller della rubrica telefonica, fornendo i metodi per l'inizializzazione
+ * e la gestione delle operazioni relative all'interfaccia utente e ai dati della rubrica.
+ * @author gruppo23
  */
-public class PhoneBookViewController implements Initializable {
+public class PhoneBookController implements Initializable {
 
     /**
-     * Initializes the controller class.
+     * Inizializza la classe controller.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {

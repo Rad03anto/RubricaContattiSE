@@ -6,8 +6,8 @@
 package com.gruppo23.phonebook.exceptions;
 
 /**
- *
- * @authors Antonio Radesca, Luca Nazzaro, Alessandro Scandone, Michele Savino
+ * @brief Una eccezione lanciata quando una lista è piena e non può aggiungere altri elementi
+ * @authors gruppo23
  */
 public class FullGroupException extends Exception {
 
