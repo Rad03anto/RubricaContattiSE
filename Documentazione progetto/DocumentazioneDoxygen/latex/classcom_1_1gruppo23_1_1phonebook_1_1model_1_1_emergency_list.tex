@@ -1,0 +1,63 @@
+\doxysection{com.\+gruppo23.\+phonebook.\+model.\+Emergency\+List Class Reference}
+\hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_emergency_list}{}\label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_emergency_list}\index{com.gruppo23.phonebook.model.EmergencyList@{com.gruppo23.phonebook.model.EmergencyList}}
+Inheritance diagram for com.\+gruppo23.\+phonebook.\+model.\+Emergency\+List\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_emergency_list}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_emergency_list_ab29ce7b42a98d7066c28f07a9c07cae9}{add\+Contact}} (\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} contact)
+\begin{DoxyCompactList}\small\item\em Aggiunge un contatto alla lista di emergenza. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list}{com.\+gruppo23.\+phonebook.\+model.\+Contact\+List}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_affc68e0ba87c193684eb1973e45ba039}{remove\+Contact}} (\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} contact)
+\begin{DoxyCompactList}\small\item\em Metodo usato per rimuovere un contatto a una lista generica. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} $>$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_af757d398ba4680923a6f7e273410a1cf}{search}} (String string)
+\begin{DoxyCompactList}\small\item\em Metodo usato per cercare un contatto in una lista generica, cercando per nome e cognome. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} $>$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_ad6d3b1ac9cf209507ab5fe27ffbf4b0f}{get\+Contacts}} ()
+\begin{DoxyCompactList}\small\item\em Restituisce una lista di contatti. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list}{com.\+gruppo23.\+phonebook.\+model.\+Contact\+List}}}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} $>$ {\bfseries contact\+List} = new Array\+List$<$$>$()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_emergency_list_ab29ce7b42a98d7066c28f07a9c07cae9}\index{com.gruppo23.phonebook.model.EmergencyList@{com.gruppo23.phonebook.model.EmergencyList}!addContact@{addContact}}
+\index{addContact@{addContact}!com.gruppo23.phonebook.model.EmergencyList@{com.gruppo23.phonebook.model.EmergencyList}}
+\doxysubsubsection{\texorpdfstring{addContact()}{addContact()}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_emergency_list_ab29ce7b42a98d7066c28f07a9c07cae9} 
+void com.\+gruppo23.\+phonebook.\+model.\+Emergency\+List.\+add\+Contact (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}}}]{contact}{}\end{DoxyParamCaption})}
+
+
+
+Aggiunge un contatto alla lista di emergenza. 
+
+Sovrascrive il metodo add\+Contact della classe base \doxylink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list}{Contact\+List}. Controlla che la lista non abbia già raggiunto il limite massimo di contatti prima di aggiungere un nuovo contatto.
+
+\begin{DoxyPrecond}{Precondition}
+La lista di contatti deve contenere meno di MAX\+\_\+\+SIZE contatti. 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em contact} & Oggetto di tipo \doxylink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact} da aggiungere alla lista. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Se la lista contiene meno di MAX\+\_\+\+SIZE contatti, il nuovo contatto viene aggiunto con successo. Altrimenti, la lista rimane invariata. 
+\end{DoxyPostcond}
+
+
+Reimplemented from \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_ae5b3e5500f8b0a56c5d9154f6fac9c7f}{com.\+gruppo23.\+phonebook.\+model.\+Contact\+List}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Rubrica\+Contatti\+Project/src/main/java/com/gruppo23/phonebook/model/\mbox{\hyperlink{_emergency_list_8java}{Emergency\+List.\+java}}\end{DoxyCompactItemize}
