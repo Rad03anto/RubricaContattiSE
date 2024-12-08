@@ -23,6 +23,7 @@ public class Contact {
     private ImageIcon image; 
     private Boolean isFavorite;
     
+    //push di aggiornamento
     public Contact(String name, String surname) {
         
     }
