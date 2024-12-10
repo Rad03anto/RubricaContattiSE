@@ -8,7 +8,7 @@ package com.gruppo23.phonebook.controller;
 import com.gruppo23.phonebook.exceptions.InvalidContactException;
 import com.gruppo23.phonebook.model.Contact;
 import com.gruppo23.phonebook.model.ContactBook;
-import java.awt.event.ActionEvent;
+import javafx.event.ActionEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
@@ -115,20 +115,19 @@ public class PhoneBookController implements Initializable {
      */
     private ContactBook contactbook;
     private ObservableList<Contact> observableContacts;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        contactbook=new ContactBook();
-        observableContacts=FXCollections.observableArrayList();
-        TableBook.setItems(observableContacts);
-        
-    }    
-            
-    private void createContact(ActionEvent event,ContactBook contactbook) throws InvalidContactException{
-        Contact contact1=new Contact(nameTextField.getText(),surnameTextField.getText());
-        contact1.getPhoneNumbers().add(number1TextField.getText());
-        contactbook.addContact(contact1);
-        
+        contactbook = new ContactBook();
+        observableContacts = FXCollections.observableArrayList();
+        TableBook.setItems(observableContacts);   
+    }
+  
+    @FXML
+    private void handleCreateButtonAction(ActionEvent event) {
+        TableBook.setVisible(false);
+        CreateForm.setVisible(true);
     }
     
 }

@@ -1,1 +1,10 @@
-MainContact.class
+com\gruppo23\phonebook\exceptions\FullGroupException.class
+com\gruppo23\phonebook\main\PhoneBookApp.class
+com\gruppo23\phonebook\model\Contact.class
+com\gruppo23\phonebook\model\EmergencyList.class
+com\gruppo23\phonebook\model\ContactList.class
+com\gruppo23\phonebook\exceptions\InvalidContactException.class
+com\gruppo23\phonebook\controller\PhoneBookController.class
+com\gruppo23\phonebook\model\Bin.class
+com\gruppo23\phonebook\model\ContactBook.class
+com\gruppo23\phonebook\model\PhoneBook.class

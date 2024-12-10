@@ -19,7 +19,7 @@ public class PhoneBookApp extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         // Carica il file FXML
-         Parent root= new FXMLLoader.load(getClass().getResource("PhoneBookView.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/com/gruppo23/phonebook/view/PhoneBookView.fxml"));
         
         // Imposta il titolo della finestra
         primaryStage.setTitle("Phone Book Application");

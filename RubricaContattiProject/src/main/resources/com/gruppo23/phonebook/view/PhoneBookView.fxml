@@ -19,7 +19,7 @@
                      <children>
                         <TextField fx:id="searchCB" layoutX="60.0" layoutY="79.0" />
                         <Label layoutX="132.0" layoutY="45.0" prefHeight="21.0" prefWidth="52.0" text="Ricerca" />
-                        <Button fx:id="CreateButton" layoutX="102.0" layoutY="168.0" mnemonicParsing="false" text="Crea Contatto" />
+                        <Button fx:id="CreateButton" layoutX="102.0" layoutY="168.0" mnemonicParsing="false" text="Crea Contatto" onAction="#handleCreateButtonAction" />
                         <Button fx:id="ViewButton" layoutX="85.0" layoutY="216.0" mnemonicParsing="false" text="Visualizza Contatto" />
                         <Button fx:id="AddToELButton" layoutX="36.0" layoutY="312.0" mnemonicParsing="false" text="Aggiungi ai Contatti di Emergenza" />
                         <Button fx:id="MoveToBinButton" layoutX="87.0" layoutY="362.0" mnemonicParsing="false" text="Sposta nel Cestino" />
