@@ -104,8 +104,8 @@
             </GridPane>
             <TableView fx:id="TableBook" prefHeight="750.0" prefWidth="947.0">
                <columns>
-                  <TableColumn prefWidth="150.0" text="Cognome" />
-                  <TableColumn prefWidth="150.0" text="Nome" />
+                  <TableColumn fx:id="surnameClm" prefWidth="150.0" text="Cognome" />
+                  <TableColumn fx:id="nameClm" prefWidth="150.0" text="Nome" />
                </columns>
             </TableView>
             <GridPane fx:id="ContactView" prefHeight="750.0" prefWidth="947.0" visible="false">

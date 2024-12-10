@@ -4,7 +4,8 @@
  */
 package com.gruppo23.phonebook.model;
 
-import com.gruppo23.rubricacontattiproject.phonebook.exceptions.InvalidContactException;
+
+import com.gruppo23.phonebook.exceptions.InvalidContactException;
 import java.util.List;
 import javax.swing.ImageIcon;
 
@@ -42,19 +43,20 @@ public class Contact {
 * @throws InvalidContactException Eccezione che viene lanciata nel caso in cui le stringhe name e surname sono vuote
 * @return nuovo oggetto Contact
 */
-    public Contact(String name, String surname) throws InvalidContactException{
-        
+    public Contact(String name, String surname) throws InvalidContactException{    
+        this.name = name;
+        this.surname = surname;
     }
 
     /**
-*
-* @brief metodo per ottenere il valore del nome di un contatto della rbrica
-* 
-* @pre L'oggetto Contact su cui viene invocato il metodo deve essere esistente
-* @post Il valore restituito è il nome dell'oggetto Contact su cui è stato invocato il metodo
-*
-* @return valore dell'attributo name su cui è stato invocato l'oggetto
-*/
+     *
+     * @brief metodo per ottenere il valore del nome di un contatto della rbrica
+     *
+     * @pre L'oggetto Contact su cui viene invocato il metodo deve essere esistente
+     * @post Il valore restituito è il nome dell'oggetto Contact su cui è stato invocato il metodo
+     *
+     * @return valore dell'attributo name su cui è stato invocato l'oggetto
+     */
     public String getName() {
         return name;
     }

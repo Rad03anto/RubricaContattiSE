@@ -4,8 +4,8 @@
  */
 package com.gruppo23.phonebook.model;
 
-import com.gruppo23.rubricacontattiproject.phonebook.exceptions.FullGroupException;
-import com.gruppo23.rubricacontattiproject.phonebook.exceptions.InvalidContactException;
+import com.gruppo23.phonebook.exceptions.InvalidContactException;
+import com.gruppo23.phonebook.exceptions.FullGroupException;
 import java.io.Serializable;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -29,6 +29,7 @@ public class ContactBook extends ContactList implements Serializable {
     private static final int MAX_CONTACTS = 1000;
     private static int globalContactCount = 0;
     
+
     /**
      * @brief Aggiunge un contatto alla rubrica.
      * 

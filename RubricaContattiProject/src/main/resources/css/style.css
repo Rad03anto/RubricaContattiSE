@@ -1,0 +1,7 @@
+/* Aggiungi un'immagine come sfondo per l'intero AnchorPane */
+.anchor-pane {
+    -fx-background-image: url("file:/path/to/your/image/uni.png");  /* Percorso dell'immagine */
+    -fx-background-size: cover;         /* Adatta l'immagine alla dimensione dell'elemento */
+    -fx-background-position: center center; /* Posiziona l'immagine al centro */
+    -fx-background-repeat: no-repeat;   /* Evita la ripetizione dell'immagine */
+}
