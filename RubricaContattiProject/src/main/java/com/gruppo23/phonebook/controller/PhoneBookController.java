@@ -125,12 +125,24 @@ public class PhoneBookController implements Initializable {
      */
     private ContactBook contactBook;
     private ObservableList<Contact> observableContacts;
+    @FXML
+    private TableView<?> TableEL;
+    @FXML
+    private TableColumn<?, ?> surnameClm1;
+    @FXML
+    private TableColumn<?, ?> nameClm1;
+    @FXML
+    private TableView<?> TableBin;
+    @FXML
+    private TableColumn<?, ?> surnameClm2;
+    @FXML
+    private TableColumn<?, ?> nameClm2;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         contactBook = new ContactBook();
-        observableContacts = FXCollections.observableArrayList();
+        observableContacts = FXCollections.observableArrayList(contactBook.getContacts());
         TableBook.setItems(observableContacts);
         
         nameClm.setCellValueFactory(new PropertyValueFactory("name"));
@@ -141,8 +153,11 @@ public class PhoneBookController implements Initializable {
     
     @FXML
     private void handleCreateButtonAction(ActionEvent event) {
+        ContactView.setVisible(false);
         TableBook.setVisible(false);
         CreateForm.setVisible(true);
+        TableEL.setVisible(false);
+        TableBin.setVisible(false);
     }
 
     @FXML
@@ -166,7 +181,8 @@ public class PhoneBookController implements Initializable {
         Contact newContact = new Contact(name, surname, phoneNumbers, emails, address, notes, image, isFavorite);
         contactBook.addContact(newContact);
         observableContacts.add(newContact);
-        
+        TableEL.setVisible(false);
+        TableBin.setVisible(false);
         CreateForm.setVisible(false);
         TableBook.setVisible(true);
     }
@@ -179,4 +195,54 @@ public class PhoneBookController implements Initializable {
     
     
     
+    @FXML
+    private void onDisplayContactButton(ActionEvent event) {
+        Contact selectedContact = TableBook.getSelectionModel().getSelectedItem();
+        CreateForm.setVisible(false);
+        TableBook.setVisible(false);
+        TableEL.setVisible(false);
+        TableBin.setVisible(false);
+        ContactView.setVisible(true);
+        int i=0;
+        int j=0;
+        nameLabel.setText(selectedContact.getName());
+        surnameLabel.setText(selectedContact.getSurname());
+       
+        
+        for(String p : selectedContact.getPhoneNumbers()){
+            if(i==0){
+            number1Label.setText(p);    
+            i++;            
+            }
+            else if(i==1){
+                number2Label.setText(p);
+                i++;
+            }
+            else if(i==2){
+                number3Label.setText(p);
+            }
+        }
+        
+         for(String s : selectedContact.getEmails()){
+            if(j==0){
+            email1Label.setText(s);    
+            j++;            
+            }
+            else if(i==1){
+                email2Label.setText(s);
+                j++;
+            }
+            else if(j==2){
+                email3Label.setText(s);
+            }
+        }
+         
+         notesLabel.setText(selectedContact.getNotes());
+         addressLabel.setText(selectedContact.getAddress());
+         if(selectedContact.getIsFavorite()==true)
+         favoritesLabel.setText("Preferito");
+         else favoritesLabel.setText("Non preferito");
+         contactImage.setImage(selectedContact.getImage());
+         
+    }
 }
