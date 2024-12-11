@@ -19,7 +19,7 @@
                      <children>
                         <TextField fx:id="searchCB" layoutX="60.0" layoutY="79.0" />
                         <Label layoutX="132.0" layoutY="45.0" prefHeight="21.0" prefWidth="52.0" text="Ricerca" />
-                        <Button fx:id="CreateButton" layoutX="102.0" layoutY="168.0" mnemonicParsing="false" text="Crea Contatto" onAction="#handleCreateButtonAction" />
+                        <Button fx:id="CreateButton" layoutX="102.0" layoutY="168.0" mnemonicParsing="false" onAction="#handleCreateButtonAction" text="Crea Contatto" />
                         <Button fx:id="ViewButton" layoutX="85.0" layoutY="216.0" mnemonicParsing="false" text="Visualizza Contatto" />
                         <Button fx:id="AddToELButton" layoutX="36.0" layoutY="312.0" mnemonicParsing="false" text="Aggiungi ai Contatti di Emergenza" />
                         <Button fx:id="MoveToBinButton" layoutX="87.0" layoutY="362.0" mnemonicParsing="false" text="Sposta nel Cestino" />
@@ -80,7 +80,9 @@
                   <TextField fx:id="email2TextField" GridPane.columnIndex="4" GridPane.rowIndex="3" />
                   <TextField fx:id="email3TextField" GridPane.columnIndex="6" GridPane.rowIndex="3" />
                   <CheckBox fx:id="favoritesCheckBox" mnemonicParsing="false" text="Aggiungi" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-                  <ImageView fitHeight="148.0" fitWidth="203.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" />
+                  <ImageView fx:id="contactImage" fitHeight="140.0" fitWidth="203.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowSpan="2" />
+                  <Button fx:id="SaveContactButton" mnemonicParsing="false" onAction="#onSaveContactButton" text="Salva Contatto" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+                  <Button fx:id="ImageButton" alignment="CENTER" mnemonicParsing="false" text="Inserisci Immagine" GridPane.columnIndex="6" GridPane.rowIndex="1" />
                </children>
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="296.0" minWidth="10.0" prefWidth="10.0" />

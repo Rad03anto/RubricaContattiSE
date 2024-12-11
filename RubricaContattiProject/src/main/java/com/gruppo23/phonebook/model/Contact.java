@@ -7,6 +7,7 @@ package com.gruppo23.phonebook.model;
 
 import com.gruppo23.phonebook.exceptions.InvalidContactException;
 import java.util.List;
+import javafx.scene.image.Image;
 import javax.swing.ImageIcon;
 
 /**
@@ -27,7 +28,7 @@ public class Contact {
     private List<String> emails; ///< Lista delle email associate al contatto
     private String address; ///< Indirizzo di locazione associato al contatto
     private String notes; ///< Informazioni aggiuntive associate al contatto
-    private ImageIcon image; ///< Immagine di profilo associata al contatto
+    private Image image; ///< Immagine di profilo associata al contatto
     private Boolean isFavorite; ///< Etichetta che identifica il contatto come preferito o meno
     
     /**
@@ -43,9 +44,15 @@ public class Contact {
 * @throws InvalidContactException Eccezione che viene lanciata nel caso in cui le stringhe name e surname sono vuote
 * @return nuovo oggetto Contact
 */
-    public Contact(String name, String surname) throws InvalidContactException{    
+    public Contact(String name, String surname, List<String> phoneNumbers, List<String> emails, String address, String notes, Image image, Boolean isFavorite) {    
         this.name = name;
         this.surname = surname;
+        this.phoneNumbers = phoneNumbers;
+        this.emails = emails;
+        this.address = address;
+        this.notes = notes;
+        this.image = image;
+        this.isFavorite = isFavorite;
     }
 
     /**
@@ -137,7 +144,7 @@ public class Contact {
 *
 * @return  valore dell'attributo image
 */
-    public ImageIcon getImage() {
+    public Image getImage() {
         return image;
     }
 
@@ -237,7 +244,7 @@ public class Contact {
 * @param[in] image l''immagine che verrà assegnata all'attributo image delll'oggetto Contact
 *
 */ 
-    public void setImage(ImageIcon image) {
+    public void setImage(Image image) {
         this.image = image;
     }
 
