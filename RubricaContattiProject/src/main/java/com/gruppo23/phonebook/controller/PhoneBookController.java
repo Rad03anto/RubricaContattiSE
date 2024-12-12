@@ -7,6 +7,7 @@ package com.gruppo23.phonebook.controller;
 
 import com.gruppo23.phonebook.model.EmergencyList;
 import com.gruppo23.phonebook.exceptions.FullGroupException;
+import com.gruppo23.phonebook.model.Bin;
 import com.gruppo23.phonebook.model.Contact;
 import com.gruppo23.phonebook.model.ContactBook;
 import javafx.event.ActionEvent;
@@ -49,8 +50,6 @@ public class PhoneBookController implements Initializable {
     private Button ViewButton;
     @FXML
     private Button AddToELButton;
-    @FXML
-    private Button MoveToBinButton;
     @FXML
     private Button ImportButton;
     @FXML
@@ -125,6 +124,8 @@ public class PhoneBookController implements Initializable {
     private Button ImageButton;
     @FXML
     private ImageView contactImage;
+    @FXML
+    private Button onMoveToBinButton;
     
     /**
      * Inizializza la classe controller.
@@ -146,6 +147,7 @@ public class PhoneBookController implements Initializable {
     private EmergencyList emergencyList;
     private ObservableList<Contact> observableContacts;
     private ObservableList<Contact> observableEL;
+<<<<<<< HEAD
     @FXML
     private Button goBackButton;
     @FXML
@@ -210,6 +212,11 @@ public class PhoneBookController implements Initializable {
     private GridPane ContactView1;
     @FXML
     private GridPane ContactView11;
+=======
+    private Bin bin;
+    private ObservableList<Contact> observableBin;
+    
+>>>>>>> alescand1
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -217,15 +224,19 @@ public class PhoneBookController implements Initializable {
         contactBook = new ContactBook();
         emergencyList = new EmergencyList();
         observableContacts = FXCollections.observableArrayList(contactBook.getContacts());
+        bin = new Bin();
         observableEL = FXCollections.observableArrayList(emergencyList.getContacts());
+        observableBin = FXCollections.observableArrayList(bin.getContacts());
         nameClm.setCellValueFactory(new PropertyValueFactory("name"));
         surnameClm.setCellValueFactory(new PropertyValueFactory("surname"));
         nameClm1.setCellValueFactory(new PropertyValueFactory("name"));
         surnameClm1.setCellValueFactory(new PropertyValueFactory("surname"));
+        nameClm2.setCellValueFactory(new PropertyValueFactory("name"));
+        surnameClm2.setCellValueFactory(new PropertyValueFactory("surname"));
         
         TableBook.setItems(observableContacts);
         TableEL.setItems(observableEL);
-        
+        TableBin.setItems(observableBin);
     }
     
     @FXML
@@ -275,6 +286,7 @@ public class PhoneBookController implements Initializable {
              }
             
     }
+    
     
     @FXML
     private void onDisplayContactButton(ActionEvent event) {
@@ -431,6 +443,7 @@ public class PhoneBookController implements Initializable {
     }
 
     @FXML
+<<<<<<< HEAD
     private void onGoBackButton(ActionEvent event) {
         ContactView.setVisible(false);
         TableBook.setVisible(true);
@@ -455,5 +468,16 @@ public class PhoneBookController implements Initializable {
     }
 
     
+=======
+    private void onMoveToBinButton(ActionEvent event) throws FullGroupException {
+    Contact selectedContact = TableBook.getSelectionModel().getSelectedItem();
+        if (selectedContact != null) {
+            observableBin.add(selectedContact);
+            bin.addContact(selectedContact);
+            contactBook.removeContact(selectedContact);
+            observableContacts.remove(selectedContact);
+        }
+    }
+>>>>>>> alescand1
     
 }
