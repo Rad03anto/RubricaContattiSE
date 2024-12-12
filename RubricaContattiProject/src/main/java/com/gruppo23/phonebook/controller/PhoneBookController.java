@@ -18,11 +18,13 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.Tab;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -144,6 +146,70 @@ public class PhoneBookController implements Initializable {
     private EmergencyList emergencyList;
     private ObservableList<Contact> observableContacts;
     private ObservableList<Contact> observableEL;
+    @FXML
+    private Button goBackButton;
+    @FXML
+    private Button ViewButton1;
+    @FXML
+    private Button ViewButton11;
+    @FXML
+    private Tab emergencyTab;
+    @FXML
+    private Tab contactBookTab;
+    @FXML
+    private Tab binTab;
+    @FXML
+    private Label number3Label2;
+    @FXML
+    private Label email3Label2;
+    @FXML
+    private Label addressLabel2;
+    @FXML
+    private Label favoritesLabel2;
+    @FXML
+    private Label notesLabel2;
+    @FXML
+    private Label email1Label2;
+    @FXML
+    private Label email2Label2;
+    @FXML
+    private Label nameLabel2;
+    @FXML
+    private Label surnameLabel2;
+    @FXML
+    private Label number1Label2;
+    @FXML
+    private Button goBackButton2;
+    @FXML
+    private Label number2Label2;
+    @FXML
+    private Label number3Label21;
+    @FXML
+    private Label email3Label21;
+    @FXML
+    private Label addressLabel21;
+    @FXML
+    private Label favoritesLabel21;
+    @FXML
+    private Label notesLabel21;
+    @FXML
+    private Label email1Label21;
+    @FXML
+    private Label email2Label21;
+    @FXML
+    private Label nameLabel21;
+    @FXML
+    private Label surnameLabel21;
+    @FXML
+    private Label number1Label21;
+    @FXML
+    private Button goBackButton21;
+    @FXML
+    private Label number2Label21;
+    @FXML
+    private GridPane ContactView1;
+    @FXML
+    private GridPane ContactView11;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -212,10 +278,15 @@ public class PhoneBookController implements Initializable {
     
     @FXML
     private void onDisplayContactButton(ActionEvent event) {
-        Contact selectedContact = TableBook.getSelectionModel().getSelectedItem();
+        Object source= event.getSource();
+        Contact selectedContact;
+        
+        if(source == ViewButton){
+        selectedContact = TableBook.getSelectionModel().getSelectedItem();
         CreateForm.setVisible(false);
         TableBook.setVisible(false);
         ContactView.setVisible(true);
+        
         int i=0;
         int j=0;
         nameLabel.setText(selectedContact.getName());
@@ -257,5 +328,132 @@ public class PhoneBookController implements Initializable {
          else favoritesLabel.setText("Non preferito");
          contactImage.setImage(selectedContact.getImage());
          
+        }
+        else if(source == ViewButton1){
+         selectedContact = TableEL.getSelectionModel().getSelectedItem();
+       
+        TableEL.setVisible(false);
+        ContactView1.setVisible(true);
+        
+        int i=0;
+        int j=0;
+        nameLabel2.setText(selectedContact.getName());
+        surnameLabel2.setText(selectedContact.getSurname());
+       
+        
+        for(String p : selectedContact.getPhoneNumbers()){
+            if(i==0){
+            number1Label2.setText(p);    
+            i++;            
+            }
+            else if(i==1){
+                number2Label2.setText(p);
+                i++;
+            }
+            else if(i==2){
+                number3Label2.setText(p);
+            }
+        }
+        
+         for(String s : selectedContact.getEmails()){
+            if(j==0){
+            email1Label2.setText(s);    
+            j++;            
+            }
+            else if(i==1){
+                email2Label2.setText(s);
+                j++;
+            }
+            else if(j==2){
+                email3Label2.setText(s);
+            }
+        }
+         
+         notesLabel2.setText(selectedContact.getNotes());
+         addressLabel2.setText(selectedContact.getAddress());
+         if(selectedContact.getIsFavorite()==true)
+         favoritesLabel2.setText("Preferito");
+         else favoritesLabel2.setText("Non preferito");
+         contactImage.setImage(selectedContact.getImage());
+         
+        
+        }
+        else{
+        selectedContact = TableBin.getSelectionModel().getSelectedItem();
+        
+        TableBin.setVisible(false);
+       
+        ContactView11.setVisible(true);
+        int i=0;
+        int j=0;
+        nameLabel21.setText(selectedContact.getName());
+        surnameLabel21.setText(selectedContact.getSurname());
+       
+        
+        for(String p : selectedContact.getPhoneNumbers()){
+            if(i==0){
+            number1Label21.setText(p);    
+            i++;            
+            }
+            else if(i==1){
+                number2Label21.setText(p);
+                i++;
+            }
+            else if(i==2){
+                number3Label21.setText(p);
+            }
+        }
+        
+         for(String s : selectedContact.getEmails()){
+            if(j==0){
+            email1Label21.setText(s);    
+            j++;            
+            }
+            else if(i==1){
+                email2Label21.setText(s);
+                j++;
+            }
+            else if(j==2){
+                email3Label21.setText(s);
+            }
+        }
+         
+         notesLabel21.setText(selectedContact.getNotes());
+         addressLabel21.setText(selectedContact.getAddress());
+         if(selectedContact.getIsFavorite()==true)
+         favoritesLabel21.setText("Preferito");
+         else favoritesLabel21.setText("Non preferito");
+         contactImage.setImage(selectedContact.getImage());
+         
+        }
+        
+       
     }
+
+    @FXML
+    private void onGoBackButton(ActionEvent event) {
+        ContactView.setVisible(false);
+        TableBook.setVisible(true);
+    }
+
+    @FXML
+    private void handleEmergencyTab(Event event) {
+        ContactView1.setVisible(false);
+        TableEL.setVisible(true);
+    }
+
+    @FXML
+    private void onContactBookTab(Event event) {
+         ContactView.setVisible(false);
+        TableBook.setVisible(true);
+    }
+
+    @FXML
+    private void onBinTab(Event event) {
+        ContactView11.setVisible(false);
+        TableBin.setVisible(true);
+    }
+
+    
+    
 }
