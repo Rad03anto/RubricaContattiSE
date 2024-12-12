@@ -147,7 +147,7 @@ public class PhoneBookController implements Initializable {
     private EmergencyList emergencyList;
     private ObservableList<Contact> observableContacts;
     private ObservableList<Contact> observableEL;
-<<<<<<< HEAD
+
     @FXML
     private Button goBackButton;
     @FXML
@@ -212,11 +212,11 @@ public class PhoneBookController implements Initializable {
     private GridPane ContactView1;
     @FXML
     private GridPane ContactView11;
-=======
+
     private Bin bin;
     private ObservableList<Contact> observableBin;
     
->>>>>>> alescand1
+
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -443,13 +443,13 @@ public class PhoneBookController implements Initializable {
     }
 
     @FXML
-<<<<<<< HEAD
+
     private void onGoBackButton(ActionEvent event) {
         ContactView.setVisible(false);
         TableBook.setVisible(true);
     }
 
-    @FXML
+  @FXML
     private void handleEmergencyTab(Event event) {
         ContactView1.setVisible(false);
         TableEL.setVisible(true);
@@ -468,7 +468,7 @@ public class PhoneBookController implements Initializable {
     }
 
     
-=======
+   @FXML
     private void onMoveToBinButton(ActionEvent event) throws FullGroupException {
     Contact selectedContact = TableBook.getSelectionModel().getSelectedItem();
         if (selectedContact != null) {
@@ -478,6 +478,6 @@ public class PhoneBookController implements Initializable {
             observableContacts.remove(selectedContact);
         }
     }
->>>>>>> alescand1
+
     
 }
