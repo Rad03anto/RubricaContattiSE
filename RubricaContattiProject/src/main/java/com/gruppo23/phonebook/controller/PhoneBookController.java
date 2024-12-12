@@ -5,6 +5,8 @@
  */
 package com.gruppo23.phonebook.controller;
 
+import com.gruppo23.phonebook.model.EmergencyList;
+import com.gruppo23.phonebook.exceptions.FullGroupException;
 import com.gruppo23.phonebook.model.Contact;
 import com.gruppo23.phonebook.model.ContactBook;
 import javafx.event.ActionEvent;
@@ -12,6 +14,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -123,32 +127,39 @@ public class PhoneBookController implements Initializable {
     /**
      * Inizializza la classe controller.
      */
+    @FXML
+    private TableView<Contact> TableEL;
+    @FXML
+    private TableColumn<Contact, String> surnameClm1;
+    @FXML
+    private TableColumn<Contact, String> nameClm1;
+    @FXML
+    private TableView<Contact> TableBin;
+    @FXML
+    private TableColumn<Contact, String> surnameClm2;
+    @FXML
+    private TableColumn<Contact, String> nameClm2;
+    
     private ContactBook contactBook;
+    private EmergencyList emergencyList;
     private ObservableList<Contact> observableContacts;
-    @FXML
-    private TableView<?> TableEL;
-    @FXML
-    private TableColumn<?, ?> surnameClm1;
-    @FXML
-    private TableColumn<?, ?> nameClm1;
-    @FXML
-    private TableView<?> TableBin;
-    @FXML
-    private TableColumn<?, ?> surnameClm2;
-    @FXML
-    private TableColumn<?, ?> nameClm2;
+    private ObservableList<Contact> observableEL;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         contactBook = new ContactBook();
+        emergencyList = new EmergencyList();
         observableContacts = FXCollections.observableArrayList(contactBook.getContacts());
-        TableBook.setItems(observableContacts);
-        
+        observableEL = FXCollections.observableArrayList(emergencyList.getContacts());
         nameClm.setCellValueFactory(new PropertyValueFactory("name"));
         surnameClm.setCellValueFactory(new PropertyValueFactory("surname"));
+        nameClm1.setCellValueFactory(new PropertyValueFactory("name"));
+        surnameClm1.setCellValueFactory(new PropertyValueFactory("surname"));
         
         TableBook.setItems(observableContacts);
+        TableEL.setItems(observableEL);
+        
     }
     
     @FXML
@@ -156,8 +167,6 @@ public class PhoneBookController implements Initializable {
         ContactView.setVisible(false);
         TableBook.setVisible(false);
         CreateForm.setVisible(true);
-        TableEL.setVisible(false);
-        TableBin.setVisible(false);
     }
 
     @FXML
@@ -179,29 +188,33 @@ public class PhoneBookController implements Initializable {
         boolean isFavorite = favoritesCheckBox.isSelected();
         
         Contact newContact = new Contact(name, surname, phoneNumbers, emails, address, notes, image, isFavorite);
-        contactBook.addContact(newContact);
-        observableContacts.add(newContact);
-        TableEL.setVisible(false);
-        TableBin.setVisible(false);
+        try {
+            contactBook.addContact(newContact);
+            observableContacts.add(newContact);
+        } catch (FullGroupException ex) {
+            Logger.getLogger(PhoneBookController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
         CreateForm.setVisible(false);
         TableBook.setVisible(true);
     }
 
     @FXML
-    private void OnAddToELButton(ActionEvent event) {
-        
+    private void onAddToELButton(ActionEvent event) throws FullGroupException {
+         Contact selectedContact = TableBook.getSelectionModel().getSelectedItem();
+         if(selectedContact!=null){
+             contactBook.moveToEmergencyList(selectedContact, emergencyList);
+             observableEL.add(selectedContact);
+             
+             }
+            
     }
-    
-    
-    
     
     @FXML
     private void onDisplayContactButton(ActionEvent event) {
         Contact selectedContact = TableBook.getSelectionModel().getSelectedItem();
         CreateForm.setVisible(false);
         TableBook.setVisible(false);
-        TableEL.setVisible(false);
-        TableBin.setVisible(false);
         ContactView.setVisible(true);
         int i=0;
         int j=0;

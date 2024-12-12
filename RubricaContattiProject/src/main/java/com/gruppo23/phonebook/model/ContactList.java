@@ -4,6 +4,7 @@
  */
 package com.gruppo23.phonebook.model;
 
+import com.gruppo23.phonebook.exceptions.FullGroupException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,11 +16,12 @@ import java.util.List;
  * @date December 8, 2024
  * @version 1.0
  */
-public abstract class ContactList implements Serializable{
+public abstract class ContactList implements Serializable {
     
     protected List<Contact> contactList = new ArrayList<>();
     
     /**
+     * @throws com.gruppo23.phonebook.exceptions.FullGroupException
      * @brief Metodo usato per aggiungere un contatto a una lista generica
      * 
      * @pre La lista non contiene il contatto
@@ -28,7 +30,7 @@ public abstract class ContactList implements Serializable{
      * 
      * @param[in] contact Il contatto che verrà aggiunto alla lista
      */
-    public void addContact(Contact contact){
+    public void addContact(Contact contact) throws FullGroupException {
         contactList.add(contact);
     }
     

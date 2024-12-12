@@ -4,6 +4,7 @@
  */
 package com.gruppo23.phonebook.model;
 
+import com.gruppo23.phonebook.exceptions.FullGroupException;
 import java.io.Serializable;
 
 /**
@@ -15,11 +16,12 @@ import java.io.Serializable;
  * 
  * @note Invariante: La dimensione della lista non deve mai superare MAX_SIZE.
  */
-public class EmergencyList extends ContactList {
+public class EmergencyList extends ContactList implements Serializable{
     
     private static final int MAX_SIZE = 15; ///< Dimensione massima della lista di contatti di emergenza.
     
     /**
+     * @throws com.gruppo23.phonebook.exceptions.FullGroupException
      * @brief Aggiunge un contatto alla lista di emergenza.
      * 
      * Sovrascrive il metodo addContact della classe base ContactList.
@@ -27,16 +29,16 @@ public class EmergencyList extends ContactList {
      * prima di aggiungere un nuovo contatto.
      * 
      * @pre La lista di contatti deve contenere meno di MAX_SIZE contatti.
-     * @param[in] contact Oggetto di tipo Contact da aggiungere alla lista.
+     * @param contact Oggetto di tipo Contact da aggiungere alla lista.
      * @post Se la lista contiene meno di MAX_SIZE contatti, il nuovo contatto viene aggiunto con successo.
      *       Altrimenti, la lista rimane invariata.
      */
     @Override
-    public void addContact(Contact contact) {
-        if(contactList.size()!=MAX_SIZE){
-            contactList.add(contact);
+    public void addContact(Contact contact) throws FullGroupException {
+        if(contactList.size()>=MAX_SIZE) {
+            throw new FullGroupException("Gruppo Emergenza Pieno");
         }
-        else System.out.println("Il Gruppo di Emergenza può contenere al massimo 15 contatti");
+        super.addContact(contact);
     }
     
 }

@@ -7,8 +7,6 @@ package com.gruppo23.phonebook.model;
 import com.gruppo23.phonebook.exceptions.InvalidContactException;
 import com.gruppo23.phonebook.exceptions.FullGroupException;
 import java.io.Serializable;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * Classe ContactBook
@@ -38,13 +36,9 @@ public class ContactBook extends ContactList implements Serializable {
      * @post Il contatto viene aggiunto alla rubrica e il contatore globale è incrementato di 1.
      */
     @Override 
-    public void addContact(Contact contact) {
+    public void addContact(Contact contact) throws FullGroupException {
         if (globalContactCount >= MAX_CONTACTS) {
-            try {
-                throw new FullGroupException("La rubrica ha raggiunto il numero massimo di contatti!");
-            } catch (FullGroupException ex) {
-                Logger.getLogger(ContactBook.class.getName()).log(Level.SEVERE, null, ex);
-            }
+                throw new FullGroupException("La rubrica ha raggiunto il numero massimo di contatti!");  
         }
         super.addContact(contact);
         globalContactCount++;
@@ -71,7 +65,7 @@ public class ContactBook extends ContactList implements Serializable {
      * @param[out] bin Il cestino in cui spostare il contatto
      * @post Il contatto viene rimosso dalla rubrica principale e aggiunto al cestino.
      */
-    public void moveToBin(Contact contact, Bin bin){
+    public void moveToBin(Contact contact, Bin bin) throws FullGroupException {
           if (contactList.contains(contact)) {
             removeContact(contact);
             bin.addContact(contact);
@@ -87,7 +81,7 @@ public class ContactBook extends ContactList implements Serializable {
      * @post Il contatto viene aggiunto alla lista di emergenza (e mantenuto nella rubrica principale)
      */
     
-    public void moveToEmergencyList(Contact contact, EmergencyList eList){
+    public void moveToEmergencyList(Contact contact, EmergencyList eList) throws FullGroupException {
         eList.addContact(contact);
     }
     

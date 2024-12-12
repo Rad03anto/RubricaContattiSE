@@ -8,7 +8,6 @@ package com.gruppo23.phonebook.model;
 import com.gruppo23.phonebook.exceptions.InvalidContactException;
 import java.util.List;
 import javafx.scene.image.Image;
-import javax.swing.ImageIcon;
 
 /**
 * @file Contact.java
