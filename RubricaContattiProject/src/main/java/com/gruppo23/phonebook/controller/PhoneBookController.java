@@ -445,12 +445,24 @@ public class PhoneBookController implements Initializable {
     @FXML
 
     private void onGoBackButton(ActionEvent event) {
+        Object source = event.getSource();
+        
+        if(source== goBackButton){
         ContactView.setVisible(false);
-        TableBook.setVisible(true);
+        TableBook.setVisible(true);}
+        else if( source == goBackButton2){
+          ContactView1.setVisible(false);
+        TableEL.setVisible(true);}  
+        
+      else{
+    ContactView11.setVisible(false);
+        TableBin.setVisible(true);
     }
-
+    }
+    
   @FXML
     private void handleEmergencyTab(Event event) {
+        CreateForm.setVisible(false);
         ContactView1.setVisible(false);
         TableEL.setVisible(true);
     }
@@ -463,6 +475,7 @@ public class PhoneBookController implements Initializable {
 
     @FXML
     private void onBinTab(Event event) {
+        CreateForm.setVisible(false);
         ContactView11.setVisible(false);
         TableBin.setVisible(true);
     }
