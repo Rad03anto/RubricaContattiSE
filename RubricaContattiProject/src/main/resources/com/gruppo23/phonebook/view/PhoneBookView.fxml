@@ -23,8 +23,8 @@
                         <Button fx:id="AddToELButton" layoutX="36.0" layoutY="312.0" mnemonicParsing="false" onAction="#onAddToELButton" text="Aggiungi ai Contatti di Emergenza" />
                         <Button fx:id="ViewButton" layoutX="85.0" layoutY="216.0" mnemonicParsing="false" onAction="#onDisplayContactButton" text="Visualizza Contatto" />                
                         <Button fx:id="MoveToBinButton" layoutX="87.0" layoutY="362.0" mnemonicParsing="false" text="Sposta nel Cestino" />
-                        <Button fx:id="ImportButton" layoutX="95.0" layoutY="490.0" mnemonicParsing="false" text="Importa Rubrica" />
-                        <Button fx:id="ExportButton" layoutX="96.0" layoutY="534.0" mnemonicParsing="false" text="Esporta Rubrica" />
+                        <Button fx:id="ImportButton" layoutX="95.0" layoutY="490.0" mnemonicParsing="false" onAction="#onImportFile" text="Importa Rubrica" />
+                        <Button fx:id="ExportButton" layoutX="96.0" layoutY="534.0" mnemonicParsing="false" onAction="#onExportButton" text="Esporta Rubrica" />
                         <StackPane layoutX="315.0" prefHeight="712.0" prefWidth="929.0">
                            <children>
                               <GridPane fx:id="ContactView" prefHeight="750.0" prefWidth="947.0" visible="false">

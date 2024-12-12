@@ -7,8 +7,12 @@ package com.gruppo23.phonebook.controller;
 
 import com.gruppo23.phonebook.model.EmergencyList;
 import com.gruppo23.phonebook.exceptions.FullGroupException;
+import com.gruppo23.phonebook.model.Bin;
 import com.gruppo23.phonebook.model.Contact;
 import com.gruppo23.phonebook.model.ContactBook;
+import com.gruppo23.phonebook.model.PhoneBook;
+import java.io.File;
+import java.io.IOException;
 import javafx.event.ActionEvent;
 import java.net.URL;
 import java.util.ArrayList;
@@ -20,7 +24,10 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
@@ -30,6 +37,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -144,6 +153,7 @@ public class PhoneBookController implements Initializable {
     private EmergencyList emergencyList;
     private ObservableList<Contact> observableContacts;
     private ObservableList<Contact> observableEL;
+    private PhoneBook phonebook;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -258,4 +268,75 @@ public class PhoneBookController implements Initializable {
          contactImage.setImage(selectedContact.getImage());
          
     }
+
+    @FXML
+    private void onImportFile(ActionEvent event) {
+
+        // Crea un oggetto FileChooser per permettere all'utente di selezionare il file CSV
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("CSV Files", "*.csv"));
+        
+        // Ottieni il riferimento alla finestra principale
+        Stage stage = (Stage) ImportButton.getScene().getWindow();
+        
+        // Mostra la finestra di dialogo per aprire il file e ottieni il file selezionato
+        File file = fileChooser.showOpenDialog(stage);
+        
+        // Se l'utente ha selezionato un file
+        if (file != null) {
+            try {
+                // Chiamata al metodo loadFromFile della classe PhoneBook
+                PhoneBook phonebook = PhoneBook.loadFromFile(file.getAbsolutePath());
+                
+                // Qui puoi aggiornare la tua UI con i contatti importati
+                // Per esempio, se usi una ListView per visualizzare i contatti:
+                // contactListView.setItems(FXCollections.observableArrayList(phonebook.getContacts()));
+
+                showSuccessMessage("Rubrica importata correttamente.");
+            } catch (FullGroupException e) {
+                // Gestisci eventuali errori di lettura del file
+                showErrorMessage("Errore durante l'importazione della rubrica.");
+            }
+        }
+    }
+    // Metodo per mostrare un messaggio di successo
+
+
+    // Metodo per mostrare un messaggio di errore
+    private void showErrorMessage(String message) {
+        Alert alert = new Alert(AlertType.ERROR, message, ButtonType.OK);
+        alert.showAndWait();
+    }
+
+    @FXML
+    private void onExportButton(ActionEvent event) {
+
+        FileChooser fileChooser = new FileChooser();
+    fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("CSV Files", "*.csv"));
+    Stage stage = (Stage) ExportButton.getScene().getWindow();
+    File file = fileChooser.showSaveDialog(stage);
+
+    if (file != null) {
+        // Chiama il metodo saveToFile per salvare i contatti nel file selezionato
+        try{
+            phonebook.saveToFile(file.getAbsolutePath());
+        showSuccessMessage("Rubrica salvata correttamente.");
+    } catch (Exception e) {
+            showErrorMessage("Errore nel salvataggio della rubrica.");
+        }
+    }
+
 }
+
+// Metodo per mostrare un messaggio di successo
+private void showSuccessMessage(String message) {
+    Alert alert = new Alert(AlertType.INFORMATION, message, ButtonType.OK);
+    alert.showAndWait();
+}
+
+
+    }
+
+
+    
+

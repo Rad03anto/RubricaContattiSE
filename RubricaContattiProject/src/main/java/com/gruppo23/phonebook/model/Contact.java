@@ -54,6 +54,10 @@ public class Contact {
         this.isFavorite = isFavorite;
     }
 
+    Contact() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     /**
      *
      * @brief metodo per ottenere il valore del nome di un contatto della rbrica
