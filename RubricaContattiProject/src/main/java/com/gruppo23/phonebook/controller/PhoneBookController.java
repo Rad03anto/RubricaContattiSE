@@ -275,6 +275,7 @@ public class PhoneBookController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        //Implementazione dei setText della pagina Rubrica
         binTab.setText("🗑 Cestino");
         contactBookTab.setText("📖 Rubrica");
         SearchButton.setText("🔍 Cerca");
@@ -285,7 +286,18 @@ public class PhoneBookController implements Initializable {
         onMoveToBinButton.setText("🗑 Sposta nel cestino");
         ImportButton.setText("📥 Importa rubrica");
         ExportButton.setText("📤 Esporta rubrica");
-
+        
+        //Implementazione dei setText della pagina EmergencyList
+        SearchButton1.setText("🔍 Cerca");
+        RemoveELButton.setText("🚑 Rimuovi dai contatti di emergenza");
+        ViewButton1.setText("👁 Visualizza Contatto");
+        
+        //Implementazione dei setText della pagina Cestino
+        SearchButton2.setText("🔍 Cerca");
+        onRestoreButton.setText("🔁 Ripristina contatto");
+        onRemoveBinButton.setText("🗑 Rimuovi definitivamente dai contatti");
+        ViewButton11.setText("👁 Visualizza Contatto");
+        
         contactBook = new ContactBook();
         emergencyList = new EmergencyList();
         observableContacts = FXCollections.observableArrayList(contactBook.getContacts());
@@ -680,7 +692,7 @@ public class PhoneBookController implements Initializable {
         Contact selectedContact = TableBin.getSelectionModel().getSelectedItem();
         if (selectedContact != null) {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("Conferma Eliminazione");
+            alert.setTitle("Rimuovi definitivamente");
             alert.setHeaderText("Sei sicuro di voler eliminare definitivamente il contatto?");
             alert.setContentText("L'operazione è irreversibile.");
 
