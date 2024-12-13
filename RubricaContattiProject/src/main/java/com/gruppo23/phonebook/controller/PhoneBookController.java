@@ -35,6 +35,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 
 /**
@@ -227,6 +228,7 @@ public class PhoneBookController implements Initializable {
     @FXML
     private Button onRemoveBinButton;
 
+    @FXML
     private Button editContactButton;
     @FXML
     private GridPane CreateForm1;
@@ -262,6 +264,8 @@ public class PhoneBookController implements Initializable {
     private Button SaveEditButton1;
     @FXML
     private Button CancelButton1;
+    @FXML
+    private AnchorPane rubricaZone;
     
 
 
@@ -333,18 +337,6 @@ public class PhoneBookController implements Initializable {
             Logger.getLogger(PhoneBookController.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        nameTextField.clear();
-        surnameTextField.clear();
-        number1TextField.clear();
-        number2TextField.clear();
-        number3TextField.clear();
-        email1TextField.clear();
-        email2TextField.clear();
-        email3TextField.clear();
-        addressTextField.clear();
-        notesTextField.clear();
-        contactImage=null;
-        favoritesCheckBox.setSelected(false);
         CreateForm.setVisible(false);
         TableBook.setVisible(true);
         
