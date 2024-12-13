@@ -30,6 +30,9 @@ public class PhoneBookApp extends Application {
         
         // Mostra la finestra principale
         primaryStage.show();
+        
+        //Impedisce il ridimensionamento della finestra
+        primaryStage.setResizable(false);
     }
 
     /**

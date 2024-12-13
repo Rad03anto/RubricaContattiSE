@@ -566,7 +566,7 @@ public class PhoneBookController implements Initializable {
         Contact selectedContact = TableBin.getSelectionModel().getSelectedItem();
         if (selectedContact != null) {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("Conferma Eliminazione");
+            alert.setTitle("Rimuovi definitivamente");
             alert.setHeaderText("Sei sicuro di voler eliminare definitivamente il contatto?");
             alert.setContentText("L'operazione è irreversibile.");
 

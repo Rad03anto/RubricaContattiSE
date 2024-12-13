@@ -29,28 +29,76 @@
                            <children>
                               <GridPane fx:id="ContactView" prefHeight="750.0" prefWidth="947.0" styleClass="GridPane" stylesheets="@style.css" visible="false">
                                  <children>
-                                    <Label layoutX="195.0" layoutY="209.0" prefHeight="74.0" prefWidth="191.0" text="Cognome:" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <Label layoutX="195.0" layoutY="209.0" prefHeight="74.0" prefWidth="191.0" text="Cognome:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                        <font>
                                           <Font name="Yu Gothic Regular" size="15.0" />
                                        </font>
                                     </Label>
-                                    <Label layoutX="195.0" layoutY="279.0" prefHeight="76.0" prefWidth="222.0" text="Numeri di telefono:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                    <Label layoutX="195.0" layoutY="97.0" prefHeight="69.0" prefWidth="198.0" text="Nome:" GridPane.columnIndex="1" />
-                                    <Label layoutX="195.0" layoutY="415.0" prefHeight="72.0" prefWidth="231.0" text="Indirizzo:" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                                    <Label layoutX="195.0" layoutY="351.0" prefHeight="67.0" prefWidth="230.0" text="Email:" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                    <Label layoutX="195.0" layoutY="553.0" prefHeight="45.0" prefWidth="109.0" text="Preferiti:" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                                    <Label layoutX="195.0" layoutY="484.0" prefHeight="72.0" prefWidth="260.0" text="Note:" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                    <Label layoutX="195.0" layoutY="279.0" prefHeight="76.0" prefWidth="222.0" text="Numeri di telefono:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label layoutX="195.0" layoutY="97.0" prefHeight="69.0" prefWidth="198.0" text="Nome:" textFill="WHITE" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label layoutX="195.0" layoutY="415.0" prefHeight="72.0" prefWidth="231.0" text="Indirizzo:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label layoutX="195.0" layoutY="351.0" prefHeight="67.0" prefWidth="230.0" text="Email:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label layoutX="195.0" layoutY="553.0" prefHeight="45.0" prefWidth="109.0" text="Preferiti:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label layoutX="195.0" layoutY="484.0" prefHeight="72.0" prefWidth="260.0" text="Note:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
                                     <ImageView fitHeight="148.0" fitWidth="203.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" />
-                                    <Label fx:id="number3Label" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-                                    <Label fx:id="email3Label" GridPane.columnIndex="6" GridPane.rowIndex="3" />
-                                    <Label fx:id="addressLabel" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                                    <Label fx:id="favoritesLabel" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-                                    <Label fx:id="notesLabel" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-                                    <Label fx:id="email1Label" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                                    <Label fx:id="email2Label" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-                                    <Label fx:id="nameLabel" GridPane.columnIndex="2" />
-                                    <Label fx:id="surnameLabel" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                                    <Label fx:id="number1Label" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <Label fx:id="number3Label" textFill="WHITE" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="13.0" />
+                                       </font></Label>
+                                    <Label fx:id="email3Label" textFill="WHITE" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="13.0" />
+                                       </font></Label>
+                                    <Label fx:id="addressLabel" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="13.0" />
+                                       </font></Label>
+                                    <Label fx:id="favoritesLabel" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="13.0" />
+                                       </font></Label>
+                                    <Label fx:id="notesLabel" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="13.0" />
+                                       </font></Label>
+                                    <Label fx:id="email1Label" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="13.0" />
+                                       </font></Label>
+                                    <Label fx:id="email2Label" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="13.0" />
+                                       </font></Label>
+                                    <Label fx:id="nameLabel" textFill="WHITE" GridPane.columnIndex="2">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="13.0" />
+                                       </font></Label>
+                                    <Label fx:id="surnameLabel" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="13.0" />
+                                       </font></Label>
+                                    <Label fx:id="number1Label" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="13.0" />
+                                       </font></Label>
                                     <Button fx:id="goBackButton" mnemonicParsing="false" onAction="#onGoBackButton" text="Indietro" GridPane.columnIndex="6" GridPane.rowIndex="6" />
                                     <Label fx:id="number2Label" GridPane.columnIndex="4" GridPane.rowIndex="2" />
                                  </children>
@@ -82,17 +130,35 @@
                               </TableView>
                               <GridPane fx:id="CreateForm" prefHeight="1221.0" prefWidth="1244.0" styleClass="GridPane" stylesheets="@style.css" visible="false">
                                  <children>
-                                    <Label layoutX="195.0" layoutY="209.0" prefHeight="74.0" prefWidth="191.0" text="Cognome:" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <Label layoutX="195.0" layoutY="209.0" prefHeight="74.0" prefWidth="191.0" text="Cognome:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                        <font>
-                                          <Font name="Yu Gothic Regular" size="15.0" />
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font>
                                     </Label>
-                                    <Label layoutX="195.0" layoutY="279.0" prefHeight="76.0" prefWidth="222.0" text="Numeri di telefono:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                    <Label layoutX="195.0" layoutY="97.0" prefHeight="69.0" prefWidth="198.0" text="Nome:" GridPane.columnIndex="1" />
-                                    <Label layoutX="195.0" layoutY="415.0" prefHeight="72.0" prefWidth="231.0" text="Indirizzo:" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                                    <Label layoutX="195.0" layoutY="351.0" prefHeight="67.0" prefWidth="230.0" text="Email:" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                    <Label layoutX="195.0" layoutY="553.0" prefHeight="45.0" prefWidth="109.0" text="Preferiti:" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                                    <Label layoutX="195.0" layoutY="484.0" prefHeight="72.0" prefWidth="260.0" text="Note:" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                    <Label layoutX="195.0" layoutY="279.0" prefHeight="76.0" prefWidth="222.0" text="Numeri di telefono:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label layoutX="195.0" layoutY="97.0" prefHeight="69.0" prefWidth="198.0" text="Nome:" textFill="WHITE" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label layoutX="195.0" layoutY="415.0" prefHeight="72.0" prefWidth="231.0" text="Indirizzo:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label layoutX="195.0" layoutY="351.0" prefHeight="67.0" prefWidth="230.0" text="Email:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label layoutX="195.0" layoutY="553.0" prefHeight="45.0" prefWidth="109.0" text="Preferiti:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label layoutX="195.0" layoutY="484.0" prefHeight="72.0" prefWidth="260.0" text="Note:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
                                     <TextField fx:id="nameTextField" promptText="Nome" GridPane.columnIndex="2" />
                                     <TextField fx:id="surnameTextField" promptText="Cognome" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                                     <TextField fx:id="number1TextField" prefHeight="23.0" prefWidth="159.0" promptText="Numero di telefono" GridPane.columnIndex="2" GridPane.rowIndex="2" />
@@ -103,7 +169,10 @@
                                     <TextField fx:id="number3TextField" prefHeight="31.0" prefWidth="153.0" promptText="Numero di telefono" GridPane.columnIndex="6" GridPane.rowIndex="2" />
                                     <TextField fx:id="email2TextField" promptText="Email" GridPane.columnIndex="4" GridPane.rowIndex="3" />
                                     <TextField fx:id="email3TextField" promptText="Email" GridPane.columnIndex="6" GridPane.rowIndex="3" />
-                                    <CheckBox fx:id="favoritesCheckBox" mnemonicParsing="false" text="Aggiungi" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                    <CheckBox fx:id="favoritesCheckBox" mnemonicParsing="false" text="Aggiungi" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></CheckBox>
                                     <ImageView fx:id="contactImage" fitHeight="140.0" fitWidth="203.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowSpan="2" />
                                     <Button fx:id="SaveContactButton" mnemonicParsing="false" onAction="#onSaveContactButton" text="Salva Contatto" GridPane.columnIndex="6" GridPane.rowIndex="6" />
                                     <Button fx:id="ImageButton" alignment="CENTER" mnemonicParsing="false" text="Inserisci Immagine" GridPane.columnIndex="6" GridPane.rowIndex="1" />
@@ -140,36 +209,87 @@
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="711.0" prefWidth="1233.0" styleClass="AnchorPane" stylesheets="@style.css">
                      <children>
                         <TextField fx:id="searchEL" layoutX="60.0" layoutY="177.0" promptText="Ricerca..." />
-                        <Button fx:id="RemoveELButton" layoutX="36.0" layoutY="262.0" mnemonicParsing="false" text="Rimuovi dal Gruppo di Emergenza" />
-                        <Button fx:id="ViewButton1" layoutX="76.0" layoutY="304.0" mnemonicParsing="false" onAction="#onDisplayContactButton" text="Visualizza Contatto" />
+                        <Button fx:id="RemoveELButton" layoutX="39.0" layoutY="262.0" mnemonicParsing="false" text="Rimuovi dai contatti di Emergenza" />
+                        <Button fx:id="ViewButton1" layoutX="83.0" layoutY="304.0" mnemonicParsing="false" onAction="#onDisplayContactButton" text="Visualizza Contatto" />
                         <StackPane layoutX="315.0" prefHeight="712.0" prefWidth="929.0">
                            <children>
                               <GridPane fx:id="ContactView1" prefHeight="750.0" prefWidth="947.0" visible="false">
                                  <children>
-                                    <Label layoutX="195.0" layoutY="209.0" prefHeight="74.0" prefWidth="191.0" text="Cognome:" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <Label layoutX="195.0" layoutY="209.0" prefHeight="74.0" prefWidth="191.0" text="Cognome:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                        <font>
-                                          <Font name="Yu Gothic Regular" size="15.0" />
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font>
                                     </Label>
-                                    <Label layoutX="195.0" layoutY="279.0" prefHeight="76.0" prefWidth="222.0" text="Numeri di telefono:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                    <Label layoutX="195.0" layoutY="97.0" prefHeight="69.0" prefWidth="198.0" text="Nome:" GridPane.columnIndex="1" />
-                                    <Label layoutX="195.0" layoutY="415.0" prefHeight="72.0" prefWidth="231.0" text="Indirizzo:" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                                    <Label layoutX="195.0" layoutY="351.0" prefHeight="67.0" prefWidth="230.0" text="Email:" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                    <Label layoutX="195.0" layoutY="553.0" prefHeight="45.0" prefWidth="109.0" text="Preferiti:" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                                    <Label layoutX="195.0" layoutY="484.0" prefHeight="72.0" prefWidth="260.0" text="Note:" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                    <Label layoutX="195.0" layoutY="279.0" prefHeight="76.0" prefWidth="222.0" text="Numeri di telefono:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label layoutX="195.0" layoutY="97.0" prefHeight="69.0" prefWidth="198.0" text="Nome:" textFill="WHITE" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label layoutX="195.0" layoutY="415.0" prefHeight="72.0" prefWidth="231.0" text="Indirizzo:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label layoutX="195.0" layoutY="351.0" prefHeight="67.0" prefWidth="230.0" text="Email:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label layoutX="195.0" layoutY="553.0" prefHeight="45.0" prefWidth="109.0" text="Preferiti:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label layoutX="195.0" layoutY="484.0" prefHeight="72.0" prefWidth="260.0" text="Note:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
                                     <ImageView fitHeight="148.0" fitWidth="203.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" />
-                                    <Label fx:id="number3Label2" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-                                    <Label fx:id="email3Label2" GridPane.columnIndex="6" GridPane.rowIndex="3" />
-                                    <Label fx:id="addressLabel2" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                                    <Label fx:id="favoritesLabel2" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-                                    <Label fx:id="notesLabel2" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-                                    <Label fx:id="email1Label2" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                                    <Label fx:id="email2Label2" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-                                    <Label fx:id="nameLabel2" GridPane.columnIndex="2" />
-                                    <Label fx:id="surnameLabel2" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                                    <Label fx:id="number1Label2" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <Label fx:id="number3Label2" textFill="WHITE" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label fx:id="email3Label2" textFill="WHITE" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label fx:id="addressLabel2" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label fx:id="favoritesLabel2" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label fx:id="notesLabel2" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label fx:id="email1Label2" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label fx:id="email2Label2" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label fx:id="nameLabel2" textFill="WHITE" GridPane.columnIndex="2">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label fx:id="surnameLabel2" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label fx:id="number1Label2" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
                                     <Button fx:id="goBackButton2" mnemonicParsing="false" onAction="#onGoBackButton" text="Indietro" GridPane.columnIndex="6" GridPane.rowIndex="6" />
-                                    <Label fx:id="number2Label2" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                                    <Label fx:id="number2Label2" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
                                  </children>
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="296.0" minWidth="10.0" prefWidth="10.0" />
@@ -212,36 +332,87 @@
                      <children>
                         <TextField fx:id="searchB" layoutX="53.0" layoutY="97.0" promptText="Ricerca..." />
                         <Button fx:id="onRestoreButton" layoutX="86.0" layoutY="255.0" mnemonicParsing="false" onAction="#onRestoreButton" text="Ripristina Contatto" />
-                        <Button fx:id="onRemoveBinButton" layoutX="71.0" layoutY="299.0" mnemonicParsing="false" onAction="#onRemoveBinButton" text="Rimuovi Definitivamente" />
+                        <Button fx:id="onRemoveBinButton" layoutX="41.0" layoutY="299.0" mnemonicParsing="false" onAction="#onRemoveBinButton" text="Rimuovi definitivamente dai contatti" />
                         <Button fx:id="ViewButton11" layoutX="86.0" layoutY="343.0" mnemonicParsing="false" onAction="#onDisplayContactButton" text="Visualizza Contatto" />
                         <StackPane layoutX="315.0" prefHeight="712.0" prefWidth="929.0">
                            <children>
                               <GridPane fx:id="ContactView11" prefHeight="750.0" prefWidth="947.0" visible="false">
                                  <children>
-                                    <Label layoutX="195.0" layoutY="209.0" prefHeight="74.0" prefWidth="191.0" text="Cognome:" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <Label layoutX="195.0" layoutY="209.0" prefHeight="74.0" prefWidth="191.0" text="Cognome:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                        <font>
-                                          <Font name="Yu Gothic Regular" size="15.0" />
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font>
                                     </Label>
-                                    <Label layoutX="195.0" layoutY="279.0" prefHeight="76.0" prefWidth="222.0" text="Numeri di telefono:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                    <Label layoutX="195.0" layoutY="97.0" prefHeight="69.0" prefWidth="198.0" text="Nome:" GridPane.columnIndex="1" />
-                                    <Label layoutX="195.0" layoutY="415.0" prefHeight="72.0" prefWidth="231.0" text="Indirizzo:" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                                    <Label layoutX="195.0" layoutY="351.0" prefHeight="67.0" prefWidth="230.0" text="Email:" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                    <Label layoutX="195.0" layoutY="553.0" prefHeight="45.0" prefWidth="109.0" text="Preferiti:" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                                    <Label layoutX="195.0" layoutY="484.0" prefHeight="72.0" prefWidth="260.0" text="Note:" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                    <Label layoutX="195.0" layoutY="279.0" prefHeight="76.0" prefWidth="222.0" text="Numeri di telefono:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label layoutX="195.0" layoutY="97.0" prefHeight="69.0" prefWidth="198.0" text="Nome:" textFill="WHITE" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label layoutX="195.0" layoutY="415.0" prefHeight="72.0" prefWidth="231.0" text="Indirizzo:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label layoutX="195.0" layoutY="351.0" prefHeight="67.0" prefWidth="230.0" text="Email:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label layoutX="195.0" layoutY="553.0" prefHeight="45.0" prefWidth="109.0" text="Preferiti:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label layoutX="195.0" layoutY="484.0" prefHeight="72.0" prefWidth="260.0" text="Note:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
                                     <ImageView fitHeight="148.0" fitWidth="203.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" />
-                                    <Label fx:id="number3Label21" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-                                    <Label fx:id="email3Label21" GridPane.columnIndex="6" GridPane.rowIndex="3" />
-                                    <Label fx:id="addressLabel21" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                                    <Label fx:id="favoritesLabel21" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-                                    <Label fx:id="notesLabel21" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-                                    <Label fx:id="email1Label21" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                                    <Label fx:id="email2Label21" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-                                    <Label fx:id="nameLabel21" GridPane.columnIndex="2" />
-                                    <Label fx:id="surnameLabel21" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                                    <Label fx:id="number1Label21" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <Label fx:id="number3Label21" textFill="WHITE" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label fx:id="email3Label21" textFill="WHITE" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label fx:id="addressLabel21" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label fx:id="favoritesLabel21" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label fx:id="notesLabel21" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label fx:id="email1Label21" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label fx:id="email2Label21" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label fx:id="nameLabel21" textFill="WHITE" GridPane.columnIndex="2">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label fx:id="surnameLabel21" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label fx:id="number1Label21" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
                                     <Button fx:id="goBackButton21" mnemonicParsing="false" onAction="#onGoBackButton" text="Indietro" GridPane.columnIndex="6" GridPane.rowIndex="6" />
-                                    <Label fx:id="number2Label21" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                                    <Label fx:id="number2Label21" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
                                  </children>
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="296.0" minWidth="10.0" prefWidth="10.0" />
