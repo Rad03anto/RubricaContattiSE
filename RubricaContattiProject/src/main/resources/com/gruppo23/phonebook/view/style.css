@@ -4,7 +4,7 @@
     -fx-background-position: center center;
     -fx-background-repeat: no-repeat;
 }
-.TableBook {
+.TableView {
     -fx-background-image: url("uni2.png");
     -fx-background-size: cover;
     -fx-background-position: center center;

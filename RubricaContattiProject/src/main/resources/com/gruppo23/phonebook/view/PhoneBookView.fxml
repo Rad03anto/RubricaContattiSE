@@ -18,16 +18,16 @@
               <AnchorPane fx:id="rubricaZone" minHeight="0.0" minWidth="0.0" prefHeight="711.0" prefWidth="27.0" styleClass="AnchorPane" stylesheets="@style.css">
                      <children>
                         <Button fx:id="SearchButton" layoutX="221.0" layoutY="105.0" mnemonicParsing="false" onAction="#onSearchButtonAction" text="Cerca" />
-                        <TextField fx:id="searchCB" promptText="Ricerca..." layoutX="28.0" layoutY="105.0" />
-                        <Button fx:id="CreateButton" layoutX="102.0" layoutY="168.0" mnemonicParsing="false" onAction="#handleCreateButtonAction" text="Crea Contatto" />
-                        <Button fx:id="AddToELButton" layoutX="36.0" layoutY="312.0" mnemonicParsing="false" onAction="#onAddToELButton" text="Aggiungi ai Contatti di Emergenza" />
-                        <Button fx:id="ViewButton" layoutX="85.0" layoutY="216.0" mnemonicParsing="false" onAction="#onDisplayContactButton" text="Visualizza Contatto" />                
-                        <Button fx:id="onMoveToBinButton" layoutX="87.0" layoutY="362.0" mnemonicParsing="false" onAction="#onMoveToBinButton" text="Sposta nel Cestino" />
+                        <TextField fx:id="searchCB" layoutX="61.0" layoutY="105.0" promptText="Ricerca..." />
+                        <Button fx:id="CreateButton" layoutX="101.0" layoutY="147.0" mnemonicParsing="false" onAction="#handleCreateButtonAction" text="Crea Contatto" />
+                        <Button fx:id="AddToELButton" layoutX="47.0" layoutY="242.0" mnemonicParsing="false" onAction="#onAddToELButton" text="Aggiungi ai Contatti di Emergenza" />
+                        <Button fx:id="ViewButton" layoutX="87.0" layoutY="192.0" mnemonicParsing="false" onAction="#onDisplayContactButton" text="Visualizza Contatto" />                
+                        <Button fx:id="onMoveToBinButton" layoutX="89.0" layoutY="290.0" mnemonicParsing="false" onAction="#onMoveToBinButton" text="Sposta nel Cestino" />
                         <Button fx:id="ImportButton" layoutX="95.0" layoutY="490.0" mnemonicParsing="false" text="Importa Rubrica" />
                         <Button fx:id="ExportButton" layoutX="96.0" layoutY="534.0" mnemonicParsing="false" text="Esporta Rubrica" />
                         <StackPane layoutX="315.0" prefHeight="712.0" prefWidth="929.0">
                            <children>
-                              <GridPane fx:id="ContactView" prefHeight="750.0" prefWidth="947.0" stylesheets="@style.css" visible="false">
+                              <GridPane fx:id="ContactView" prefHeight="750.0" prefWidth="947.0" styleClass="GridPane" stylesheets="@style.css" visible="false">
                                  <children>
                                     <Label layoutX="195.0" layoutY="209.0" prefHeight="74.0" prefWidth="191.0" text="Cognome:" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                        <font>
@@ -74,13 +74,13 @@
                                     <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="115.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                               </GridPane>
-                              <TableView fx:id="TableBook" prefHeight="636.0" prefWidth="931.0" styleClass="TableBook" stylesheets="@style.css">
+                              <TableView fx:id="TableBook" prefHeight="636.0" prefWidth="931.0" styleClass="TableView" stylesheets="@style.css">
                                  <columns>
                                     <TableColumn fx:id="surnameClm" prefWidth="150.0" text="Cognome" />
                                     <TableColumn fx:id="nameClm" prefWidth="150.0" text="Nome" />
                                  </columns>
                               </TableView>
-                              <GridPane fx:id="CreateForm" prefHeight="1221.0" prefWidth="1244.0" visible="false">
+                              <GridPane fx:id="CreateForm" prefHeight="1221.0" prefWidth="1244.0" styleClass="GridPane" stylesheets="@style.css" visible="false">
                                  <children>
                                     <Label layoutX="195.0" layoutY="209.0" prefHeight="74.0" prefWidth="191.0" text="Cognome:" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                        <font>
@@ -95,12 +95,12 @@
                                     <Label layoutX="195.0" layoutY="484.0" prefHeight="72.0" prefWidth="260.0" text="Note:" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                                     <TextField fx:id="nameTextField" promptText="Nome" GridPane.columnIndex="2" />
                                     <TextField fx:id="surnameTextField" promptText="Cognome" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                                    <TextField fx:id="number1TextField" promptText="Numero di telefono" prefHeight="23.0" prefWidth="159.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <TextField fx:id="number1TextField" prefHeight="23.0" prefWidth="159.0" promptText="Numero di telefono" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                                     <TextField fx:id="email1TextField" promptText="Email" GridPane.columnIndex="2" GridPane.rowIndex="3" />
                                     <TextField fx:id="addressTextField" promptText="Indirizzo" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                                    <TextField fx:id="notesTextField" promptText="Inserisci qui le note..." prefHeight="73.0" prefWidth="218.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                                    <TextField fx:id="notesTextField" prefHeight="73.0" prefWidth="218.0" promptText="Inserisci qui le note..." GridPane.columnIndex="2" GridPane.rowIndex="6" />
                                     <TextField fx:id="number2TextField" promptText="Numero di telefono" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-                                    <TextField fx:id="number3TextField" promptText="Numero di telefono" prefHeight="31.0" prefWidth="153.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                                    <TextField fx:id="number3TextField" prefHeight="31.0" prefWidth="153.0" promptText="Numero di telefono" GridPane.columnIndex="6" GridPane.rowIndex="2" />
                                     <TextField fx:id="email2TextField" promptText="Email" GridPane.columnIndex="4" GridPane.rowIndex="3" />
                                     <TextField fx:id="email3TextField" promptText="Email" GridPane.columnIndex="6" GridPane.rowIndex="3" />
                                     <CheckBox fx:id="favoritesCheckBox" mnemonicParsing="false" text="Aggiungi" GridPane.columnIndex="2" GridPane.rowIndex="5" />
@@ -137,12 +137,11 @@
           </Tab>
           <Tab fx:id="emergencyTab" onSelectionChanged="#handleEmergencyTab" text="Contatti di Emergenza">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="711.0" prefWidth="1233.0">
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="711.0" prefWidth="1233.0" styleClass="AnchorPane" stylesheets="@style.css">
                      <children>
-                        <TextField fx:id="searchEL" layoutX="28.0" layoutY="80.0" />
-                        <Label layoutX="132.0" layoutY="45.0" prefHeight="21.0" prefWidth="52.0" text="Ricerca"/>
-                        <Button fx:id="RemoveELButton" layoutX="36.0" layoutY="138.0" mnemonicParsing="false" text="Rimuovi dal Gruppo di Emergenza" />
-                        <Button fx:id="ViewButton1" layoutX="80.0" layoutY="186.0" mnemonicParsing="false" onAction="#onDisplayContactButton" text="Visualizza Contatto" />
+                        <TextField fx:id="searchEL" layoutX="60.0" layoutY="177.0" promptText="Ricerca..." />
+                        <Button fx:id="RemoveELButton" layoutX="36.0" layoutY="262.0" mnemonicParsing="false" text="Rimuovi dal Gruppo di Emergenza" />
+                        <Button fx:id="ViewButton1" layoutX="76.0" layoutY="304.0" mnemonicParsing="false" onAction="#onDisplayContactButton" text="Visualizza Contatto" />
                         <StackPane layoutX="315.0" prefHeight="712.0" prefWidth="929.0">
                            <children>
                               <GridPane fx:id="ContactView1" prefHeight="750.0" prefWidth="947.0" visible="false">
@@ -192,7 +191,7 @@
                                     <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="115.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                               </GridPane>
-                              <TableView fx:id="TableEL" layoutX="315.0" prefHeight="712.0" prefWidth="1318.0">
+                              <TableView fx:id="TableEL" layoutX="315.0" prefHeight="712.0" prefWidth="1318.0" styleClass="GridPane" stylesheets="@style.css">
                                  <columns>
                                     <TableColumn fx:id="surnameClm1" prefWidth="150.0" text="Cognome" />
                                     <TableColumn fx:id="nameClm1" prefWidth="150.0" text="Nome" />
@@ -201,7 +200,7 @@
                            </children>
                         </StackPane>
                         <Separator layoutX="309.0" layoutY="-146.0" orientation="VERTICAL" prefHeight="713.0" prefWidth="13.0" />
-                        <Button fx:id="SearchButton1" layoutX="222.0" layoutY="80.0" mnemonicParsing="false" onAction="#onSearchButtonAction" text="Cerca" />
+                        <Button fx:id="SearchButton1" layoutX="223.0" layoutY="177.0" mnemonicParsing="false" onAction="#onSearchButtonAction" text="Cerca" />
 
                      </children>
                   </AnchorPane>
@@ -209,13 +208,12 @@
           </Tab>
             <Tab fx:id="binTab" onSelectionChanged="#onBinTab" text="Cestino">
                <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="711.0" prefWidth="369.0">
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="711.0" prefWidth="369.0" styleClass="AnchorPane" stylesheets="@style.css">
                      <children>
-                        <TextField fx:id="searchB" layoutX="28.0" layoutY="80.0" />
-                        <Label layoutX="132.0" layoutY="45.0" prefHeight="21.0" prefWidth="52.0" text="Ricerca" />
-                        <Button fx:id="onRestoreButton" layoutX="86.0" layoutY="142.0" mnemonicParsing="false" onAction="#onRestoreButton" text="Ripristina Contatto" />
-                        <Button fx:id="onRemoveBinButton" layoutX="70.0" layoutY="197.0" mnemonicParsing="false" onAction="#onRemoveBinButton" text="Rimuovi Definitivamente" />
-                        <Button fx:id="ViewButton11" layoutX="85.0" layoutY="244.0" mnemonicParsing="false" onAction="#onDisplayContactButton" text="Visualizza Contatto" />
+                        <TextField fx:id="searchB" layoutX="53.0" layoutY="97.0" promptText="Ricerca..." />
+                        <Button fx:id="onRestoreButton" layoutX="86.0" layoutY="255.0" mnemonicParsing="false" onAction="#onRestoreButton" text="Ripristina Contatto" />
+                        <Button fx:id="onRemoveBinButton" layoutX="71.0" layoutY="299.0" mnemonicParsing="false" onAction="#onRemoveBinButton" text="Rimuovi Definitivamente" />
+                        <Button fx:id="ViewButton11" layoutX="86.0" layoutY="343.0" mnemonicParsing="false" onAction="#onDisplayContactButton" text="Visualizza Contatto" />
                         <StackPane layoutX="315.0" prefHeight="712.0" prefWidth="929.0">
                            <children>
                               <GridPane fx:id="ContactView11" prefHeight="750.0" prefWidth="947.0" visible="false">
@@ -265,7 +263,7 @@
                                     <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="115.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                               </GridPane>
-                              <TableView fx:id="TableBin" layoutX="315.0" prefHeight="712.0" prefWidth="929.0">
+                              <TableView fx:id="TableBin" layoutX="315.0" prefHeight="712.0" prefWidth="929.0" styleClass="TableView" stylesheets="@style.css">
                                  <columns>
                                     <TableColumn fx:id="surnameClm2" prefWidth="150.0" text="Cognome" />
                                     <TableColumn fx:id="nameClm2" prefWidth="150.0" text="Nome" />
@@ -274,7 +272,7 @@
                            </children>
                         </StackPane>
                         <Separator layoutX="309.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="713.0" prefWidth="13.0" />
-                        <Button fx:id="SearchButton2" layoutX="222.0" layoutY="80.0" mnemonicParsing="false" onAction="#onSearchButtonAction" text="Cerca" />
+                        <Button fx:id="SearchButton2" layoutX="217.0" layoutY="97.0" mnemonicParsing="false" onAction="#onSearchButtonAction" text="Cerca" />
                      </children>
                   </AnchorPane>
                </content>

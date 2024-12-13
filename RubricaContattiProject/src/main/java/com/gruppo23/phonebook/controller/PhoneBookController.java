@@ -229,17 +229,29 @@ public class PhoneBookController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        //Implementazione dei setText della pagina Rubrica
         binTab.setText("🗑 Cestino");
         contactBookTab.setText("📖 Rubrica");
         SearchButton.setText("🔍 Cerca");
         emergencyTab.setText("🚑 Contatti di emergenza");
         CreateButton.setText("➕ Crea Contatto");
         ViewButton.setText("👁 Visualizza Contatto");
-        AddToELButton.setText("🚑 Aggiungi contatto alla lista di emergenza");
+        AddToELButton.setText("🚑 Aggiungi ai contatti di emergenza");
         onMoveToBinButton.setText("🗑 Sposta nel cestino");
         ImportButton.setText("📥 Importa rubrica");
         ExportButton.setText("📤 Esporta rubrica");
-
+        
+        //Implementazione dei setText della pagina EmergencyList
+        SearchButton1.setText("🔍 Cerca");
+        RemoveELButton.setText("🚑 Rimuovi dai contatti di emergenza");
+        ViewButton1.setText("👁 Visualizza Contatto");
+        
+        //Implementazione dei setText della pagina Cestino
+        SearchButton2.setText("🔍 Cerca");
+        onRestoreButton.setText("🔁 Ripristina contatto");
+        onRemoveBinButton.setText("🗑 Rimuovi definitivamente dai contatti");
+        ViewButton11.setText("👁 Visualizza Contatto");
+        
         contactBook = new ContactBook();
         emergencyList = new EmergencyList();
         observableContacts = FXCollections.observableArrayList(contactBook.getContacts());
