@@ -148,6 +148,7 @@ public class PhoneBookController implements Initializable {
     private ObservableList<Contact> observableContacts;
     private ObservableList<Contact> observableEL;
 
+
     @FXML
     private Button goBackButton;
     @FXML
@@ -212,11 +213,15 @@ public class PhoneBookController implements Initializable {
     private GridPane ContactView1;
     @FXML
     private GridPane ContactView11;
+    @FXML
+    private Button SearchButton;
+    @FXML
+    private Button SearchButton1;
+    @FXML
+    private Button SearchButton2;
 
     private Bin bin;
     private ObservableList<Contact> observableBin;
-    
-
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -249,6 +254,8 @@ public class PhoneBookController implements Initializable {
     @FXML
     private void onSaveContactButton(ActionEvent event) {
         
+        TableBook.setItems(observableContacts);
+        
         String name = nameTextField.getText();
         String surname = surnameTextField.getText();
         List<String> phoneNumbers = new ArrayList<>();
@@ -267,13 +274,26 @@ public class PhoneBookController implements Initializable {
         Contact newContact = new Contact(name, surname, phoneNumbers, emails, address, notes, image, isFavorite);
         try {
             contactBook.addContact(newContact);
-            observableContacts.add(newContact);
+            observableContacts.setAll(contactBook.getContacts());
         } catch (FullGroupException ex) {
             Logger.getLogger(PhoneBookController.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         CreateForm.setVisible(false);
         TableBook.setVisible(true);
+        
+        nameTextField.clear();
+        surnameTextField.clear();
+        number1TextField.clear();
+        number2TextField.clear();
+        number3TextField.clear();
+        email1TextField.clear();
+        email2TextField.clear();
+        email3TextField.clear();
+        addressTextField.clear();
+        notesTextField.clear();
+        favoritesCheckBox.setSelected(false);
+        contactImage.setImage(null);
     }
 
     @FXML
@@ -281,7 +301,7 @@ public class PhoneBookController implements Initializable {
          Contact selectedContact = TableBook.getSelectionModel().getSelectedItem();
          if(selectedContact!=null){
              contactBook.moveToEmergencyList(selectedContact, emergencyList);
-             observableEL.add(selectedContact);
+             observableEL.setAll(emergencyList.getContacts());
              
              }
             
@@ -443,7 +463,6 @@ public class PhoneBookController implements Initializable {
     }
 
     @FXML
-
     private void onGoBackButton(ActionEvent event) {
         Object source = event.getSource();
         
@@ -460,7 +479,7 @@ public class PhoneBookController implements Initializable {
     }
     }
     
-  @FXML
+    @FXML
     private void handleEmergencyTab(Event event) {
         CreateForm.setVisible(false);
         ContactView1.setVisible(false);
@@ -479,8 +498,7 @@ public class PhoneBookController implements Initializable {
         ContactView11.setVisible(false);
         TableBin.setVisible(true);
     }
-
-    
+   
    @FXML
     private void onMoveToBinButton(ActionEvent event) throws FullGroupException {
     Contact selectedContact = TableBook.getSelectionModel().getSelectedItem();
@@ -491,6 +509,12 @@ public class PhoneBookController implements Initializable {
             observableContacts.remove(selectedContact);
         }
     }
-
     
+    @FXML
+    private void onSearchButtonAction(ActionEvent event) {
+        List<Contact> filteredContacts = contactBook.search(searchCB.getText().toLowerCase());
+        ObservableList<Contact> observableFilteredContacts = FXCollections.observableArrayList(filteredContacts);
+        TableBook.setItems(observableFilteredContacts);
+    }
+
 }

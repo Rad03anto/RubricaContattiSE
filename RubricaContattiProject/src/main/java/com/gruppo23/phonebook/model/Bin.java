@@ -4,6 +4,8 @@
  */
 package com.gruppo23.phonebook.model;
 
+import com.gruppo23.phonebook.exceptions.FullGroupException;
+
 /**
  *Classe Bin
  *@brief Gestisce un cestino per contatti, consentendo il ripristino o
@@ -33,8 +35,9 @@ public class Bin extends ContactList {
      * @post Il contatto viene rimosso dal cestino, pronto per essere aggiunto a un'altra lista.
      */
    
-    public void restoreContact(Contact contact){
-       
+    public void restoreContact(Contact contact, ContactBook contactBook) throws FullGroupException{
+       removeContact(contact);
+       contactBook.addContact(contact);
     }
 /**
  *@brief Elimina automaticamente tutti i contatti dal cestino.

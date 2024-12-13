@@ -7,6 +7,7 @@ package com.gruppo23.phonebook.model;
 import com.gruppo23.phonebook.exceptions.FullGroupException;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -32,6 +33,7 @@ public abstract class ContactList implements Serializable {
      */
     public void addContact(Contact contact) throws FullGroupException {
         contactList.add(contact);
+        Collections.sort(contactList);
     }
     
     /**
@@ -67,11 +69,18 @@ public abstract class ContactList implements Serializable {
      * @return result La lista filtrata e ordinata
      */
     
-    public List<Contact> search(String string){
+    public List<Contact> search(String searchString) {
         //da implementare
-        List<Contact> result = new ArrayList();
+        List<Contact> result = new ArrayList<>();
+        String searchStringLower = searchString.toLowerCase();
+        for(Contact contact : contactList) {
+            if(contact.getSurname().toLowerCase().contains(searchStringLower) || contact.getName().toLowerCase().contains(searchStringLower)) {
+                result.add(contact);
+            }
+        }
         return result;
     }
+    
     
     /**
      * @brief Restituisce una lista di contatti
@@ -81,5 +90,6 @@ public abstract class ContactList implements Serializable {
     public List<Contact> getContacts() {
         return contactList;
     }
+   
   
 }
