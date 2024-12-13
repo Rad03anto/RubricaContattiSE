@@ -14,7 +14,6 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
-import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.collections.FXCollections;
@@ -281,10 +280,9 @@ public class PhoneBookController implements Initializable {
          
     }
 
-    //devo applicarlo su contactbook
     @FXML
     private void onSearchButtonAction(ActionEvent event) {
-        Set<Contact> filteredContacts = contactBook.search(searchCB.getText().toLowerCase());
+        List<Contact> filteredContacts = contactBook.search(searchCB.getText().toLowerCase());
         ObservableList<Contact> observableFilteredContacts = FXCollections.observableArrayList(filteredContacts);
         TableBook.setItems(observableFilteredContacts);
     }
