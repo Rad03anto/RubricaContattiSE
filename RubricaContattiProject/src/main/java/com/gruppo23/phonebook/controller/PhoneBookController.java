@@ -266,6 +266,8 @@ public class PhoneBookController implements Initializable {
     private Button CancelButton1;
     @FXML
     private AnchorPane rubricaZone;
+    @FXML
+    private Button FavButton;
     
 
 
@@ -279,7 +281,7 @@ public class PhoneBookController implements Initializable {
         emergencyTab.setText("🚑 Contatti di emergenza");
         CreateButton.setText("➕ Crea Contatto");
         ViewButton.setText("👁 Visualizza Contatto");
-        AddToELButton.setText("🚑 Aggiungi contatto alla lista di emergenza");
+        AddToELButton.setText("🚑 Aggiungi ai contatti di emergenza");
         onMoveToBinButton.setText("🗑 Sposta nel cestino");
         ImportButton.setText("📥 Importa rubrica");
         ExportButton.setText("📤 Esporta rubrica");
@@ -692,6 +694,28 @@ public class PhoneBookController implements Initializable {
                 TableBin.refresh();
             }
         }
+    }
+
+    @FXML
+    private void onFavButton(ActionEvent event) {
+    List<Contact> favoriteContacts = contactBook.displayFavorites();
+
+
+    ObservableList<Contact> favoriteObservableContacts = FXCollections.observableArrayList(favoriteContacts);
+
+
+    TableBook.setItems(favoriteObservableContacts);
+    }
+
+    @FXML
+    private void onRemoveFromEL(ActionEvent event) {
+        Contact selectedContact = TableBook.getSelectionModel().getSelectedItem();
+        if (selectedContact != null) 
+            if (emergencyList.getContacts().contains(selectedContact)) {
+            emergencyList.removeContact(selectedContact);
+            observableEL.setAll(emergencyList.getContacts());
+        }
+            
     }
 
 }
