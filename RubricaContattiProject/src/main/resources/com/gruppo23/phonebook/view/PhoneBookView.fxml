@@ -17,7 +17,8 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="711.0" prefWidth="27.0">
                      <children>
-                        <TextField fx:id="searchCB" layoutX="60.0" layoutY="79.0" />
+                        <Button fx:id="SearchButton" layoutX="222.0" layoutY="80.0" mnemonicParsing="false" onAction="#onSearchButtonAction" text="Cerca" />
+                        <TextField fx:id="searchCB" layoutX="28.0" layoutY="80.0" />
                         <Label layoutX="132.0" layoutY="45.0" prefHeight="21.0" prefWidth="52.0" text="Ricerca" />
                         <Button fx:id="CreateButton" layoutX="102.0" layoutY="168.0" mnemonicParsing="false" onAction="#handleCreateButtonAction" text="Crea Contatto" />
                         <Button fx:id="AddToELButton" layoutX="36.0" layoutY="312.0" mnemonicParsing="false" onAction="#onAddToELButton" text="Aggiungi ai Contatti di Emergenza" />
@@ -138,7 +139,7 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="711.0" prefWidth="1233.0">
                      <children>
-                        <TextField fx:id="searchEL" layoutX="60.0" layoutY="79.0" />
+                        <TextField fx:id="searchEL" layoutX="28.0" layoutY="80.0" />
                         <Label layoutX="132.0" layoutY="45.0" prefHeight="21.0" prefWidth="52.0" text="Ricerca" />
                         <Button fx:id="RemoveELButton" layoutX="36.0" layoutY="138.0" mnemonicParsing="false" text="Rimuovi dal Gruppo di Emergenza" />
                         <TableView fx:id="TableEL" layoutX="315.0" prefHeight="712.0" prefWidth="929.0">
@@ -148,6 +149,7 @@
                            </columns>
                         </TableView>
                         <Separator layoutX="309.0" orientation="VERTICAL" prefHeight="713.0" prefWidth="0.0" />
+                        <Button fx:id="SearchButton1" layoutX="222.0" layoutY="80.0" mnemonicParsing="false" onAction="#onSearchButtonAction" text="Cerca" />
                      </children>
                   </AnchorPane>
             </content>
@@ -156,7 +158,7 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="711.0" prefWidth="369.0">
                      <children>
-                        <TextField fx:id="searchB" layoutX="60.0" layoutY="79.0" />
+                        <TextField fx:id="searchB" layoutX="28.0" layoutY="80.0" />
                         <Label layoutX="132.0" layoutY="45.0" prefHeight="21.0" prefWidth="52.0" text="Ricerca" />
                         <Button fx:id="RestoreButton" layoutX="86.0" layoutY="142.0" mnemonicParsing="false" text="Ripristina Contatto" />
                         <Button fx:id="RemoveBinButton" layoutX="70.0" layoutY="197.0" mnemonicParsing="false" text="Rimuovi Definitivamente" />
@@ -167,6 +169,7 @@
                            </columns>
                         </TableView>
                         <Separator layoutX="309.0" orientation="VERTICAL" prefHeight="713.0" prefWidth="0.0" />
+                        <Button fx:id="SearchButton2" layoutX="222.0" layoutY="80.0" mnemonicParsing="false" onAction="#onSearchButtonAction" text="Cerca" />
                      </children>
                   </AnchorPane>
                </content>

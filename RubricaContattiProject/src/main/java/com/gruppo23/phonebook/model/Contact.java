@@ -19,7 +19,7 @@ import javafx.scene.image.Image;
 * @date Dicembre 8, 2024
 * @versione 1.0
 */
-public class Contact {
+public class Contact implements Comparable<Contact> {
     
     private String name;///< Il nome del contatto
     private String surname; ///< Il cognome del contatto
@@ -275,4 +275,8 @@ public class Contact {
         this.isFavorite = isFavorite;
     }
     
+    public int compareTo(Contact contact) {
+        return this.surname.compareTo(contact.surname);
+    }
+  
 }

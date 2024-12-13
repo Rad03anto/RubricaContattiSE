@@ -14,6 +14,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.collections.FXCollections;
@@ -144,6 +145,12 @@ public class PhoneBookController implements Initializable {
     private EmergencyList emergencyList;
     private ObservableList<Contact> observableContacts;
     private ObservableList<Contact> observableEL;
+    @FXML
+    private Button SearchButton;
+    @FXML
+    private Button SearchButton1;
+    @FXML
+    private Button SearchButton2;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -172,6 +179,8 @@ public class PhoneBookController implements Initializable {
     @FXML
     private void onSaveContactButton(ActionEvent event) {
         
+        TableBook.setItems(observableContacts);
+        
         String name = nameTextField.getText();
         String surname = surnameTextField.getText();
         List<String> phoneNumbers = new ArrayList<>();
@@ -190,13 +199,26 @@ public class PhoneBookController implements Initializable {
         Contact newContact = new Contact(name, surname, phoneNumbers, emails, address, notes, image, isFavorite);
         try {
             contactBook.addContact(newContact);
-            observableContacts.add(newContact);
+            observableContacts.setAll(contactBook.getContacts());
         } catch (FullGroupException ex) {
             Logger.getLogger(PhoneBookController.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         CreateForm.setVisible(false);
         TableBook.setVisible(true);
+        
+        nameTextField.clear();
+        surnameTextField.clear();
+        number1TextField.clear();
+        number2TextField.clear();
+        number3TextField.clear();
+        email1TextField.clear();
+        email2TextField.clear();
+        email3TextField.clear();
+        addressTextField.clear();
+        notesTextField.clear();
+        favoritesCheckBox.setSelected(false);
+        contactImage.setImage(null);
     }
 
     @FXML
@@ -204,7 +226,7 @@ public class PhoneBookController implements Initializable {
          Contact selectedContact = TableBook.getSelectionModel().getSelectedItem();
          if(selectedContact!=null){
              contactBook.moveToEmergencyList(selectedContact, emergencyList);
-             observableEL.add(selectedContact);
+             observableEL.setAll(emergencyList.getContacts());
              
              }
             
@@ -257,5 +279,13 @@ public class PhoneBookController implements Initializable {
          else favoritesLabel.setText("Non preferito");
          contactImage.setImage(selectedContact.getImage());
          
+    }
+
+    //devo applicarlo su contactbook
+    @FXML
+    private void onSearchButtonAction(ActionEvent event) {
+        Set<Contact> filteredContacts = contactBook.search(searchCB.getText().toLowerCase());
+        ObservableList<Contact> observableFilteredContacts = FXCollections.observableArrayList(filteredContacts);
+        TableBook.setItems(observableFilteredContacts);
     }
 }

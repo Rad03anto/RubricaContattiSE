@@ -8,6 +8,8 @@ import com.gruppo23.phonebook.exceptions.FullGroupException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * @package com.gruppo23.phonebook.model
@@ -67,11 +69,18 @@ public abstract class ContactList implements Serializable {
      * @return result La lista filtrata e ordinata
      */
     
-    public List<Contact> search(String string){
+    public Set<Contact> search(String searchString) {
         //da implementare
-        List<Contact> result = new ArrayList();
+        Set<Contact> result = new TreeSet<>();
+        String searchStringLower = searchString.toLowerCase();
+        for(Contact contact : contactList) {
+            if(contact.getSurname().contains(searchStringLower) || contact.getName().contains(searchStringLower)) {
+                result.add(contact);
+            }
+        }
         return result;
     }
+    
     
     /**
      * @brief Restituisce una lista di contatti
@@ -81,5 +90,6 @@ public abstract class ContactList implements Serializable {
     public List<Contact> getContacts() {
         return contactList;
     }
+   
   
 }
