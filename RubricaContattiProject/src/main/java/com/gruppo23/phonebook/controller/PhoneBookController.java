@@ -14,6 +14,7 @@ import javafx.event.ActionEvent;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -22,7 +23,9 @@ import javafx.collections.ObservableList;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.Tab;
@@ -41,7 +44,7 @@ import javafx.scene.layout.GridPane;
  * @author gruppo23
  */
 public class PhoneBookController implements Initializable {
-
+    
     @FXML
     private TextField searchCB;
     @FXML
@@ -60,10 +63,6 @@ public class PhoneBookController implements Initializable {
     private Button RemoveELButton;
     @FXML
     private TextField searchB;
-    @FXML
-    private Button RestoreButton;
-    @FXML
-    private Button RemoveBinButton;
     @FXML
     private GridPane CreateForm;
     @FXML
@@ -222,10 +221,25 @@ public class PhoneBookController implements Initializable {
 
     private Bin bin;
     private ObservableList<Contact> observableBin;
+    @FXML
+    private Button onRestoreButton;
+    @FXML
+    private Button onRemoveBinButton;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        binTab.setText("🗑 Cestino");
+        contactBookTab.setText("📖 Rubrica");
+        SearchButton.setText("🔍 Cerca");
+        emergencyTab.setText("🚑 Contatti di emergenza");
+        CreateButton.setText("➕ Crea Contatto");
+        ViewButton.setText("👁 Visualizza Contatto");
+        AddToELButton.setText("🚑 Aggiungi contatto alla lista di emergenza");
+        onMoveToBinButton.setText("🗑 Sposta nel cestino");
+        ImportButton.setText("📥 Importa rubrica");
+        ExportButton.setText("📤 Esporta rubrica");
+
         contactBook = new ContactBook();
         emergencyList = new EmergencyList();
         observableContacts = FXCollections.observableArrayList(contactBook.getContacts());
@@ -503,6 +517,10 @@ public class PhoneBookController implements Initializable {
     private void onMoveToBinButton(ActionEvent event) throws FullGroupException {
     Contact selectedContact = TableBook.getSelectionModel().getSelectedItem();
         if (selectedContact != null) {
+            if (emergencyList.getContacts().contains(selectedContact)) {
+            emergencyList.removeContact(selectedContact);
+            observableEL.setAll(emergencyList.getContacts());
+        }
             observableBin.add(selectedContact);
             bin.addContact(selectedContact);
             contactBook.removeContact(selectedContact);
@@ -515,6 +533,41 @@ public class PhoneBookController implements Initializable {
         List<Contact> filteredContacts = contactBook.search(searchCB.getText().toLowerCase());
         ObservableList<Contact> observableFilteredContacts = FXCollections.observableArrayList(filteredContacts);
         TableBook.setItems(observableFilteredContacts);
+    }
+    
+    @FXML
+    private void onRestoreButton(ActionEvent event) throws FullGroupException {
+        
+        Contact selectedContact = TableBin.getSelectionModel().getSelectedItem();
+
+        if (selectedContact != null) {
+            bin.restoreContact(selectedContact, contactBook);
+            observableContacts.add(selectedContact); 
+            observableBin.remove(selectedContact);
+            TableBook.refresh();
+            TableBin.refresh();
+        }
+    }
+    
+    @FXML
+    private void onRemoveBinButton(ActionEvent event) {
+        Contact selectedContact = TableBin.getSelectionModel().getSelectedItem();
+        if (selectedContact != null) {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Conferma Eliminazione");
+            alert.setHeaderText("Sei sicuro di voler eliminare definitivamente il contatto?");
+            alert.setContentText("L'operazione è irreversibile.");
+
+            Optional<ButtonType> result = alert.showAndWait();
+
+            if (result.isPresent() && result.get() == ButtonType.OK) {
+                bin.deleteContactPermanently(selectedContact, contactBook);
+                observableBin.remove(selectedContact);
+                observableContacts.remove(selectedContact);
+                TableBook.refresh();
+                TableBin.refresh();
+            }
+        }
     }
 
 }

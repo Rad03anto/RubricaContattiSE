@@ -1,0 +1,18 @@
+.AnchorPane {
+    -fx-background-image: url("uni.png");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+.TableBook {
+    -fx-background-image: url("uni2.png");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+.GridPane {
+    -fx-background-image: url("uni2.png");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
