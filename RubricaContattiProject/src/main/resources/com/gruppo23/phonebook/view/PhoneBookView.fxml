@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
@@ -53,6 +54,7 @@
                                     <Label fx:id="number1Label" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                                     <Button fx:id="goBackButton" mnemonicParsing="false" onAction="#onGoBackButton" text="Indietro" GridPane.columnIndex="6" GridPane.rowIndex="6" />
                                     <Label fx:id="number2Label" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                                    <Button fx:id="editContactButton" mnemonicParsing="false" onAction="#onEditContactButton" text="Modifica Contatto" translateX="27.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
                                  </children>
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="296.0" minWidth="10.0" prefWidth="10.0" />
@@ -107,6 +109,56 @@
                                     <ImageView fx:id="contactImage" fitHeight="140.0" fitWidth="203.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowSpan="2" />
                                     <Button fx:id="SaveContactButton" mnemonicParsing="false" onAction="#onSaveContactButton" text="Salva Contatto" GridPane.columnIndex="6" GridPane.rowIndex="6" />
                                     <Button fx:id="ImageButton" alignment="CENTER" mnemonicParsing="false" text="Inserisci Immagine" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                                    <Button fx:id="CancelButton" mnemonicParsing="false" onAction="#onCancelButton" text="Annulla" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="296.0" minWidth="10.0" prefWidth="10.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="296.0" minWidth="10.0" prefWidth="180.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="343.0" minWidth="10.0" prefWidth="180.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="343.0" minWidth="10.0" prefWidth="25.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.0" minWidth="10.0" prefWidth="180.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.0" minWidth="10.0" prefWidth="25.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="444.0" minWidth="10.0" prefWidth="180.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="444.0" minWidth="10.0" prefWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="102.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="165.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="183.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="164.0" minHeight="10.0" prefHeight="94.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="208.0" minHeight="10.0" prefHeight="208.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="115.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <GridPane fx:id="CreateForm1" layoutX="10.0" layoutY="10.0" prefHeight="1221.0" prefWidth="1244.0" visible="false">
+                                 <children>
+                                    <Label layoutX="195.0" layoutY="209.0" prefHeight="74.0" prefWidth="191.0" text="Cognome:" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Yu Gothic Regular" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="195.0" layoutY="279.0" prefHeight="76.0" prefWidth="222.0" text="Numeri di telefono:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label layoutX="195.0" layoutY="97.0" prefHeight="69.0" prefWidth="198.0" text="Nome:" GridPane.columnIndex="1" />
+                                    <Label layoutX="195.0" layoutY="415.0" prefHeight="72.0" prefWidth="231.0" text="Indirizzo:" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <Label layoutX="195.0" layoutY="351.0" prefHeight="67.0" prefWidth="230.0" text="Email:" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Label layoutX="195.0" layoutY="553.0" prefHeight="45.0" prefWidth="109.0" text="Preferiti:" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <Label layoutX="195.0" layoutY="484.0" prefHeight="72.0" prefWidth="260.0" text="Note:" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                    <TextField fx:id="nameTextField1" GridPane.columnIndex="2" />
+                                    <TextField fx:id="surnameTextField1" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <TextField fx:id="number1TextField1" prefHeight="23.0" prefWidth="159.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <TextField fx:id="email1TextField1" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                    <TextField fx:id="addressTextField1" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                    <TextField fx:id="notesTextField1" prefHeight="73.0" prefWidth="218.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                                    <TextField fx:id="number2TextField1" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                                    <TextField fx:id="number3TextField1" prefHeight="31.0" prefWidth="153.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                                    <TextField fx:id="email2TextField1" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                                    <TextField fx:id="email3TextField1" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                                    <CheckBox fx:id="favoritesCheckBox1" mnemonicParsing="false" text="Aggiungi" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                    <ImageView fx:id="contactImage1" fitHeight="140.0" fitWidth="203.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowSpan="2" />
+                                    <Button fx:id="SaveEditButton1" mnemonicParsing="false" onAction="#onSaveEditButton" text="Salva Contatto" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+                                    <Button fx:id="ImageButton1" alignment="CENTER" mnemonicParsing="false" text="Inserisci Immagine" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                                    <Button fx:id="CancelButton1" mnemonicParsing="false" onAction="#onCancelButton" text="Annulla" GridPane.columnIndex="4" GridPane.rowIndex="6" />
                                  </children>
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="296.0" minWidth="10.0" prefWidth="10.0" />

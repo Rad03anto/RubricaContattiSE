@@ -215,6 +215,42 @@ public class PhoneBookController implements Initializable {
 
     private Bin bin;
     private ObservableList<Contact> observableBin;
+    @FXML
+    private Button editContactButton;
+    @FXML
+    private GridPane CreateForm1;
+    @FXML
+    private TextField nameTextField1;
+    @FXML
+    private TextField surnameTextField1;
+    @FXML
+    private TextField number1TextField1;
+    @FXML
+    private TextField email1TextField1;
+    @FXML
+    private TextField addressTextField1;
+    @FXML
+    private TextField notesTextField1;
+    @FXML
+    private TextField number2TextField1;
+    @FXML
+    private TextField number3TextField1;
+    @FXML
+    private TextField email2TextField1;
+    @FXML
+    private TextField email3TextField1;
+    @FXML
+    private CheckBox favoritesCheckBox1;
+    @FXML
+    private ImageView contactImage1;
+    @FXML
+    private Button ImageButton1;
+    @FXML
+    private Button CancelButton;
+    @FXML
+    private Button SaveEditButton1;
+    @FXML
+    private Button CancelButton1;
     
 
     
@@ -272,6 +308,18 @@ public class PhoneBookController implements Initializable {
             Logger.getLogger(PhoneBookController.class.getName()).log(Level.SEVERE, null, ex);
         }
         
+        nameTextField.clear();
+        surnameTextField.clear();
+        number1TextField.clear();
+        number2TextField.clear();
+        number3TextField.clear();
+        email1TextField.clear();
+        email2TextField.clear();
+        email3TextField.clear();
+        addressTextField.clear();
+        notesTextField.clear();
+        contactImage=null;
+        favoritesCheckBox.setSelected(false);
         CreateForm.setVisible(false);
         TableBook.setVisible(true);
     }
@@ -490,6 +538,82 @@ public class PhoneBookController implements Initializable {
             contactBook.removeContact(selectedContact);
             observableContacts.remove(selectedContact);
         }
+    }
+
+    @FXML
+    private void onEditContactButton(ActionEvent event) {
+      Contact selectedContact = TableBook.getSelectionModel().getSelectedItem();
+      int i=0;
+      int j=0;
+        CreateForm1.setVisible(true);
+        CreateForm.setVisible(false);
+        ContactView.setVisible(false);
+        nameTextField1.setText(selectedContact.getName());
+        surnameTextField1.setText(selectedContact.getSurname());
+         for(String p : selectedContact.getPhoneNumbers()){
+            if(i==0){
+            number1TextField1.setText(p);    
+            i++;            
+            }
+            else if(i==1){
+                number2TextField1.setText(p);
+                i++;
+            }
+            else if(i==2){
+                number3TextField1.setText(p);
+            }
+        }
+        
+         for(String s : selectedContact.getEmails()){
+            if(j==0){
+            email1TextField1.setText(s);    
+            j++;            
+            }
+            else if(j==1){
+                email2TextField1.setText(s);
+                j++;
+            }
+            else if(j==2){
+                email3TextField1.setText(s);
+            }
+        }
+    
+     addressTextField1.setText(selectedContact.getAddress());
+    notesTextField1.setText(selectedContact.getNotes());
+    favoritesCheckBox1.setSelected(selectedContact.getIsFavorite());
+     contactImage1.setImage(selectedContact.getImage());
+  
+    }
+
+
+    @FXML
+    private void onSaveEditButton(ActionEvent event) {
+        Contact selectedContact = TableBook.getSelectionModel().getSelectedItem();
+        
+        selectedContact.setName(nameTextField1.getText());
+        selectedContact.setSurname(surnameTextField1.getText());
+        selectedContact.getPhoneNumbers().set(0,number1TextField1.getText());
+        selectedContact.getPhoneNumbers().set(1,number2TextField1.getText());
+        selectedContact.getPhoneNumbers().set(2,number3TextField1.getText());
+        selectedContact.getEmails().set(0,email1TextField1.getText());
+        selectedContact.getEmails().set(1,email2TextField1.getText());
+        selectedContact.getEmails().set(2,email3TextField1.getText());
+        selectedContact.setAddress(addressTextField1.getText());
+        selectedContact.setNotes(notesTextField1.getText());
+        selectedContact.setImage(contactImage1.getImage());
+        selectedContact.setIsFavorite(favoritesCheckBox1.isSelected());
+        
+       TableBook.refresh();
+        
+        CreateForm1.setVisible(false);
+        TableBook.setVisible(true);
+    }
+
+    @FXML
+    private void onCancelButton(ActionEvent event) {
+        CreateForm1.setVisible(false);
+        CreateForm.setVisible(false);
+        TableBook.setVisible(true);
     }
 
     
