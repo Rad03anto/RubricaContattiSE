@@ -18,8 +18,9 @@
             <content>
               <AnchorPane fx:id="rubricaZone" minHeight="0.0" minWidth="0.0" prefHeight="711.0" prefWidth="27.0" styleClass="AnchorPane" stylesheets="@style.css">
                      <children>
+                        <Button fx:id="FavButton" layoutX="104.0" layoutY="419.0" mnemonicParsing="false" onAction="#onFavButton" text="Filtra Preferiti" />
                         <Button fx:id="SearchButton" layoutX="221.0" layoutY="105.0" mnemonicParsing="false" onAction="#onSearchButtonAction" text="Cerca" />
-                        <TextField fx:id="searchCB" promptText="Ricerca..." layoutX="28.0" layoutY="105.0" />
+                        <TextField fx:id="searchCB" layoutX="28.0" layoutY="105.0" promptText="Ricerca..." />
                         <Button fx:id="CreateButton" layoutX="102.0" layoutY="168.0" mnemonicParsing="false" onAction="#handleCreateButtonAction" text="Crea Contatto" />
                         <Button fx:id="AddToELButton" layoutX="36.0" layoutY="312.0" mnemonicParsing="false" onAction="#onAddToELButton" text="Aggiungi ai Contatti di Emergenza" />
                         <Button fx:id="ViewButton" layoutX="85.0" layoutY="216.0" mnemonicParsing="false" onAction="#onDisplayContactButton" text="Visualizza Contatto" />                
@@ -97,12 +98,12 @@
                                     <Label layoutX="195.0" layoutY="484.0" prefHeight="72.0" prefWidth="260.0" text="Note:" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                                     <TextField fx:id="nameTextField" promptText="Nome" GridPane.columnIndex="2" />
                                     <TextField fx:id="surnameTextField" promptText="Cognome" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                                    <TextField fx:id="number1TextField" promptText="Numero di telefono" prefHeight="23.0" prefWidth="159.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <TextField fx:id="number1TextField" prefHeight="23.0" prefWidth="159.0" promptText="Numero di telefono" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                                     <TextField fx:id="email1TextField" promptText="Email" GridPane.columnIndex="2" GridPane.rowIndex="3" />
                                     <TextField fx:id="addressTextField" promptText="Indirizzo" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                                    <TextField fx:id="notesTextField" promptText="Inserisci qui le note..." prefHeight="73.0" prefWidth="218.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                                    <TextField fx:id="notesTextField" prefHeight="73.0" prefWidth="218.0" promptText="Inserisci qui le note..." GridPane.columnIndex="2" GridPane.rowIndex="6" />
                                     <TextField fx:id="number2TextField" promptText="Numero di telefono" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-                                    <TextField fx:id="number3TextField" promptText="Numero di telefono" prefHeight="31.0" prefWidth="153.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                                    <TextField fx:id="number3TextField" prefHeight="31.0" prefWidth="153.0" promptText="Numero di telefono" GridPane.columnIndex="6" GridPane.rowIndex="2" />
                                     <TextField fx:id="email2TextField" promptText="Email" GridPane.columnIndex="4" GridPane.rowIndex="3" />
                                     <TextField fx:id="email3TextField" promptText="Email" GridPane.columnIndex="6" GridPane.rowIndex="3" />
                                     <CheckBox fx:id="favoritesCheckBox" mnemonicParsing="false" text="Aggiungi" GridPane.columnIndex="2" GridPane.rowIndex="5" />
@@ -192,8 +193,8 @@
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="711.0" prefWidth="1233.0">
                      <children>
                         <TextField fx:id="searchEL" layoutX="28.0" layoutY="80.0" />
-                        <Label layoutX="132.0" layoutY="45.0" prefHeight="21.0" prefWidth="52.0" text="Ricerca"/>
-                        <Button fx:id="RemoveELButton" layoutX="36.0" layoutY="138.0" mnemonicParsing="false" text="Rimuovi dal Gruppo di Emergenza" />
+                        <Label layoutX="132.0" layoutY="45.0" prefHeight="21.0" prefWidth="52.0" text="Ricerca" />
+                        <Button fx:id="RemoveELButton" layoutX="36.0" layoutY="138.0" mnemonicParsing="false" onAction="#onRemoveFromEL" text="Rimuovi dal Gruppo di Emergenza" />
                         <Button fx:id="ViewButton1" layoutX="80.0" layoutY="186.0" mnemonicParsing="false" onAction="#onDisplayContactButton" text="Visualizza Contatto" />
                         <StackPane layoutX="315.0" prefHeight="712.0" prefWidth="929.0">
                            <children>

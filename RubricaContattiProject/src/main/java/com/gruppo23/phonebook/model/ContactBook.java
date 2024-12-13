@@ -7,6 +7,8 @@ package com.gruppo23.phonebook.model;
 import com.gruppo23.phonebook.exceptions.InvalidContactException;
 import com.gruppo23.phonebook.exceptions.FullGroupException;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Classe ContactBook
@@ -111,8 +113,15 @@ public class ContactBook extends ContactList implements Serializable {
      * @post Viene visualizzata la lista dei contatti preferiti, se presenti.
      * 
      */
-    public void displayFavorites() {
+    public List<Contact> displayFavorites() {
         //da implementare
+        List<Contact> favorites = new ArrayList<>();
+        for (Contact contact : contactList) {
+        if (contact.getIsFavorite() != null && contact.getIsFavorite()) {
+            favorites.add(contact);
+        }
+    }
+        return favorites;
     }
     
     /**
