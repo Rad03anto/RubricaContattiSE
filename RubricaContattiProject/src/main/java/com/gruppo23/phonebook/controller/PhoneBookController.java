@@ -10,6 +10,11 @@ import com.gruppo23.phonebook.exceptions.FullGroupException;
 import com.gruppo23.phonebook.model.Bin;
 import com.gruppo23.phonebook.model.Contact;
 import com.gruppo23.phonebook.model.ContactBook;
+import com.gruppo23.phonebook.model.PhoneBook;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import javafx.event.ActionEvent;
 import java.net.URL;
 import java.util.ArrayList;
@@ -37,6 +42,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -143,6 +150,7 @@ public class PhoneBookController implements Initializable {
     @FXML
     private TableColumn<Contact, String> nameClm2;
     
+    private PhoneBook pB;
     private ContactBook contactBook;
     private EmergencyList emergencyList;
     private ObservableList<Contact> observableContacts;
@@ -300,8 +308,9 @@ public class PhoneBookController implements Initializable {
         
         contactBook = new ContactBook();
         emergencyList = new EmergencyList();
-        observableContacts = FXCollections.observableArrayList(contactBook.getContacts());
         bin = new Bin();
+        pB= new PhoneBook(contactBook,emergencyList,bin);
+        observableContacts = FXCollections.observableArrayList(contactBook.getContacts());
         observableEL = FXCollections.observableArrayList(emergencyList.getContacts());
         observableBin = FXCollections.observableArrayList(bin.getContacts());
         nameClm.setCellValueFactory(new PropertyValueFactory("name"));
@@ -326,7 +335,7 @@ public class PhoneBookController implements Initializable {
     @FXML
     private void onSaveContactButton(ActionEvent event) {
         
-        TableBook.setItems(observableContacts);
+        
         
         String name = nameTextField.getText();
         String surname = surnameTextField.getText();
@@ -346,11 +355,11 @@ public class PhoneBookController implements Initializable {
         Contact newContact = new Contact(name, surname, phoneNumbers, emails, address, notes, image, isFavorite);
         try {
             contactBook.addContact(newContact);
-            observableContacts.setAll(contactBook.getContacts());
+            observableContacts.add(newContact);
         } catch (FullGroupException ex) {
             Logger.getLogger(PhoneBookController.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+        TableBook.setItems(observableContacts);
         CreateForm.setVisible(false);
         TableBook.setVisible(true);
         
@@ -719,15 +728,77 @@ public class PhoneBookController implements Initializable {
     TableBook.setItems(favoriteObservableContacts);
     }
 
-    @FXML
     private void onRemoveFromEL(ActionEvent event) {
         Contact selectedContact = TableBook.getSelectionModel().getSelectedItem();
         if (selectedContact != null) 
             if (emergencyList.getContacts().contains(selectedContact)) {
             emergencyList.removeContact(selectedContact);
-            observableEL.setAll(emergencyList.getContacts());
+            observableEL.remove(emergencyList.getContacts());
         }
             
+    }
+
+    @FXML
+    private void onExportFIle(ActionEvent event) throws IOException {
+             //da implementare
+           String filePath = "Contatti.csv";
+    
+        // Svuota il file
+       try (FileWriter fileWriter = new FileWriter(filePath, false)) {
+        // Non scrive nulla, semplicemente svuota il file
+    }
+    
+     
+        pB.saveToFile("Contatti.csv");
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("La rubrica è stata esportata con successo");
+        alert.setHeaderText("La lista è stata inserita nel file Contatti.csv");
+       alert.showAndWait(); 
+            
+    }
+
+    @FXML
+    private void onImportButton(ActionEvent event) throws IOException, FileNotFoundException, FullGroupException {
+        FileChooser fileChooser = new FileChooser();
+        File file = fileChooser.showOpenDialog(new Stage());
+        if(file != null){
+            pB.loadFromFile(file.getAbsolutePath());
+            
+           // Svuota le liste osservabili prima di aggiornare
+        observableContacts.clear();
+        observableEL.clear();
+        observableBin.clear();
+
+        // Usa una copia della lista per evitare ConcurrentModificationException
+        List<Contact> contactBookCopy = new ArrayList<>(pB.getContactBook().getContacts());
+        for (Contact c : contactBookCopy) {
+            observableContacts.add(c);  // Aggiungi alla lista osservabile
+            
+            
+            contactBook.addContact(c);   // Aggiungi alla lista principale
+        }
+
+        // Copia per la lista di emergenza
+        List<Contact> emergencyListCopy = new ArrayList<>(pB.geteList().getContacts());
+        for (Contact c : emergencyListCopy) {
+            observableEL.add(c);  // Aggiungi alla lista osservabile
+            emergencyList.addContact(c);   // Aggiungi alla lista principale
+        }
+
+        // Copia per il cestino
+        List<Contact> binCopy = new ArrayList<>(pB.getBin().getContacts());
+        for (Contact c : binCopy) {
+            observableBin.add(c);  // Aggiungi alla lista osservabile
+            bin.addContact(c);   // Aggiungi alla lista principale
+        }
+           
+            TableBook.setItems(observableContacts);
+            TableBin.setItems(observableBin);
+            TableEL.setItems(observableEL);
+            
+        }
+        //observableContacts.setAll(pB.getContactBook().getContacts());
+       
     }
 
 }

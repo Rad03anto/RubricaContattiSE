@@ -37,11 +37,13 @@ public class Bin extends ContactList {
    
     public void restoreContact(Contact contact, ContactBook contactBook) throws FullGroupException{
        removeContact(contact);
+       this.removeContact(contact);
        contactBook.addContact(contact);
     }
     
      public void deleteContactPermanently(Contact contact, ContactBook contactBook) {
         contactBook.removeContact(contact);
+        this.removeContact(contact);
         removeContact(contact);
     }
 /**
