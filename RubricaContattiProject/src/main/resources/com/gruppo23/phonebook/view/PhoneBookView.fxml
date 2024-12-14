@@ -18,7 +18,8 @@
             <content>
               <AnchorPane fx:id="rubricaZone" minHeight="0.0" minWidth="0.0" prefHeight="711.0" prefWidth="27.0" styleClass="AnchorPane" stylesheets="@style.css">
                      <children>
-                        <Button fx:id="FavButton" layoutX="104.0" layoutY="419.0" mnemonicParsing="false" onAction="#onFavButton" text="Filtra Preferiti" />
+                        <Button fx:id="ContactBookButton" layoutX="171.0" layoutY="419.0" mnemonicParsing="false" onAction="#onContactBookButton" text="Mostra Rubrica" />
+                        <Button fx:id="FavButton" layoutX="24.0" layoutY="419.0" mnemonicParsing="false" onAction="#onFavButton" text="Filtra Preferiti" />
                         <Button fx:id="SearchButton" layoutX="221.0" layoutY="105.0" mnemonicParsing="false" onAction="#onSearchButtonAction" text="Cerca" />
                         <TextField fx:id="searchCB" layoutX="61.0" layoutY="105.0" promptText="Ricerca..." />
                         <Button fx:id="CreateButton" layoutX="101.0" layoutY="147.0" mnemonicParsing="false" onAction="#handleCreateButtonAction" text="Crea Contatto" />
@@ -284,7 +285,7 @@
                      <children>
 
                         <TextField fx:id="searchEL" layoutX="60.0" layoutY="177.0" promptText="Ricerca..." />
-                        <Button fx:id="RemoveELButton" layoutX="39.0" layoutY="262.0" mnemonicParsing="false" text="Rimuovi dai contatti di Emergenza" onAction="#onRemoveFromEL" />
+                        <Button fx:id="RemoveELButton" layoutX="39.0" layoutY="262.0" mnemonicParsing="false" text="Rimuovi dai contatti di Emergenza" onAction="#onRemoveFromEL" />           
                         <Button fx:id="ViewButton1" layoutX="83.0" layoutY="304.0" mnemonicParsing="false" onAction="#onDisplayContactButton" text="Visualizza Contatto" />
                         <StackPane layoutX="315.0" prefHeight="712.0" prefWidth="929.0">
                            <children>

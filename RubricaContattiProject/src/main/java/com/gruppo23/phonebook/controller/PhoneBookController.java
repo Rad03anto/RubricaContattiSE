@@ -7,6 +7,7 @@ package com.gruppo23.phonebook.controller;
 
 import com.gruppo23.phonebook.model.EmergencyList;
 import com.gruppo23.phonebook.exceptions.FullGroupException;
+import com.gruppo23.phonebook.exceptions.InvalidContactException;
 import com.gruppo23.phonebook.model.Bin;
 import com.gruppo23.phonebook.model.Contact;
 import com.gruppo23.phonebook.model.ContactBook;
@@ -269,6 +270,8 @@ public class PhoneBookController implements Initializable {
     private AnchorPane rubricaZone;
     @FXML
     private Button FavButton;
+    @FXML
+    private Button ContactBookButton;
     
 
 
@@ -349,7 +352,7 @@ public class PhoneBookController implements Initializable {
     * @param event Evento che attiva l'azione (click su "Salva Contatto")
     */
     @FXML
-    private void onSaveContactButton(ActionEvent event) {
+    private void onSaveContactButton(ActionEvent event) throws InvalidContactException {
         
         TableBook.setItems(observableContacts);
         
@@ -743,7 +746,7 @@ public class PhoneBookController implements Initializable {
      * @post Le modifiche vengono salvate e la tabella viene aggiornata.
      */
     @FXML
-    private void onSaveEditButton(ActionEvent event) {
+    private void onSaveEditButton(ActionEvent event) throws InvalidContactException {
         Contact selectedContact = TableBook.getSelectionModel().getSelectedItem();
         
         selectedContact.setName(nameTextField1.getText());
@@ -759,6 +762,15 @@ public class PhoneBookController implements Initializable {
         selectedContact.setImage(contactImage1.getImage());
         selectedContact.setIsFavorite(favoritesCheckBox1.isSelected());
         
+        if ((selectedContact.getName() == null || selectedContact.getName().trim().isEmpty()) && (selectedContact.getSurname() == null || selectedContact.getSurname().trim().isEmpty())) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Contatto non salvato!");
+        alert.setHeaderText("Il contatto non è stato modificato correttamente!");
+        alert.setContentText("Inserire almeno un nome o un cognome.");
+        alert.showAndWait();
+        throw new InvalidContactException("Il contatto deve avere almeno un nome o un cognome.");
+
+    }
        TableBook.refresh();
         
         CreateForm1.setVisible(false);
@@ -902,6 +914,20 @@ public class PhoneBookController implements Initializable {
             TableEL.refresh();
         }
             
+    }
+    
+    /**
+     * Mostra la rubrica principale senza filtri
+     * 
+     * @param event L'evento che attiva la funzione (click su "Mostra Rubrica")
+     * @pre la rubrica è filtrata
+     * @pre La rubrica principale viene mostrata con tutti i contatti
+     * 
+     */
+    
+    @FXML
+    private void onContactBookButton(ActionEvent event) {
+        TableBook.setItems(observableContacts);
     }
 
 }

@@ -7,6 +7,9 @@ package com.gruppo23.phonebook.model;
 
 import com.gruppo23.phonebook.exceptions.InvalidContactException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
 
 /**
@@ -44,16 +47,26 @@ public class Contact implements Comparable<Contact> {
 * @throws InvalidContactException Eccezione che viene lanciata nel caso in cui le stringhe name e surname sono vuote
 * @return nuovo oggetto Contact
 */
-    public Contact(String name, String surname, List<String> phoneNumbers, List<String> emails, String address, String notes, Image image, Boolean isFavorite) {    
-        this.name = name;
-        this.surname = surname;
-        this.phoneNumbers = phoneNumbers;
-        this.emails = emails;
-        this.address = address;
-        this.notes = notes;
-        this.image = image;
-        this.isFavorite = isFavorite;
+    public Contact(String name, String surname, List<String> phoneNumbers, List<String> emails, String address, String notes, Image image, Boolean isFavorite) throws InvalidContactException {    
+    if ((name == null || name.trim().isEmpty()) && (surname == null || surname.trim().isEmpty())) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Contatto non creato!");
+        alert.setHeaderText("Il contatto non è stato creato correttamente!");
+        alert.setContentText("Inserire almeno un nome o un cognome.");
+        alert.showAndWait();
+        throw new InvalidContactException("Il contatto deve avere almeno un nome o un cognome.");
+
     }
+    this.name = name;
+    this.surname = surname;
+    this.phoneNumbers = phoneNumbers;
+    this.emails = emails;
+    this.address = address;
+    this.notes = notes;
+    this.image = image;
+    this.isFavorite = isFavorite;
+}
+
 
     /**
      *
