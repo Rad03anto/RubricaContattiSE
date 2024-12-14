@@ -10,7 +10,8 @@ import java.util.List;
 import javafx.scene.image.Image;
 
 /**
-* @file Contact.java
+* @package com.gruppo23.phonebook.model
+* @class Contact.java
 * @brief Questo file contiene l'implementazione dei metodi della classe Contact  
 *
 * Il file contenente la classe Contact presenta tutti gli attributi che appartengono agli oggetti Contact e i metodi invocabili   * su  essi

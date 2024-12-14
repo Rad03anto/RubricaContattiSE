@@ -1,9 +1,15 @@
 \doxysection{com.\+gruppo23.\+phonebook.\+model.\+Contact Class Reference}
 \hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{}\label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}\index{com.gruppo23.phonebook.model.Contact@{com.gruppo23.phonebook.model.Contact}}
+Inheritance diagram for com.\+gruppo23.\+phonebook.\+model.\+Contact\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}
+\end{center}
+\end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_ae7b47abb91475b173e1fe3e1e47f6ecc}{Contact}} (String name, String surname)  throws Invalid\+Contact\+Exception
+\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_ad9609b484565f050a97924c8b1b4eb81}{Contact}} (String name, String surname, List$<$ String $>$ phone\+Numbers, List$<$ String $>$ emails, String address, String notes, Image image, Boolean is\+Favorite)
 \begin{DoxyCompactList}\small\item\em Costruttore degli oggetti \doxylink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}. \end{DoxyCompactList}\item 
 String \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_aade19e895f196e674d94e37e8dd3eb6f}{get\+Name}} ()
 \begin{DoxyCompactList}\small\item\em metodo per ottenere il valore del nome di un contatto della rbrica \end{DoxyCompactList}\item 
@@ -17,7 +23,7 @@ String \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_a
 \begin{DoxyCompactList}\small\item\em metodo per ottenere l\textquotesingle{}indirizzo di un contatto della rubrica \end{DoxyCompactList}\item 
 String \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_a5bb46127748169018b34613721d8fc40}{get\+Notes}} ()
 \begin{DoxyCompactList}\small\item\em metodo per ottenere le note di un contatto della rubrica \end{DoxyCompactList}\item 
-Image\+Icon \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_aa48e40da8e0b52d57fae6e5c4361735d}{get\+Image}} ()
+Image \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_aec1e6a589bbbf2bb2551cd4cb77dc0b9}{get\+Image}} ()
 \begin{DoxyCompactList}\small\item\em metodo per ottenere l\textquotesingle{}immagine di un contatto della rubrica \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_a2d677aaa4cd64ef4dac0880e068307ed}{set\+Name}} (String name)
 \begin{DoxyCompactList}\small\item\em metodo per impostare il nome di un contatto della rubrica \end{DoxyCompactList}\item 
@@ -31,20 +37,23 @@ void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_add
 \begin{DoxyCompactList}\small\item\em metodo per impostare l\textquotesingle{}indirizzo di un contatto della rubrica \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_a873382fbd95dbe7f2e56b17cdce9ec3d}{set\+Notes}} (String notes)
 \begin{DoxyCompactList}\small\item\em metodo per inserire informazioni aggiuntive di un contatto della rubrica \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_ae90b09341eca198bd05c735f37b58fce}{set\+Image}} (Image\+Icon image)
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_a9f620d9ef345fface1cffebebe973d02}{set\+Image}} (Image image)
 \begin{DoxyCompactList}\small\item\em metodo per impostare un\textquotesingle{}immagine di profilo ad un contatto della rubrica \end{DoxyCompactList}\item 
 Boolean \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_aaba35519cc6632a2248f6af6052b3055}{get\+Is\+Favorite}} ()
 \begin{DoxyCompactList}\small\item\em metodo per impostare come preferito un contatto della rubrica \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_abb322207b10e7175ff40c4176c920859}{set\+Is\+Favorite}} (Boolean is\+Favorite)
-\begin{DoxyCompactList}\small\item\em metodo per modificare di un contatto della rubrica \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em metodo per modificare di un contatto della rubrica \end{DoxyCompactList}\item 
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_a41e5731411b9b523e2fb7f7222a911fc}\label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_a41e5731411b9b523e2fb7f7222a911fc} 
+int {\bfseries compare\+To} (\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} contact)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_ae7b47abb91475b173e1fe3e1e47f6ecc}\index{com.gruppo23.phonebook.model.Contact@{com.gruppo23.phonebook.model.Contact}!Contact@{Contact}}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_ad9609b484565f050a97924c8b1b4eb81}\index{com.gruppo23.phonebook.model.Contact@{com.gruppo23.phonebook.model.Contact}!Contact@{Contact}}
 \index{Contact@{Contact}!com.gruppo23.phonebook.model.Contact@{com.gruppo23.phonebook.model.Contact}}
 \doxysubsubsection{\texorpdfstring{Contact()}{Contact()}}
-{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_ae7b47abb91475b173e1fe3e1e47f6ecc} 
-com.\+gruppo23.\+phonebook.\+model.\+Contact.\+Contact (\begin{DoxyParamCaption}\item[{String}]{name}{, }\item[{String}]{surname}{}\end{DoxyParamCaption}) throws Invalid\+Contact\+Exception}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_ad9609b484565f050a97924c8b1b4eb81} 
+com.\+gruppo23.\+phonebook.\+model.\+Contact.\+Contact (\begin{DoxyParamCaption}\item[{String}]{name}{, }\item[{String}]{surname}{, }\item[{List$<$ String $>$}]{phone\+Numbers}{, }\item[{List$<$ String $>$}]{emails}{, }\item[{String}]{address}{, }\item[{String}]{notes}{, }\item[{Image}]{image}{, }\item[{Boolean}]{is\+Favorite}{}\end{DoxyParamCaption})}
 
 
 
@@ -112,11 +121,11 @@ Il valore restituito è la list emails dell\textquotesingle{}oggetto \doxylink{c
 \begin{DoxyReturn}{Returns}
 valori contenuti nell\textquotesingle{}attributo emails 
 \end{DoxyReturn}
-\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_aa48e40da8e0b52d57fae6e5c4361735d}\index{com.gruppo23.phonebook.model.Contact@{com.gruppo23.phonebook.model.Contact}!getImage@{getImage}}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_aec1e6a589bbbf2bb2551cd4cb77dc0b9}\index{com.gruppo23.phonebook.model.Contact@{com.gruppo23.phonebook.model.Contact}!getImage@{getImage}}
 \index{getImage@{getImage}!com.gruppo23.phonebook.model.Contact@{com.gruppo23.phonebook.model.Contact}}
 \doxysubsubsection{\texorpdfstring{getImage()}{getImage()}}
-{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_aa48e40da8e0b52d57fae6e5c4361735d} 
-Image\+Icon com.\+gruppo23.\+phonebook.\+model.\+Contact.\+get\+Image (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_aec1e6a589bbbf2bb2551cd4cb77dc0b9} 
+Image com.\+gruppo23.\+phonebook.\+model.\+Contact.\+get\+Image (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
@@ -270,11 +279,11 @@ Il contatto ha una o più email
 {\em emails} & la lista di valori che verranno assegnati all\textquotesingle{}attributo emails dell\textquotesingle{}oggetto \doxylink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact} \\
 \hline
 \end{DoxyParams}
-\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_ae90b09341eca198bd05c735f37b58fce}\index{com.gruppo23.phonebook.model.Contact@{com.gruppo23.phonebook.model.Contact}!setImage@{setImage}}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_a9f620d9ef345fface1cffebebe973d02}\index{com.gruppo23.phonebook.model.Contact@{com.gruppo23.phonebook.model.Contact}!setImage@{setImage}}
 \index{setImage@{setImage}!com.gruppo23.phonebook.model.Contact@{com.gruppo23.phonebook.model.Contact}}
 \doxysubsubsection{\texorpdfstring{setImage()}{setImage()}}
-{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_ae90b09341eca198bd05c735f37b58fce} 
-void com.\+gruppo23.\+phonebook.\+model.\+Contact.\+set\+Image (\begin{DoxyParamCaption}\item[{Image\+Icon}]{image}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_a9f620d9ef345fface1cffebebe973d02} 
+void com.\+gruppo23.\+phonebook.\+model.\+Contact.\+set\+Image (\begin{DoxyParamCaption}\item[{Image}]{image}{}\end{DoxyParamCaption})}
 
 
 
@@ -400,4 +409,4 @@ Il contatto ha un cognome
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Rubrica\+Contatti\+Project/src/main/java/com/gruppo23/phonebook/model/\mbox{\hyperlink{_contact_8java}{Contact.\+java}}\end{DoxyCompactItemize}
+Rubrica\+Contatti\+Project/src/main/java/com/gruppo23/phonebook/model/Contact.\+java\end{DoxyCompactItemize}

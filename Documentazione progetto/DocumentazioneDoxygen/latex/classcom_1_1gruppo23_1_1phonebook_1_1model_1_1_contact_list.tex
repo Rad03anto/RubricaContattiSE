@@ -1,5 +1,10 @@
 \doxysection{com.\+gruppo23.\+phonebook.\+model.\+Contact\+List Class Reference}
 \hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list}{}\label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list}\index{com.gruppo23.phonebook.model.ContactList@{com.gruppo23.phonebook.model.ContactList}}
+
+
+Questa classe astratta contiene metodi e attributi ereditabili da altre classi.  
+
+
 Inheritance diagram for com.\+gruppo23.\+phonebook.\+model.\+Contact\+List\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,11 +14,11 @@ Inheritance diagram for com.\+gruppo23.\+phonebook.\+model.\+Contact\+List\+:\be
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_ae5b3e5500f8b0a56c5d9154f6fac9c7f}{add\+Contact}} (\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} contact)
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_ae5b3e5500f8b0a56c5d9154f6fac9c7f}{add\+Contact}} (\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} contact)  throws \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1exceptions_1_1_full_group_exception}{Full\+Group\+Exception}} 
 \begin{DoxyCompactList}\small\item\em Metodo usato per aggiungere un contatto a una lista generica. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_affc68e0ba87c193684eb1973e45ba039}{remove\+Contact}} (\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} contact)
 \begin{DoxyCompactList}\small\item\em Metodo usato per rimuovere un contatto a una lista generica. \end{DoxyCompactList}\item 
-List$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} $>$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_af757d398ba4680923a6f7e273410a1cf}{search}} (String string)
+List$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} $>$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_ae2fe84d2479a22c4b593942336022a16}{search}} (String search\+String)
 \begin{DoxyCompactList}\small\item\em Metodo usato per cercare un contatto in una lista generica, cercando per nome e cognome. \end{DoxyCompactList}\item 
 List$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} $>$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_ad6d3b1ac9cf209507ab5fe27ffbf4b0f}{get\+Contacts}} ()
 \begin{DoxyCompactList}\small\item\em Restituisce una lista di contatti. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -25,17 +30,36 @@ List$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Questa classe astratta contiene metodi e attributi ereditabili da altre classi. 
+
+\begin{DoxyAuthor}{Author}
+gruppo23 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+December 8, 2024 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
 \doxysubsection{Member Function Documentation}
 \Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_ae5b3e5500f8b0a56c5d9154f6fac9c7f}\index{com.gruppo23.phonebook.model.ContactList@{com.gruppo23.phonebook.model.ContactList}!addContact@{addContact}}
 \index{addContact@{addContact}!com.gruppo23.phonebook.model.ContactList@{com.gruppo23.phonebook.model.ContactList}}
 \doxysubsubsection{\texorpdfstring{addContact()}{addContact()}}
 {\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_ae5b3e5500f8b0a56c5d9154f6fac9c7f} 
-void com.\+gruppo23.\+phonebook.\+model.\+Contact\+List.\+add\+Contact (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}}}]{contact}{}\end{DoxyParamCaption})}
+void com.\+gruppo23.\+phonebook.\+model.\+Contact\+List.\+add\+Contact (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}}}]{contact}{}\end{DoxyParamCaption}) throws \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1exceptions_1_1_full_group_exception}{Full\+Group\+Exception}}}
 
 
 
 Metodo usato per aggiungere un contatto a una lista generica. 
 
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{classcom_1_1gruppo23_1_1phonebook_1_1exceptions_1_1_full_group_exception}{com.\+gruppo23.\+phonebook.\+exceptions.\+Full\+Group\+Exception}} & \\
+\hline
+\end{DoxyExceptions}
 \begin{DoxyPrecond}{Precondition}
 La lista non contiene il contatto 
 \end{DoxyPrecond}
@@ -95,11 +119,11 @@ Invariante\+: Il contatto deve esistere
 
 Reimplemented in \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_book_ace1bf5cb4d55d8ffb63d54477ec716a6}{com.\+gruppo23.\+phonebook.\+model.\+Contact\+Book}}.
 
-\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_af757d398ba4680923a6f7e273410a1cf}\index{com.gruppo23.phonebook.model.ContactList@{com.gruppo23.phonebook.model.ContactList}!search@{search}}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_ae2fe84d2479a22c4b593942336022a16}\index{com.gruppo23.phonebook.model.ContactList@{com.gruppo23.phonebook.model.ContactList}!search@{search}}
 \index{search@{search}!com.gruppo23.phonebook.model.ContactList@{com.gruppo23.phonebook.model.ContactList}}
 \doxysubsubsection{\texorpdfstring{search()}{search()}}
-{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_af757d398ba4680923a6f7e273410a1cf} 
-List$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} $>$ com.\+gruppo23.\+phonebook.\+model.\+Contact\+List.\+search (\begin{DoxyParamCaption}\item[{String}]{string}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_ae2fe84d2479a22c4b593942336022a16} 
+List$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} $>$ com.\+gruppo23.\+phonebook.\+model.\+Contact\+List.\+search (\begin{DoxyParamCaption}\item[{String}]{search\+String}{}\end{DoxyParamCaption})}
 
 
 

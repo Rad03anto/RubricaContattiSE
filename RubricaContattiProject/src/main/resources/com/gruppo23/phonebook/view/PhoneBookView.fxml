@@ -284,7 +284,7 @@
                      <children>
 
                         <TextField fx:id="searchEL" layoutX="60.0" layoutY="177.0" promptText="Ricerca..." />
-                        <Button fx:id="RemoveELButton" layoutX="39.0" layoutY="262.0" mnemonicParsing="false" text="Rimuovi dai contatti di Emergenza" />
+                        <Button fx:id="RemoveELButton" layoutX="39.0" layoutY="262.0" mnemonicParsing="false" text="Rimuovi dai contatti di Emergenza" onAction="#onRemoveFromEL" />
                         <Button fx:id="ViewButton1" layoutX="83.0" layoutY="304.0" mnemonicParsing="false" onAction="#onDisplayContactButton" text="Visualizza Contatto" />
                         <StackPane layoutX="315.0" prefHeight="712.0" prefWidth="929.0">
                            <children>

@@ -16,18 +16,21 @@ Inheritance diagram for com.\+gruppo23.\+phonebook.\+model.\+Bin\+:\begin{figure
 \item 
 \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin_a423262616e955b49c09a767d48ff01ca}{Bin}} ()
 \begin{DoxyCompactList}\small\item\em Costruttore predefinito della classe \doxylink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin}{Bin}. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin_a6d10894d1c0e4552f20520a571f73ab9}{restore\+Contact}} (\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} contact)
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin_add97cc4da029e57368e6b8a2a275e7f3}{restore\+Contact}} (\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} contact, \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_book}{Contact\+Book}} contact\+Book)  throws \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1exceptions_1_1_full_group_exception}{Full\+Group\+Exception}}
 \begin{DoxyCompactList}\small\item\em Ripristina un contatto dal cestino alla rubrica. \end{DoxyCompactList}\item 
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin_a76d0073101a873389f530853fe3311be}\label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin_a76d0073101a873389f530853fe3311be} 
+void {\bfseries delete\+Contact\+Permanently} (\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} contact, \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_book}{Contact\+Book}} contact\+Book)
+\item 
 void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin_a33ce696fe9f2f4cb95eb2c1e8abe18e0}{autodelete\+From\+Bin}} ()
 \begin{DoxyCompactList}\small\item\em Elimina automaticamente tutti i contatti dal cestino. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list}{com.\+gruppo23.\+phonebook.\+model.\+Contact\+List}}}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_ae5b3e5500f8b0a56c5d9154f6fac9c7f}{add\+Contact}} (\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} contact)
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_ae5b3e5500f8b0a56c5d9154f6fac9c7f}{add\+Contact}} (\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} contact)  throws \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1exceptions_1_1_full_group_exception}{Full\+Group\+Exception}} 
 \begin{DoxyCompactList}\small\item\em Metodo usato per aggiungere un contatto a una lista generica. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_affc68e0ba87c193684eb1973e45ba039}{remove\+Contact}} (\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} contact)
 \begin{DoxyCompactList}\small\item\em Metodo usato per rimuovere un contatto a una lista generica. \end{DoxyCompactList}\item 
-List$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} $>$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_af757d398ba4680923a6f7e273410a1cf}{search}} (String string)
+List$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} $>$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_ae2fe84d2479a22c4b593942336022a16}{search}} (String search\+String)
 \begin{DoxyCompactList}\small\item\em Metodo usato per cercare un contatto in una lista generica, cercando per nome e cognome. \end{DoxyCompactList}\item 
 List$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} $>$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_ad6d3b1ac9cf209507ab5fe27ffbf4b0f}{get\+Contacts}} ()
 \begin{DoxyCompactList}\small\item\em Restituisce una lista di contatti. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -41,8 +44,6 @@ List$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}
 
 \doxysubsection{Detailed Description}
 Gestisce un cestino per contatti, consentendo il ripristino o la cancellazione automatica dei contatti. 
-
-Classe \doxylink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin}{Bin} 
 
 La classe \doxylink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin}{Bin} estende \doxylink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list}{Contact\+List} e aggiunge funzionalità specifiche per la gestione dei contatti spostati nel cestino, come il ripristino e l\textquotesingle{}eliminazione automatica.
 
@@ -84,11 +85,11 @@ Il cestino contiene uno o più contatti.
 \begin{DoxyPostcond}{Postcondition}
 Tutti i contatti presenti nel cestino vengono eliminati definitivamente. 
 \end{DoxyPostcond}
-\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin_a6d10894d1c0e4552f20520a571f73ab9}\index{com.gruppo23.phonebook.model.Bin@{com.gruppo23.phonebook.model.Bin}!restoreContact@{restoreContact}}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin_add97cc4da029e57368e6b8a2a275e7f3}\index{com.gruppo23.phonebook.model.Bin@{com.gruppo23.phonebook.model.Bin}!restoreContact@{restoreContact}}
 \index{restoreContact@{restoreContact}!com.gruppo23.phonebook.model.Bin@{com.gruppo23.phonebook.model.Bin}}
 \doxysubsubsection{\texorpdfstring{restoreContact()}{restoreContact()}}
-{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin_a6d10894d1c0e4552f20520a571f73ab9} 
-void com.\+gruppo23.\+phonebook.\+model.\+Bin.\+restore\+Contact (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}}}]{contact}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin_add97cc4da029e57368e6b8a2a275e7f3} 
+void com.\+gruppo23.\+phonebook.\+model.\+Bin.\+restore\+Contact (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}}}]{contact}{, }\item[{\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_book}{Contact\+Book}}}]{contact\+Book}{}\end{DoxyParamCaption}) throws \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1exceptions_1_1_full_group_exception}{Full\+Group\+Exception}}}
 
 
 

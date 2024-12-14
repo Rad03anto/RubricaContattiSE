@@ -7,14 +7,15 @@ package com.gruppo23.phonebook.model;
 import com.gruppo23.phonebook.exceptions.FullGroupException;
 
 /**
- *Classe Bin
- *@brief Gestisce un cestino per contatti, consentendo il ripristino o
- *la cancellazione automatica dei contatti.
+ * @package com.gruppo23.phonebook.model
+ * @class Bin
+ * @brief Gestisce un cestino per contatti, consentendo il ripristino o
+ * la cancellazione automatica dei contatti.
  *
- *@details  La classe Bin estende ContactList e aggiunge funzionalità specifiche per
- *la gestione dei contatti spostati nel cestino, come il ripristino e l'eliminazione automatica.
+ * @details  La classe Bin estende ContactList e aggiunge funzionalità specifiche per
+ * la gestione dei contatti spostati nel cestino, come il ripristino e l'eliminazione automatica.
  *
- *@author gruppo23
+ * @author gruppo23
  */
 public class Bin extends ContactList {
     

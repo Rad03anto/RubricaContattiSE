@@ -7,7 +7,7 @@ package com.gruppo23.phonebook.model;
 import java.io.Serializable;
 
 /**
- *
+ * @package com.gruppo23.phonebook.model
  * @class PhoneBook
  * @brief Gestisce la rubrica dei contatti, inclusi salvataggio, caricamento e gestione delle liste.
  * 
