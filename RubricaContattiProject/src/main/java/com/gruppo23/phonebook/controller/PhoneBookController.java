@@ -269,6 +269,8 @@ public class PhoneBookController implements Initializable {
     private AnchorPane rubricaZone;
     @FXML
     private Button FavButton;
+    @FXML
+    private Button ContactBookButton;
     
 
 
@@ -738,6 +740,11 @@ public class PhoneBookController implements Initializable {
             observableEL.setAll(emergencyList.getContacts());
         }
             
+    }
+
+    @FXML
+    private void onContactBookButton(ActionEvent event) {
+        TableBook.setItems(observableContacts);
     }
 
 }
