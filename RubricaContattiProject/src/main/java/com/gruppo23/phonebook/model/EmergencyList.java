@@ -6,6 +6,7 @@ package com.gruppo23.phonebook.model;
 
 import com.gruppo23.phonebook.exceptions.FullGroupException;
 import java.io.Serializable;
+import javafx.scene.control.Alert;
 
 /**
  * @package com.gruppo23.phonebook.model

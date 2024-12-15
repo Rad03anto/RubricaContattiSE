@@ -103,9 +103,15 @@
                                           <Font name="Yu Gothic UI Regular" size="13.0" />
                                        </font></Label>
                                     <Button fx:id="goBackButton" mnemonicParsing="false" onAction="#onGoBackButton" text="Indietro" GridPane.columnIndex="6" GridPane.rowIndex="7" />
-                                    <Label fx:id="number2Label" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                                    <Label fx:id="number2Label" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="13.0" />
+                                       </font></Label>
                                     <Button fx:id="editContactButton" mnemonicParsing="false" onAction="#onEditContactButton" text="Modifica Contatto" translateX="27.0" GridPane.columnIndex="4" GridPane.rowIndex="7" />
-                                    <Label text="Immagine:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label text="Immagine:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
                                  </children>
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="296.0" minWidth="10.0" prefWidth="10.0" />

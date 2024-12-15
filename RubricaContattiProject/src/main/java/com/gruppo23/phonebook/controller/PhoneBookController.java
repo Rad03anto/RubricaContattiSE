@@ -424,15 +424,28 @@ public class PhoneBookController implements Initializable {
      * @invariant Le liste osservabili devono essere sincronizzate con i rispettivi modelli.
      */
     @FXML
-    private void onAddToELButton(ActionEvent event) throws FullGroupException {
-         Contact selectedContact = TableBook.getSelectionModel().getSelectedItem();
-         if(selectedContact!=null){
-             contactBook.moveToEmergencyList(selectedContact, emergencyList);
-             observableEL.setAll(emergencyList.getContacts());
-             
-             }
-            
+    private void onAddToELButton(ActionEvent event) {
+        Contact selectedContact = TableBook.getSelectionModel().getSelectedItem();
+        if (selectedContact != null) {
+            if (emergencyList.getContacts().contains(selectedContact)) {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Contatto già presente!");
+                alert.setHeaderText("Il contatto è già presente nel gruppo d'emergenza!");
+                alert.showAndWait();
+                return;
+        }
+        try {
+            contactBook.moveToEmergencyList(selectedContact, emergencyList);
+            observableEL.setAll(emergencyList.getContacts());
+        } catch (FullGroupException e) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Limite massimo raggiunto!");
+            alert.setHeaderText("Il contatto non è stato aggiunto al gruppo d'emergenza!");
+            alert.setContentText("Gruppo pieno, rimuovere un contatto per poter aggiungerne uno.");
+            alert.showAndWait();
+        }
     }
+}
     
     /** 
      * @brief Visualizza i dettagli di un contatto selezionato.
@@ -932,11 +945,19 @@ public class PhoneBookController implements Initializable {
         Contact selectedContact = TableEL.getSelectionModel().getSelectedItem();
         if (selectedContact != null) 
             if (emergencyList.getContacts().contains(selectedContact)) {
+                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setTitle("Rimuovi dai contatti di emergenza");
+                alert.setHeaderText("Sei sicuro di voler rimuovere il contatto dai contatti di emergenza?");
+
+            Optional<ButtonType> result = alert.showAndWait();
+
+            if (result.isPresent() && result.get() == ButtonType.OK){
             emergencyList.removeContact(selectedContact);
             
             observableEL.remove(selectedContact);
             TableEL.setItems(observableEL);
             TableEL.refresh();
+            }
 
         }
             
