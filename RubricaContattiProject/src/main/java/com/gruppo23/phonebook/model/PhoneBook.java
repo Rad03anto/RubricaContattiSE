@@ -5,6 +5,7 @@
 package com.gruppo23.phonebook.model;
 
 import com.gruppo23.phonebook.exceptions.FullGroupException;
+import com.gruppo23.phonebook.exceptions.InvalidContactException;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
@@ -20,7 +21,7 @@ import java.util.Scanner;
 import javafx.scene.image.Image;
 
 /**
- *
+ * @package com.gruppo23.phonebook.model
  * @class PhoneBook
  * @brief Gestisce la rubrica dei contatti, inclusi salvataggio, caricamento e gestione delle liste.
  * 
@@ -86,7 +87,7 @@ public class PhoneBook implements Serializable {
      * @note Se il caricamento fallisce, viene restituito `null`.
      */
   
-    public void loadFromFile(String filename) throws FileNotFoundException, IOException, FullGroupException {
+    public void loadFromFile(String filename) throws FileNotFoundException, IOException, FullGroupException, InvalidContactException {
        //da implementare
     
         try(Scanner s = new Scanner(new  BufferedReader(new FileReader(filename)))){

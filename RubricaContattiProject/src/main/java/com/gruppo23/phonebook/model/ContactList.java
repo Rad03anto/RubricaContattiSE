@@ -12,6 +12,7 @@ import java.util.List;
 
 /**
  * @package com.gruppo23.phonebook.model
+ * @class ContactList
  * @brief Questa classe astratta contiene metodi e attributi ereditabili da altre classi
  * @author gruppo23
  * @date December 8, 2024
@@ -70,7 +71,6 @@ public abstract class ContactList implements Serializable {
      */
     
     public List<Contact> search(String searchString) {
-        //da implementare
         List<Contact> result = new ArrayList<>();
         String searchStringLower = searchString.toLowerCase();
         for(Contact contact : contactList) {

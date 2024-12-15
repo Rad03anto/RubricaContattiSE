@@ -1,0 +1,161 @@
+\doxysection{com.\+gruppo23.\+phonebook.\+model.\+Contact\+List Class Reference}
+\hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list}{}\label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list}\index{com.gruppo23.phonebook.model.ContactList@{com.gruppo23.phonebook.model.ContactList}}
+
+
+Questa classe astratta contiene metodi e attributi ereditabili da altre classi.  
+
+
+Inheritance diagram for com.\+gruppo23.\+phonebook.\+model.\+Contact\+List\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.924399cm]{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_ae5b3e5500f8b0a56c5d9154f6fac9c7f}{add\+Contact}} (\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} contact)  throws \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1exceptions_1_1_full_group_exception}{Full\+Group\+Exception}} 
+\begin{DoxyCompactList}\small\item\em Metodo usato per aggiungere un contatto a una lista generica. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_affc68e0ba87c193684eb1973e45ba039}{remove\+Contact}} (\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} contact)
+\begin{DoxyCompactList}\small\item\em Metodo usato per rimuovere un contatto a una lista generica. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} $>$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_ae2fe84d2479a22c4b593942336022a16}{search}} (String search\+String)
+\begin{DoxyCompactList}\small\item\em Metodo usato per cercare un contatto in una lista generica, cercando per nome e cognome. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} $>$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_ad6d3b1ac9cf209507ab5fe27ffbf4b0f}{get\+Contacts}} ()
+\begin{DoxyCompactList}\small\item\em Restituisce una lista di contatti. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_a0e75920785441602596847de30011001}\label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_a0e75920785441602596847de30011001} 
+List$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} $>$ {\bfseries contact\+List} = new Array\+List$<$$>$()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Questa classe astratta contiene metodi e attributi ereditabili da altre classi. 
+
+\begin{DoxyAuthor}{Author}
+gruppo23 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+December 8, 2024 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_ae5b3e5500f8b0a56c5d9154f6fac9c7f}\index{com.gruppo23.phonebook.model.ContactList@{com.gruppo23.phonebook.model.ContactList}!addContact@{addContact}}
+\index{addContact@{addContact}!com.gruppo23.phonebook.model.ContactList@{com.gruppo23.phonebook.model.ContactList}}
+\doxysubsubsection{\texorpdfstring{addContact()}{addContact()}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_ae5b3e5500f8b0a56c5d9154f6fac9c7f} 
+void com.\+gruppo23.\+phonebook.\+model.\+Contact\+List.\+add\+Contact (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}}}]{contact}{}\end{DoxyParamCaption}) throws \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1exceptions_1_1_full_group_exception}{Full\+Group\+Exception}}}
+
+
+
+Metodo usato per aggiungere un contatto a una lista generica. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{classcom_1_1gruppo23_1_1phonebook_1_1exceptions_1_1_full_group_exception}{com.\+gruppo23.\+phonebook.\+exceptions.\+Full\+Group\+Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyPrecond}{Precondition}
+La lista non contiene il contatto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Il contatto viene aggiunto alla lista 
+\end{DoxyPostcond}
+\begin{DoxyNote}{Note}
+Invariante\+: Il contatto non deve essere nullo
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em contact} & Il contatto che verrà aggiunto alla lista \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_book_a21623b37b7b2c51409d6869a36c525a7}{com.\+gruppo23.\+phonebook.\+model.\+Contact\+Book}}, and \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_emergency_list_ab29ce7b42a98d7066c28f07a9c07cae9}{com.\+gruppo23.\+phonebook.\+model.\+Emergency\+List}}.
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_ad6d3b1ac9cf209507ab5fe27ffbf4b0f}\index{com.gruppo23.phonebook.model.ContactList@{com.gruppo23.phonebook.model.ContactList}!getContacts@{getContacts}}
+\index{getContacts@{getContacts}!com.gruppo23.phonebook.model.ContactList@{com.gruppo23.phonebook.model.ContactList}}
+\doxysubsubsection{\texorpdfstring{getContacts()}{getContacts()}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_ad6d3b1ac9cf209507ab5fe27ffbf4b0f} 
+List$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} $>$ com.\+gruppo23.\+phonebook.\+model.\+Contact\+List.\+get\+Contacts (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Restituisce una lista di contatti. 
+
+\begin{DoxyReturn}{Returns}
+la lista di contatti 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_affc68e0ba87c193684eb1973e45ba039}\index{com.gruppo23.phonebook.model.ContactList@{com.gruppo23.phonebook.model.ContactList}!removeContact@{removeContact}}
+\index{removeContact@{removeContact}!com.gruppo23.phonebook.model.ContactList@{com.gruppo23.phonebook.model.ContactList}}
+\doxysubsubsection{\texorpdfstring{removeContact()}{removeContact()}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_affc68e0ba87c193684eb1973e45ba039} 
+void com.\+gruppo23.\+phonebook.\+model.\+Contact\+List.\+remove\+Contact (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}}}]{contact}{}\end{DoxyParamCaption})}
+
+
+
+Metodo usato per rimuovere un contatto a una lista generica. 
+
+\begin{DoxyPrecond}{Precondition}
+Il contatto è presente nella lista 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Il contatto viene rimosso dalla lista 
+\end{DoxyPostcond}
+\begin{DoxyNote}{Note}
+Invariante\+: Il contatto deve esistere
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em contact} & Il contatto da rimuovere \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_book_ace1bf5cb4d55d8ffb63d54477ec716a6}{com.\+gruppo23.\+phonebook.\+model.\+Contact\+Book}}.
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_ae2fe84d2479a22c4b593942336022a16}\index{com.gruppo23.phonebook.model.ContactList@{com.gruppo23.phonebook.model.ContactList}!search@{search}}
+\index{search@{search}!com.gruppo23.phonebook.model.ContactList@{com.gruppo23.phonebook.model.ContactList}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_ae2fe84d2479a22c4b593942336022a16} 
+List$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} $>$ com.\+gruppo23.\+phonebook.\+model.\+Contact\+List.\+search (\begin{DoxyParamCaption}\item[{String}]{search\+String}{}\end{DoxyParamCaption})}
+
+
+
+Metodo usato per cercare un contatto in una lista generica, cercando per nome e cognome. 
+
+Restituisce quella lista ordinata in base alle caratteristiche\+: nome e cognome. La lista viene filtrata in base a\+:
+\begin{DoxyEnumerate}
+\item cognome che inizia per la sottostringa passata
+\item cognome che contiene la sottostringa passata
+\item nome che inizia per la sottostringa passata
+\item nome che contiene la sottostringa passata
+\end{DoxyEnumerate}
+
+\begin{DoxyPrecond}{Precondition}
+Viene visualizzata la lista completa 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Viene visualizzata la lista "{}filtrata"{} e ordinata
+\end{DoxyPostcond}
+\begin{DoxyNote}{Note}
+Invariante\+: Il contatto deve esistere
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em string} & La sottostringa da cercare \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+result La lista filtrata e ordinata 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Rubrica\+Contatti\+Project/src/main/java/com/gruppo23/phonebook/model/Contact\+List.\+java\end{DoxyCompactItemize}

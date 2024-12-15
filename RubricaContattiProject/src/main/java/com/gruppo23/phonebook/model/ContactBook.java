@@ -11,7 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Classe ContactBook
+ * @package com.gruppo23.phonebook.model
+ * @class ContactBook
  * 
  * @brief Gestisce la rubrica principale con funzionalità di aggiunta, rimozione e
  *        spostamento di contatti.

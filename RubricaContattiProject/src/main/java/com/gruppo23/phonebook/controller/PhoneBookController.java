@@ -7,6 +7,7 @@ package com.gruppo23.phonebook.controller;
 
 import com.gruppo23.phonebook.model.EmergencyList;
 import com.gruppo23.phonebook.exceptions.FullGroupException;
+import com.gruppo23.phonebook.exceptions.InvalidContactException;
 import com.gruppo23.phonebook.model.Bin;
 import com.gruppo23.phonebook.model.Contact;
 import com.gruppo23.phonebook.model.ContactBook;
@@ -46,6 +47,7 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 /**
+ * @package com.gruppo23.phonebook.controller
  * FXML Controller class
  * Classe che gestisce il controller della rubrica telefonica, fornendo i metodi per l'inizializzazione
  * e la gestione delle operazioni relative all'interfaccia utente e ai dati della rubrica.
@@ -276,10 +278,19 @@ public class PhoneBookController implements Initializable {
     private AnchorPane rubricaZone;
     @FXML
     private Button FavButton;
+    @FXML
+    private Button ContactBookButton;
     
 
 
-    
+    /** 
+    * @brief Inizializza la GUI e le risorse associate.
+    * 
+    * @details Configura i testi dei pulsanti e delle schede, associa i dati delle tabelle ai rispettivi modelli,
+    *e inizializza le liste osservabili per contatti, lista di emergenza e cestino.
+    * @pre Nessuna finestra grafica è aperta e il controller è stato caricato correttamente.
+    * @post L'interfaccia è pronta per essere utilizzata.
+    */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -324,16 +335,33 @@ public class PhoneBookController implements Initializable {
         TableEL.setItems(observableEL);
         TableBin.setItems(observableBin);
     }
-    
+    /** 
+    * @brief Gestisce l'azione del pulsante "Crea Contatto".
+    * 
+    * @details Mostra il FORM per creare un nuovo contatto e nasconde la tabella dei contatti.
+    * 
+    * @pre L'interfaccia deve essere già inizializzata.
+    * @post La finestra di creazione del contatto è visibile.
+    */
     @FXML
     private void handleCreateButtonAction(ActionEvent event) {
         ContactView.setVisible(false);
         TableBook.setVisible(false);
         CreateForm.setVisible(true);
     }
-
+    /** 
+    * @brief Salva un nuovo contatto nella rubrica.
+    * 
+    * @details Raccoglie i dati inseriti nel form, crea un oggetto `Contact`, lo aggiunge alla rubrica
+    * e aggiorna la lista osservabile per riflettere i cambiamenti.
+    *    
+    * @pre Tutti i campi obbligatori del modulo (nome e cognome) devono essere compilati correttamente.
+    * @post Il nuovo contatto è aggiunto alla rubrica e visibile nella tabella.
+    * 
+    * @param event Evento che attiva l'azione (click su "Salva Contatto")
+    */
     @FXML
-    private void onSaveContactButton(ActionEvent event) {
+    private void onSaveContactButton(ActionEvent event) throws InvalidContactException {
         
         
         
@@ -377,6 +405,16 @@ public class PhoneBookController implements Initializable {
         contactImage.setImage(null);
     }
 
+   /** 
+     * @brief Aggiunge un contatto alla lista di emergenza.
+     * 
+     * @details Sposta un contatto selezionato dalla rubrica alla lista dei contatti di emergenza.
+     * 
+     * @pre Il contatto selezionato deve esistere nella rubrica.
+     * @post Il contatto è aggiunto alla lista di emergenza e rimosso dalla rubrica.
+     * @param event Evento che attiva l'azione (click su "Aggiungi ai Contatti di Emergenza").
+     * @invariant Le liste osservabili devono essere sincronizzate con i rispettivi modelli.
+     */
     @FXML
     private void onAddToELButton(ActionEvent event) throws FullGroupException {
          Contact selectedContact = TableBook.getSelectionModel().getSelectedItem();
@@ -388,7 +426,16 @@ public class PhoneBookController implements Initializable {
             
     }
     
-    
+    /** 
+     * @brief Visualizza i dettagli di un contatto selezionato.
+     * 
+     * @details Mostra tutte le informazioni di un contatto creato, che può trovarsi nella Rubrica Principale, nei Contatti di Emergenza
+     * o nel Cestino
+     * 
+     * @pre Deve essere selezionato un contatto valido.
+     * @post La schermata di visualizzazione dei dettagli è visibile.
+     * @param event Evento che attiva l'azione (click su "Visualizza Contatto").
+     */
     @FXML
     private void onDisplayContactButton(ActionEvent event) {
         Object source= event.getSource();
@@ -542,7 +589,15 @@ public class PhoneBookController implements Initializable {
         
        
     }
-
+    /** 
+     * @brief Torna alla visualizzazione della tabella principale.
+     * 
+     * @details Cambia la vista attuale per ritornare alla tabella di origine.
+     * 
+     * @pre Deve essere attiva una vista dettagli di un contatto.
+     * @post La tabella principale è visibile.
+     * @param event Evento che attiva l'azione.
+     */
     @FXML
     private void onGoBackButton(ActionEvent event) {
         Object source = event.getSource();
@@ -560,26 +615,62 @@ public class PhoneBookController implements Initializable {
     }
     }
     
+    /** 
+     * @brief Passa alla scheda dei contatti di emergenza.
+     * 
+     * @details Cambia la visualizzazione per mostrare la lista dei contatti di emergenza.
+     * 
+     * @pre Nessuna.
+     * @post La scheda dei contatti di emergenza è visibile.
+     * @param event Evento che attiva l'azione.
+     */
     @FXML
     private void handleEmergencyTab(Event event) {
         CreateForm.setVisible(false);
         ContactView1.setVisible(false);
         TableEL.setVisible(true);
     }
-
+    
+    /** 
+     * @brief Passa alla scheda della rubrica principale.
+     * 
+     * @details Cambia la visualizzazione per mostrare la lista della rubrica principale.
+     * 
+     * @pre Nessuna.
+     * @post La scheda della rubrica principale è visibile.
+     * @param event Evento che attiva l'azione.
+     */
     @FXML
     private void onContactBookTab(Event event) {
          ContactView.setVisible(false);
         TableBook.setVisible(true);
     }
-
+    
+    /** 
+     * @brief Passa alla scheda del cestino.
+     * 
+     * @details Cambia la visualizzazione per mostrare la lista del cestino.
+     * 
+     * @pre Nessuna.
+     * @post La scheda del cestino è visibile.
+     * @param event Evento che attiva l'azione.
+     */
     @FXML
     private void onBinTab(Event event) {
         CreateForm.setVisible(false);
         ContactView11.setVisible(false);
         TableBin.setVisible(true);
     }
-   
+    
+    /** 
+     * @brief Sposta un contatto nel cestino.
+     * 
+     * @details Rimuove un contatto dalla rubrica o dalla lista di emergenza e lo aggiunge al cestino.
+     * 
+     * @pre Deve essere selezionato un contatto valido.
+     * @post Il contatto è spostato nel cestino.
+     * @param event Evento che attiva l'azione (click di "Sposta nel Cestino").
+     */
    @FXML
     private void onMoveToBinButton(ActionEvent event) throws FullGroupException {
     Contact selectedContact = TableBook.getSelectionModel().getSelectedItem();
@@ -595,8 +686,18 @@ public class PhoneBookController implements Initializable {
         }
     }
 
-
-
+    /**
+     * @brief Gestisce l'evento del pulsante per la modifica di un contatto.
+     * 
+     * Questo metodo viene invocato quando l'utente seleziona un contatto dalla rubrica
+     * principale e clicca sul pulsante di modifica. Rende visibile il form
+     * di modifica e compila i campi con i dettagli del contatto selezionato.
+     * 
+     * @param event L'evento che attiva la funzione (click di "Modifica").
+     * 
+     * @pre Il contatto selezionato deve essere presente nella rubrica principale.
+     * @post Il form di modifica diventa visibile e i campi possono essere modificati.
+     */
     @FXML
     private void onEditContactButton(ActionEvent event) {
       Contact selectedContact = TableBook.getSelectionModel().getSelectedItem();
@@ -642,9 +743,19 @@ public class PhoneBookController implements Initializable {
   
     }
 
-
+    /**
+     * @brief Salva le modifiche apportate al contatto selezionato.
+     * 
+     * Questo metodo aggiorna i dettagli del contatto con i valori inseriti nel form di modifica.
+     * Successivamente aggiorna la rubrica principale con le informazioni modificate.
+     * 
+     * @param event L'evento che attiva la funzione (click di "Salva").
+     * 
+     * @pre Il contatto selezionato deve essere presente nella rubrica principale.
+     * @post Le modifiche vengono salvate e la tabella viene aggiornata.
+     */
     @FXML
-    private void onSaveEditButton(ActionEvent event) {
+    private void onSaveEditButton(ActionEvent event) throws InvalidContactException {
         Contact selectedContact = TableBook.getSelectionModel().getSelectedItem();
         
         selectedContact.setName(nameTextField1.getText());
@@ -660,12 +771,32 @@ public class PhoneBookController implements Initializable {
         selectedContact.setImage(contactImage1.getImage());
         selectedContact.setIsFavorite(favoritesCheckBox1.isSelected());
         
+        if ((selectedContact.getName() == null || selectedContact.getName().trim().isEmpty()) && (selectedContact.getSurname() == null || selectedContact.getSurname().trim().isEmpty())) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Contatto non salvato!");
+        alert.setHeaderText("Il contatto non è stato modificato correttamente!");
+        alert.setContentText("Inserire almeno un nome o un cognome.");
+        alert.showAndWait();
+        throw new InvalidContactException("Il contatto deve avere almeno un nome o un cognome.");
+
+    }
        TableBook.refresh();
         
         CreateForm1.setVisible(false);
         TableBook.setVisible(true);
     }
 
+     /**
+     * @brief Annulla l'operazione di modifica di un contatto.
+     * 
+     * Questo metodo nasconde i form di creazione o modifica e mostra la tabella principale.
+     * Serve per annullare l'operazione di modifica o di creazione.
+     * 
+     * @param event L'evento che attiva la funzione (click di "Indietro").
+     * 
+     * @pre Il form di modifica o creazione è visibile.
+     * @post I form di modifica o creazione vengono nascosti, e la tabella principale viene ripristinata.
+     */
     @FXML
     private void onCancelButton(ActionEvent event) {
         CreateForm1.setVisible(false);
@@ -674,7 +805,17 @@ public class PhoneBookController implements Initializable {
     }
 
 
-    
+    /**
+     * @brief Gestisce la ricerca dei contatti.
+     * 
+     * Questo metodo filtra i contatti in base al testo inserito nell'apposito campo di ricerca,
+     * e aggiorna la tabella principale con i risultati.
+     * 
+     * @param event L'evento che attiva la funzione (click di "Cerca").
+     * 
+     * @pre La rubrica deve avere almeno un contatto.
+     * @post La tabella dei contatti viene aggiornata con i risultati della ricerca.
+     */
     @FXML
     private void onSearchButtonAction(ActionEvent event) {
         List<Contact> filteredContacts = contactBook.search(searchCB.getText().toLowerCase());
@@ -682,6 +823,17 @@ public class PhoneBookController implements Initializable {
         TableBook.setItems(observableFilteredContacts);
     }
     
+     /**
+     * @brief Ripristina un contatto dal cestino.
+     * 
+     * Ripristina un contatto dal cestino, rimuovendolo da quest'ultimo e aggiungendolo
+     * alla rubrica principale.
+     * 
+     * @param event L'evento che attiva la funzione (click di "Ripristina Contatto").
+     * 
+     * @pre Il contatto selezionato deve essere presente nel cestino.
+     * @post Il contatto viene ripristinato e la tabella viene aggiornata.
+     */
     @FXML
     private void onRestoreButton(ActionEvent event) throws FullGroupException {
         
@@ -696,6 +848,16 @@ public class PhoneBookController implements Initializable {
         }
     }
     
+     /**
+     * @brief Rimuove definitivamente un contatto dal cestino.
+     * 
+     * Elimina definitivamente un contatto
+     * 
+     * @param event L'evento che attiva la funzione (click di "Rimuovi Definitivamente").
+     * 
+     * @pre Il contatto selezionato deve essere presente nella tabella dei contatti eliminati.
+     * @post Il contatto viene rimosso definitivamente dal cestino e dalla lista dei contatti.
+     */
     @FXML
     private void onRemoveBinButton(ActionEvent event) {
         Contact selectedContact = TableBin.getSelectionModel().getSelectedItem();
@@ -717,6 +879,17 @@ public class PhoneBookController implements Initializable {
         }
     }
 
+    /**
+     * @brief Visualizza i contatti preferiti nella rubrica principale.
+     * 
+     * Questo metodo aggiorna la rubrica principale con i contatti che sono contrassegnati come
+     * preferiti.
+     * 
+     * @param event L'evento che attiva la funzione (click su "Filtra Preferiti").
+     * 
+     * @pre La lista dei contatti preferiti deve essere disponibile.
+     * @post La tabella viene aggiornata con i contatti preferiti.
+     */
     @FXML
     private void onFavButton(ActionEvent event) {
     List<Contact> favoriteContacts = contactBook.displayFavorites();
@@ -728,14 +901,46 @@ public class PhoneBookController implements Initializable {
     TableBook.setItems(favoriteObservableContacts);
     }
 
+
+     /**
+     * @brief Rimuove un contatto dalla lista di emergenza.
+     * 
+     * Questo metodo rimuove un contatto selezionato dalla lista di emergenza (`emergencyList`)
+     * e aggiorna la tabella corrispondente.
+     * 
+     * @param event L'evento che attiva la funzione (clic di "Rimuovi dai Contatti di Emergenza").
+     * 
+     * @pre Il contatto selezionato deve essere presente nella lista di emergenza.
+     * @post Il contatto viene rimosso dalla lista di emergenza e la tabella viene aggiornata.
+     */
+    
+  @FXML
     private void onRemoveFromEL(ActionEvent event) {
-        Contact selectedContact = TableBook.getSelectionModel().getSelectedItem();
+        Contact selectedContact = TableEL.getSelectionModel().getSelectedItem();
         if (selectedContact != null) 
             if (emergencyList.getContacts().contains(selectedContact)) {
             emergencyList.removeContact(selectedContact);
-            observableEL.remove(emergencyList.getContacts());
+            
+            observableEL.remove(selectedContact);
+            TableEL.setItems(observableEL);
+            TableEL.refresh();
+
         }
             
+    }
+    
+    /**
+     * Mostra la rubrica principale senza filtri
+     * 
+     * @param event L'evento che attiva la funzione (click su "Mostra Rubrica")
+     * @pre la rubrica è filtrata
+     * @pre La rubrica principale viene mostrata con tutti i contatti
+     * 
+     */
+    
+    @FXML
+    private void onContactBookButton(ActionEvent event) {
+        TableBook.setItems(observableContacts);
     }
 
     @FXML
@@ -758,7 +963,7 @@ public class PhoneBookController implements Initializable {
     }
 
     @FXML
-    private void onImportButton(ActionEvent event) throws IOException, FileNotFoundException, FullGroupException {
+    private void onImportButton(ActionEvent event) throws IOException, FileNotFoundException, FullGroupException, InvalidContactException {
         FileChooser fileChooser = new FileChooser();
         File file = fileChooser.showOpenDialog(new Stage());
         if(file != null){

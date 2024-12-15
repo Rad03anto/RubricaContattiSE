@@ -8,7 +8,8 @@ import com.gruppo23.phonebook.exceptions.FullGroupException;
 import java.io.Serializable;
 
 /**
- * @file EmergencyList.java
+ * @package com.gruppo23.phonebook.model
+ * @class EmergencyList.java
  * @brief Classe che rappresenta una lista di contatti di emergenza.
  * 
  * Questa classe estende la classe ContactList e aggiunge delle funzionalità specifiche

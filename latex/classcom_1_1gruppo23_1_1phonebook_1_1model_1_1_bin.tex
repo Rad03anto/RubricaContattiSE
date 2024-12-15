@@ -1,0 +1,118 @@
+\doxysection{com.\+gruppo23.\+phonebook.\+model.\+Bin Class Reference}
+\hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin}{}\label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin}\index{com.gruppo23.phonebook.model.Bin@{com.gruppo23.phonebook.model.Bin}}
+
+
+Gestisce un cestino per contatti, consentendo il ripristino o la cancellazione automatica dei contatti.  
+
+
+Inheritance diagram for com.\+gruppo23.\+phonebook.\+model.\+Bin\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin_a423262616e955b49c09a767d48ff01ca}{Bin}} ()
+\begin{DoxyCompactList}\small\item\em Costruttore predefinito della classe \doxylink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin}{Bin}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin_add97cc4da029e57368e6b8a2a275e7f3}{restore\+Contact}} (\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} contact, \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_book}{Contact\+Book}} contact\+Book)  throws \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1exceptions_1_1_full_group_exception}{Full\+Group\+Exception}}
+\begin{DoxyCompactList}\small\item\em Ripristina un contatto dal cestino alla rubrica. \end{DoxyCompactList}\item 
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin_a76d0073101a873389f530853fe3311be}\label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin_a76d0073101a873389f530853fe3311be} 
+void {\bfseries delete\+Contact\+Permanently} (\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} contact, \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_book}{Contact\+Book}} contact\+Book)
+\item 
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin_a33ce696fe9f2f4cb95eb2c1e8abe18e0}{autodelete\+From\+Bin}} ()
+\begin{DoxyCompactList}\small\item\em Elimina automaticamente tutti i contatti dal cestino. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list}{com.\+gruppo23.\+phonebook.\+model.\+Contact\+List}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_ae5b3e5500f8b0a56c5d9154f6fac9c7f}{add\+Contact}} (\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} contact)  throws \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1exceptions_1_1_full_group_exception}{Full\+Group\+Exception}} 
+\begin{DoxyCompactList}\small\item\em Metodo usato per aggiungere un contatto a una lista generica. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_affc68e0ba87c193684eb1973e45ba039}{remove\+Contact}} (\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} contact)
+\begin{DoxyCompactList}\small\item\em Metodo usato per rimuovere un contatto a una lista generica. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} $>$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_ae2fe84d2479a22c4b593942336022a16}{search}} (String search\+String)
+\begin{DoxyCompactList}\small\item\em Metodo usato per cercare un contatto in una lista generica, cercando per nome e cognome. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} $>$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_ad6d3b1ac9cf209507ab5fe27ffbf4b0f}{get\+Contacts}} ()
+\begin{DoxyCompactList}\small\item\em Restituisce una lista di contatti. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list}{com.\+gruppo23.\+phonebook.\+model.\+Contact\+List}}}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} $>$ {\bfseries contact\+List} = new Array\+List$<$$>$()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Gestisce un cestino per contatti, consentendo il ripristino o la cancellazione automatica dei contatti. 
+
+La classe \doxylink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin}{Bin} estende \doxylink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list}{Contact\+List} e aggiunge funzionalità specifiche per la gestione dei contatti spostati nel cestino, come il ripristino e l\textquotesingle{}eliminazione automatica.
+
+\begin{DoxyAuthor}{Author}
+gruppo23 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin_a423262616e955b49c09a767d48ff01ca}\index{com.gruppo23.phonebook.model.Bin@{com.gruppo23.phonebook.model.Bin}!Bin@{Bin}}
+\index{Bin@{Bin}!com.gruppo23.phonebook.model.Bin@{com.gruppo23.phonebook.model.Bin}}
+\doxysubsubsection{\texorpdfstring{Bin()}{Bin()}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin_a423262616e955b49c09a767d48ff01ca} 
+com.\+gruppo23.\+phonebook.\+model.\+Bin.\+Bin (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Costruttore predefinito della classe \doxylink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin}{Bin}. 
+
+\begin{DoxyPostcond}{Postcondition}
+Viene creato un oggetto \doxylink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin}{Bin} vuoto. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin_a33ce696fe9f2f4cb95eb2c1e8abe18e0}\index{com.gruppo23.phonebook.model.Bin@{com.gruppo23.phonebook.model.Bin}!autodeleteFromBin@{autodeleteFromBin}}
+\index{autodeleteFromBin@{autodeleteFromBin}!com.gruppo23.phonebook.model.Bin@{com.gruppo23.phonebook.model.Bin}}
+\doxysubsubsection{\texorpdfstring{autodeleteFromBin()}{autodeleteFromBin()}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin_a33ce696fe9f2f4cb95eb2c1e8abe18e0} 
+void com.\+gruppo23.\+phonebook.\+model.\+Bin.\+autodelete\+From\+Bin (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Elimina automaticamente tutti i contatti dal cestino. 
+
+\begin{DoxyPrecond}{Precondition}
+Il cestino contiene uno o più contatti. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Tutti i contatti presenti nel cestino vengono eliminati definitivamente. 
+\end{DoxyPostcond}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin_add97cc4da029e57368e6b8a2a275e7f3}\index{com.gruppo23.phonebook.model.Bin@{com.gruppo23.phonebook.model.Bin}!restoreContact@{restoreContact}}
+\index{restoreContact@{restoreContact}!com.gruppo23.phonebook.model.Bin@{com.gruppo23.phonebook.model.Bin}}
+\doxysubsubsection{\texorpdfstring{restoreContact()}{restoreContact()}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin_add97cc4da029e57368e6b8a2a275e7f3} 
+void com.\+gruppo23.\+phonebook.\+model.\+Bin.\+restore\+Contact (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}}}]{contact}{, }\item[{\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_book}{Contact\+Book}}}]{contact\+Book}{}\end{DoxyParamCaption}) throws \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1exceptions_1_1_full_group_exception}{Full\+Group\+Exception}}}
+
+
+
+Ripristina un contatto dal cestino alla rubrica. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em contact} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+Il contatto deve essere presente nel cestino. 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em contact} & il contatto da ripristinare \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Il contatto viene rimosso dal cestino, pronto per essere aggiunto a un\textquotesingle{}altra lista. 
+\end{DoxyPostcond}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Rubrica\+Contatti\+Project/src/main/java/com/gruppo23/phonebook/model/Bin.\+java\end{DoxyCompactItemize}
