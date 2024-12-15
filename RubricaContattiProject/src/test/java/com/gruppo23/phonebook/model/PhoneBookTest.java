@@ -53,7 +53,7 @@ public class PhoneBookTest {
     }
 
     /**
-     * Test per getContactBook.
+     * Test per getContactBook della classe PhoneBook
      */
     @Test
     public void testGetContactBook() {
@@ -62,7 +62,7 @@ public class PhoneBookTest {
     }
 
     /**
-     * Test per setContactBook
+     * Test per setContactBook della classe PhoneBook
      */
     @Test
     public void testSetContactBook() {
@@ -72,7 +72,7 @@ public class PhoneBookTest {
     }
 
     /**
-     * Test per geteList.
+     * Test per geteList della classe PhoneBook
      */
     @Test
     public void testGeteList() {
@@ -81,7 +81,7 @@ public class PhoneBookTest {
     }
 
     /**
-     * Test per seteList.
+     * Test per seteList della classe PhoneBook
      */
     @Test
     public void testSeteList() {
@@ -91,7 +91,7 @@ public class PhoneBookTest {
     }
 
     /**
-     * Test per getBin.
+     * Test per getBin della classe PhoneBook
      */
     @Test
     public void testGetBin() {
@@ -100,7 +100,7 @@ public class PhoneBookTest {
     }
 
     /**
-     * Test per setBin.
+     * Test per setBin della classe PhoneBook
      */
     @Test
     public void testSetBin() {
@@ -110,7 +110,7 @@ public class PhoneBookTest {
     }
 
     /**
-     * Test del metodo LoadFromFile
+     * Test del metodo LoadFromFile della classe PhoneBook
      * per il caricamento da file csv.
      */
     @Test
@@ -129,7 +129,7 @@ public class PhoneBookTest {
     }
 
     /**
-     * Test per il metodo SaveToFile
+     * Test per il metodo SaveToFile della classe PhoneBook
      * per il salvataggio su file csv.
      */
     @Test

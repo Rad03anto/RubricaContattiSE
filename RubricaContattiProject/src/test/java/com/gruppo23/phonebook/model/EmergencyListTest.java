@@ -45,7 +45,7 @@ public class EmergencyListTest {
     }
 
     /**
-     * Test per il metodo AddContact
+     * Test per il metodo AddContact della classe EmergencyList
      * per l'aggiunta di un contatto ai contatti di emergenza.
      * @throws InvalidContactException
      * @throws FullGroupException
@@ -62,7 +62,7 @@ public class EmergencyListTest {
     }
     
     /**
-     * Test per il metodo AddContactMaxSize
+     * Test per il metodo AddContactMaxSize della classe EmergencyList
      * Per verificare che venga lanciata un'eccezione quando provo a inserire il contatto numero 16 nel gruppo di emergenza
      * @throws InvalidContactException
      * @throws FullGroupException 

@@ -79,7 +79,7 @@ public class PhoneBook implements Serializable {
         this.bin = bin;
     }
   
-      /**
+     /**
      * @brief Carica la rubrica da un file.
      * 
      * @param[in] filename Il nome del file da cui caricare la rubrica.
@@ -125,7 +125,7 @@ public class PhoneBook implements Serializable {
             
         }
     }
-        /**
+     /**
      * @brief Salva la rubrica su un file.
      * 
      * @param[in] filename Il nome del file su cui salvare la rubrica.

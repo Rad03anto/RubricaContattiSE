@@ -125,14 +125,5 @@ public class ContactBook extends ContactList implements Serializable {
         return favorites;
     }
     
-    /**
-     * @brief Modifica un contatto passato per parametro
-     * @pre La rubrica principale deve avere almeno un contatto (da modificare)
-     * @post Il contatto viene aggiornato
-     * @param[inout] contact
-     */
-    public void editContact(Contact contact) throws InvalidContactException {
-        //da implementare
-    }
     
 }

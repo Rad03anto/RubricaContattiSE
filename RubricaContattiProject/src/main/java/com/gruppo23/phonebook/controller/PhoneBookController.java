@@ -949,14 +949,20 @@ public class PhoneBookController implements Initializable {
         Contact selectedContact = TableEL.getSelectionModel().getSelectedItem();
         if (selectedContact != null) 
             if (emergencyList.getContacts().contains(selectedContact)) {
-            emergencyList.removeContact(selectedContact);
-            
-            observableEL.remove(selectedContact);
-            TableEL.setItems(observableEL);
-            TableEL.refresh();
+                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setTitle("Rimuovi dai contatti di emergenza");
+                alert.setHeaderText("Sei sicuro di voler rimuovere il contatto dai contatti di emergenza?");
 
-        }
+                Optional<ButtonType> result = alert.showAndWait();
+                emergencyList.removeContact(selectedContact);
             
+                if (result.isPresent() && result.get() == ButtonType.OK){
+                    emergencyList.removeContact(selectedContact);
+                    observableEL.remove(selectedContact);
+                    TableEL.setItems(observableEL);
+                    TableEL.refresh();
+                }
+            }
     }
     
     /**
@@ -1033,14 +1039,14 @@ public class PhoneBookController implements Initializable {
 
         List<Contact> emergencyListCopy = new ArrayList<>(pB.geteList().getContacts());
         for (Contact c : emergencyListCopy) {
-            observableEL.add(c);  // Aggiungi alla lista osservabile
-            emergencyList.addContact(c);   // Aggiungi alla lista principale
+            observableEL.add(c);
+            emergencyList.addContact(c);
         }
 
         List<Contact> binCopy = new ArrayList<>(pB.getBin().getContacts());
         for (Contact c : binCopy) {
-            observableBin.add(c);  // Aggiungi alla lista osservabile
-            bin.addContact(c);   // Aggiungi alla lista principale
+            observableBin.add(c);
+            bin.addContact(c);
         }
            
             TableBook.setItems(observableContacts);

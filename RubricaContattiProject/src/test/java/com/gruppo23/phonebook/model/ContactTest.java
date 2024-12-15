@@ -32,7 +32,7 @@ public class ContactTest {
     }
     
     /**
-     * Test of getName method, of class Contact.
+     * Test di getName della classe Contact
      */
     @Test
     public void testGetName() {
@@ -40,7 +40,7 @@ public class ContactTest {
     }
 
     /**
-     * Test of getSurname method, of class Contact.
+     * Test di getSurname della classe Contact
      */
     @Test
     public void testGetSurname() {
@@ -48,7 +48,7 @@ public class ContactTest {
     }
 
     /**
-     * Test of getPhoneNumbers method, of class Contact.
+     * Test di getPhoneNumbers della classe Contact
      */
     @Test
     public void testGetPhoneNumbers() {
@@ -57,7 +57,7 @@ public class ContactTest {
     }
 
     /**
-     * Test of getEmails method, of class Contact.
+     * Test di getEmails della classe Contact.
      */
     @Test
     public void testGetEmails() {
@@ -66,7 +66,7 @@ public class ContactTest {
     }
 
     /**
-     * Test of getAddress method, of class Contact.
+     * Test di getAddress della classe Contact
      */
     @Test
     public void testGetAddress() {
@@ -74,7 +74,7 @@ public class ContactTest {
     }
 
     /**
-     * Test of getNotes method, of class Contact.
+     * Test di getNotes della classe Contact.
      */
     @Test
     public void testGetNotes() {
@@ -95,7 +95,7 @@ public class ContactTest {
 }*/
 
     /**
-     * Test of setName method, of class Contact.
+     * Test di setName della classe Contact.
      */
     @Test
     public void testSetName() {
@@ -104,7 +104,7 @@ public class ContactTest {
     }
 
     /**
-     * Test of setSurname method, of class Contact.
+     * Test di setSurname della classe Contact.
      */
     @Test
     public void testSetSurname() {
@@ -113,7 +113,7 @@ public class ContactTest {
     }
 
     /**
-     * Test of setPhoneNumbers method, of class Contact.
+     * Test di setPhoneNumbers della classe Contact.
      */
     @Test
     public void testSetPhoneNumbers() {
@@ -123,7 +123,7 @@ public class ContactTest {
     }
 
     /**
-     * Test of setEmails method, of class Contact.
+     * Test di setEmails della classe Contact.
      */
     @Test
     public void testSetEmails() {
@@ -133,7 +133,7 @@ public class ContactTest {
     }
 
     /**
-     * Test of setAddress method, of class Contact.
+     * Test di setAddress della classe Contact.
      */
     @Test
     public void testSetAddress() {
@@ -142,7 +142,7 @@ public class ContactTest {
     }
 
     /**
-     * Test of setNotes method, of class Contact.
+     * Test di setNotes della classe Contact.
      */
     @Test
     public void testSetNotes() {
@@ -161,7 +161,7 @@ public class ContactTest {
     } */
 
     /**
-     * Test of getIsFavorite method, of class Contact.
+     * Test di getIsFavorite della classe Contact.
      */
     @Test
     public void testGetIsFavorite() {
@@ -169,7 +169,7 @@ public class ContactTest {
     }
 
     /**
-     * Test of setIsFavorite method, of class Contact.
+     * Test di setIsFavorite della classe Contact.
      */
     @Test
     public void testSetIsFavorite() {
@@ -178,7 +178,7 @@ public class ContactTest {
     }
 
     /**
-     * Test of compareTo method, of class Contact.
+     * Test di compareTo method della classe Contact.
      */
     @Test
     public void testCompareTo() throws InvalidContactException {

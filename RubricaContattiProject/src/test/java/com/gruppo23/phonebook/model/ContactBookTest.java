@@ -4,6 +4,9 @@
  */
 package com.gruppo23.phonebook.model;
 
+import com.gruppo23.phonebook.exceptions.FullGroupException;
+import com.gruppo23.phonebook.exceptions.InvalidContactException;
+import java.util.Arrays;
 import java.util.List;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
@@ -18,6 +21,12 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class ContactBookTest {
     
+    private ContactBook contactBook;
+    private Contact contact;
+    private Contact favoriteContact;
+    private Bin bin;
+    private EmergencyList emergencyList;
+    
     public ContactBookTest() {
     }
     
@@ -30,7 +39,20 @@ public class ContactBookTest {
     }
     
     @BeforeEach
-    public void setUp() {
+    public void setUp() throws InvalidContactException, FullGroupException {
+        
+        contactBook = new ContactBook();
+        bin = new Bin();
+        emergencyList = new EmergencyList();
+        
+        List<String> phoneNumbers = Arrays.asList("1234567890", "0987654321", "8908394302");
+        List<String> emails = Arrays.asList("email@esempio.com", "email@esempio2.com", "email@esempio3.com");
+        
+        contact = new Contact("Nome", "Cognome", phoneNumbers, emails, "1234 Indirizzo", "Note", null, true);
+        favoriteContact = new Contact("Nome2", "Cognome2", phoneNumbers, emails, "1234 Indirizzo2", "Note", null, true);
+        
+        contactBook.addContact(contact);
+        contactBook.addContact(favoriteContact);
     }
     
     @AfterEach
@@ -38,84 +60,73 @@ public class ContactBookTest {
     }
 
     /**
-     * Test of addContact method, of class ContactBook.
+     * Test per addContact della classe ContactBook
+     * Aggiunge un contatto alla contactbook, cioè alla rubrica principale, inoltre verifica che il contatore sia incrementato di 2
+     * dopo l'aggiunta di 2 contatti
      */
     @Test
     public void testAddContact() throws Exception {
-        System.out.println("addContact");
-        Contact contact = null;
-        ContactBook instance = new ContactBook();
-        instance.addContact(contact);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertTrue(contactBook.getContacts().contains(contact), "Il contatto dovrebbe essere presente nella rubrica principale.");
+        int expectedCount = 2;
+        assertEquals(expectedCount, ContactBook.getGlobalContactCount(), "Il contatore dovrebbe essere aggiornato.");
     }
 
     /**
-     * Test of removeContact method, of class ContactBook.
+     * Test di removeContact della classe ContactBook
+     * Verifica che il contatto sia rimosso dalla rubrica principale che il contatore sia decrementato
      */
     @Test
     public void testRemoveContact() {
-        System.out.println("removeContact");
-        Contact contact = null;
-        ContactBook instance = new ContactBook();
-        instance.removeContact(contact);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        contactBook.removeContact(contact);
+        assertFalse(contactBook.getContacts().contains(contact), "Il contatto dovrebbe essere stato rimosso dalla rubrica principale.");
+        
+        int expectedCount = 1;
+        assertEquals(expectedCount, ContactBook.getGlobalContactCount(), "Il contatore dovrebbe essere aggiornato.");
     }
 
     /**
-     * Test of moveToBin method, of class ContactBook.
+     * Test di moveToBin della classe ContactBook
+     * verifica che il contatto venga aggiunto al cestino
      */
     @Test
     public void testMoveToBin() throws Exception {
-        System.out.println("moveToBin");
-        Contact contact = null;
-        Bin bin = null;
-        ContactBook instance = new ContactBook();
-        instance.moveToBin(contact, bin);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       
+        assertTrue(contactBook.getContacts().contains(contact), "Il contatto dovrebbe essere nella rubrica.");
+        contactBook.moveToBin(contact, bin);
+        assertFalse(contactBook.getContacts().contains(contact), "Il contatto dovrebbe essere stato rimosso dalla rubrica.");
+        assertTrue(bin.getContacts().contains(contact), "Il contatto dovrebbe essere stato aggiunto al cestino.");
     }
 
     /**
-     * Test of moveToEmergencyList method, of class ContactBook.
+     * Test di moveToEmergencyList della classe ContactBook
+     * verifica che un contatto venga aggiunto ai contatti di emergenza e che non venga eliminato dalla rubrica
      */
     @Test
     public void testMoveToEmergencyList() throws Exception {
-        System.out.println("moveToEmergencyList");
-        Contact contact = null;
-        EmergencyList eList = null;
-        ContactBook instance = new ContactBook();
-        instance.moveToEmergencyList(contact, eList);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+        contactBook.moveToEmergencyList(contact, emergencyList);
+        assertTrue(emergencyList.getContacts().contains(contact), "Il contatto dovrebbe essere stato aggiunto ai contatti di emergenza.");
+        assertTrue(contactBook.getContacts().contains(contact), "Il contatto dovrebbe essere ancora nella rubrica.");
     }
 
     /**
-     * Test of getGlobalContactCount method, of class ContactBook.
+     * Test di getGlobalContactCount della classe ContactBook.
+     * verifica che sia corretto il numero del contatore
      */
     @Test
     public void testGetGlobalContactCount() {
-        System.out.println("getGlobalContactCount");
-        int expResult = 0;
-        int result = ContactBook.getGlobalContactCount();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        int expectedCount = 2;
+        assertEquals(expectedCount, ContactBook.getGlobalContactCount(), "Il numero di contatti dovrebbe essere corretto.");
     }
 
     /**
-     * Test of displayFavorites method, of class ContactBook.
+     * Test di displayFavorites della classe ContactBook.
+     * verifica che il contatto preferito sia aggiunto nel display
      */
     @Test
-    public void testDisplayFavorites() {
-        System.out.println("displayFavorites");
-        ContactBook instance = new ContactBook();
-        List<Contact> expResult = null;
-        List<Contact> result = instance.displayFavorites();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testDisplayFavorites() throws InvalidContactException, FullGroupException {
+        List<Contact> favorites = contactBook.displayFavorites();
+        assertTrue(favorites.contains(favoriteContact), "La lista dei preferiti dovrebbe contenere il contatto preferito.");
     }
 
     
