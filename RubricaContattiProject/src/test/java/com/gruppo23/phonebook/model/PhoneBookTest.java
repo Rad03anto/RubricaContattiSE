@@ -11,6 +11,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -20,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  *
- * @author miche
+ * @author gruppo23
  */
 public class PhoneBookTest {
     
@@ -115,9 +116,10 @@ public class PhoneBookTest {
      */
     @Test
     public void testLoadFromFile() throws Exception {
-        String filename = "testPhoneBook.csv";
+        String filename = "Contatti.csv";
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
-            writer.write("Mario;Rossi;12345;67890;54321;mail1@mail.com;mail2@mail.com;mail3@mail.com;Via Roma;Note;image.png;true;CONTACTBOOK\n");
+        writer.write("Name;Surname;number1;number2;number3;email1;email2;email3;address;notes;image;isFavorite;Type\n");
+        writer.write("Mario;Rossi;12345;67890;54321;mail1@mail.com;mail2@mail.com;mail3@mail.com;Via Roma;Note;image.png;true;CONTACTBOOK\n");
         }
         phoneBook.loadFromFile(filename);
         List<Contact> contacts = phoneBook.getContactBook().getContacts();
@@ -138,14 +140,22 @@ public class PhoneBookTest {
                 Arrays.asList("mail1@mail.com", "mail2@mail.com", "mail3@mail.com"), 
                 "Via Roma", "Note", null, true);
         phoneBook.getContactBook().addContact(contact);
-        String filename = "testSavePhoneBook.csv";
+        String filename = "Contatti.csv";
         phoneBook.saveToFile(filename);
-        try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
-            String line = reader.readLine();
-            assertTrue(line.contains("Mario"));
-            assertTrue(line.contains("Rossi"));
+        try (Scanner s = new Scanner(new BufferedReader(new FileReader(filename)))) {
+        
+        if (s.hasNextLine()) {
+            s.nextLine();
         }
-        new File(filename).delete();
+        
+        String line = s.nextLine().trim();  
+        
+        System.out.println("First contact in the file: " + line);
+        assertTrue(line.contains("Mario"));
+        assertTrue(line.contains("Rossi"));
+    }
+        
+    new File(filename).delete();
     }
     
-}
+    }

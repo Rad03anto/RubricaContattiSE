@@ -137,10 +137,6 @@ public class PhoneBookController implements Initializable {
     private ImageView contactImage;
     @FXML
     private Button onMoveToBinButton;
-    
-    /**
-     * Inizializza la classe controller.
-     */
     @FXML
     private TableView<Contact> TableEL;
     @FXML
@@ -153,14 +149,6 @@ public class PhoneBookController implements Initializable {
     private TableColumn<Contact, String> surnameClm2;
     @FXML
     private TableColumn<Contact, String> nameClm2;
-    
-    private PhoneBook pB;
-    private ContactBook contactBook;
-    private EmergencyList emergencyList;
-    private ObservableList<Contact> observableContacts;
-    private ObservableList<Contact> observableEL;
-
-
     @FXML
     private Button goBackButton;
     @FXML
@@ -231,15 +219,10 @@ public class PhoneBookController implements Initializable {
     private Button SearchButton1;
     @FXML
     private Button SearchButton2;
-
-    private Bin bin;
-    private ObservableList<Contact> observableBin;
     @FXML
-
     private Button onRestoreButton;
     @FXML
     private Button onRemoveBinButton;
-
     @FXML
     private Button editContactButton;
     @FXML
@@ -289,7 +272,14 @@ public class PhoneBookController implements Initializable {
     @FXML
     private ImageView contactImageBin;
     
-
+    
+    private PhoneBook pB;
+    private ContactBook contactBook;
+    private EmergencyList emergencyList;
+    private ObservableList<Contact> observableContacts;
+    private ObservableList<Contact> observableEL;
+    private Bin bin;
+    private ObservableList<Contact> observableBin;
 
     /** 
     * @brief Inizializza la GUI e le risorse associate.
@@ -443,13 +433,27 @@ public class PhoneBookController implements Initializable {
     @FXML
     private void onAddToELButton(ActionEvent event) throws FullGroupException {
          Contact selectedContact = TableBook.getSelectionModel().getSelectedItem();
-         if(selectedContact!=null){
-             contactBook.moveToEmergencyList(selectedContact, emergencyList);
-             observableEL.setAll(emergencyList.getContacts());
-             
-             }
-            
+            if (selectedContact != null) {
+            if (emergencyList.getContacts().contains(selectedContact)) {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Contatto già presente!");
+                alert.setHeaderText("Il contatto è già presente nel gruppo d'emergenza!");
+                alert.showAndWait();
+                return;
+        }
+        try {
+            contactBook.moveToEmergencyList(selectedContact, emergencyList);
+            observableEL.setAll(emergencyList.getContacts());
+        } catch (FullGroupException e) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Limite massimo raggiunto!");
+            alert.setHeaderText("Il contatto non è stato aggiunto al gruppo d'emergenza!");
+            alert.setContentText("Gruppo pieno, rimuovere un contatto per poter aggiungerne uno.");
+            alert.showAndWait();
+            }
+        }
     }
+    
     
     /** 
      * @brief Visualizza i dettagli di un contatto selezionato.
@@ -498,7 +502,7 @@ public class PhoneBookController implements Initializable {
             email1Label.setText(s);    
             j++;            
             }
-            else if(i==1){
+            else if(j==1){
                 email2Label.setText(s);
                 j++;
             }
@@ -547,7 +551,7 @@ public class PhoneBookController implements Initializable {
             email1Label2.setText(s);    
             j++;            
             }
-            else if(i==1){
+            else if(j==1){
                 email2Label2.setText(s);
                 j++;
             }
@@ -597,7 +601,7 @@ public class PhoneBookController implements Initializable {
             email1Label21.setText(s);    
             j++;            
             }
-            else if(i==1){
+            else if(j==1){
                 email2Label21.setText(s);
                 j++;
             }
@@ -835,7 +839,6 @@ public class PhoneBookController implements Initializable {
         TableBook.setVisible(true);
     }
 
-
     /**
      * @brief Gestisce la ricerca dei contatti.
      * 
@@ -849,10 +852,24 @@ public class PhoneBookController implements Initializable {
      */
     @FXML
     private void onSearchButtonAction(ActionEvent event) {
+        Object source = event.getSource();
+        if(source == searchCB){
         List<Contact> filteredContacts = contactBook.search(searchCB.getText().toLowerCase());
         ObservableList<Contact> observableFilteredContacts = FXCollections.observableArrayList(filteredContacts);
         TableBook.setItems(observableFilteredContacts);
+        }
+        else if(source == searchEL){
+        List<Contact> filteredContacts = emergencyList.search(searchEL.getText().toLowerCase());
+        ObservableList<Contact> observableFilteredContacts = FXCollections.observableArrayList(filteredContacts);
+        TableEL.setItems(observableFilteredContacts);    
+        }
+        else if(source == searchB){
+        List<Contact> filteredContacts = bin.search(searchB.getText().toLowerCase());
+        ObservableList<Contact> observableFilteredContacts = FXCollections.observableArrayList(filteredContacts);
+        TableBin.setItems(observableFilteredContacts);  
+        }
     }
+    
     
      /**
      * @brief Ripristina un contatto dal cestino.
@@ -932,7 +949,6 @@ public class PhoneBookController implements Initializable {
     TableBook.setItems(favoriteObservableContacts);
     }
 
-
      /**
      * @brief Rimuove un contatto dalla lista di emergenza.
      * 
@@ -1000,8 +1016,7 @@ public class PhoneBookController implements Initializable {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("La rubrica è stata esportata con successo");
         alert.setHeaderText("La lista è stata inserita nel file Contatti.csv");
-       alert.showAndWait(); 
-            
+       alert.showAndWait();            
     }
     
     /**
@@ -1051,10 +1066,8 @@ public class PhoneBookController implements Initializable {
            
             TableBook.setItems(observableContacts);
             TableBin.setItems(observableBin);
-            TableEL.setItems(observableEL);
-            
-        }
-   
+            TableEL.setItems(observableEL);           
+        }  
     }
     
     /**
@@ -1084,12 +1097,10 @@ public class PhoneBookController implements Initializable {
         }
             
             else if (source == ImageButton1) {
-                contactImage1.setImage(image);
+            contactImage1.setImage(image);
             Circle clip = new Circle(contactImage1.getFitWidth() / 3, contactImage1.getFitHeight() / 3, contactImage1.getFitWidth() / 3);
             contactImage1.setClip(clip);
             }
-           
-
         }
      }
 

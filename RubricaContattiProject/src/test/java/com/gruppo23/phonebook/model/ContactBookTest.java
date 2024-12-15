@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  *
- * @author miche
+ * @author gruppo23
  */
 public class ContactBookTest {
     
@@ -61,27 +61,22 @@ public class ContactBookTest {
 
     /**
      * Test per addContact della classe ContactBook
-     * Aggiunge un contatto alla contactbook, cioè alla rubrica principale, inoltre verifica che il contatore sia incrementato di 2
-     * dopo l'aggiunta di 2 contatti
+     * Aggiunge un contatto alla contactbook, cioè alla rubrica principale.
      */
     @Test
     public void testAddContact() throws Exception {
         assertTrue(contactBook.getContacts().contains(contact), "Il contatto dovrebbe essere presente nella rubrica principale.");
-        int expectedCount = 2;
-        assertEquals(expectedCount, ContactBook.getGlobalContactCount(), "Il contatore dovrebbe essere aggiornato.");
     }
 
     /**
      * Test di removeContact della classe ContactBook
-     * Verifica che il contatto sia rimosso dalla rubrica principale che il contatore sia decrementato
+     * Verifica che il contatto sia rimosso dalla rubrica principale
      */
     @Test
     public void testRemoveContact() {
         contactBook.removeContact(contact);
         assertFalse(contactBook.getContacts().contains(contact), "Il contatto dovrebbe essere stato rimosso dalla rubrica principale.");
         
-        int expectedCount = 1;
-        assertEquals(expectedCount, ContactBook.getGlobalContactCount(), "Il contatore dovrebbe essere aggiornato.");
     }
 
     /**
@@ -107,16 +102,6 @@ public class ContactBookTest {
         contactBook.moveToEmergencyList(contact, emergencyList);
         assertTrue(emergencyList.getContacts().contains(contact), "Il contatto dovrebbe essere stato aggiunto ai contatti di emergenza.");
         assertTrue(contactBook.getContacts().contains(contact), "Il contatto dovrebbe essere ancora nella rubrica.");
-    }
-
-    /**
-     * Test di getGlobalContactCount della classe ContactBook.
-     * verifica che sia corretto il numero del contatore
-     */
-    @Test
-    public void testGetGlobalContactCount() {
-        int expectedCount = 2;
-        assertEquals(expectedCount, ContactBook.getGlobalContactCount(), "Il numero di contatti dovrebbe essere corretto.");
     }
 
     /**

@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  *
- * @author miche
+ * @author gruppo23
  */
 public class ContactTest {
     
