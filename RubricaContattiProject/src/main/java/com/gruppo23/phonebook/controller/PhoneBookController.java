@@ -305,12 +305,10 @@ public class PhoneBookController implements Initializable {
         ExportButton.setText("📤 Esporta rubrica");
         
         //Implementazione dei setText della pagina EmergencyList
-        SearchButton1.setText("🔍 Cerca");
         RemoveELButton.setText("🚑 Rimuovi dai contatti di emergenza");
         ViewButton1.setText("👁 Visualizza Contatto");
         
         //Implementazione dei setText della pagina Cestino
-        SearchButton2.setText("🔍 Cerca");
         onRestoreButton.setText("🔁 Ripristina contatto");
         onRemoveBinButton.setText("🗑 Rimuovi definitivamente dai contatti");
         ViewButton11.setText("👁 Visualizza Contatto");
@@ -852,23 +850,11 @@ public class PhoneBookController implements Initializable {
      */
     @FXML
     private void onSearchButtonAction(ActionEvent event) {
-        Object source = event.getSource();
-        if(source == searchCB){
+        
         List<Contact> filteredContacts = contactBook.search(searchCB.getText().toLowerCase());
         ObservableList<Contact> observableFilteredContacts = FXCollections.observableArrayList(filteredContacts);
         TableBook.setItems(observableFilteredContacts);
         }
-        else if(source == searchEL){
-        List<Contact> filteredContacts = emergencyList.search(searchEL.getText().toLowerCase());
-        ObservableList<Contact> observableFilteredContacts = FXCollections.observableArrayList(filteredContacts);
-        TableEL.setItems(observableFilteredContacts);    
-        }
-        else if(source == searchB){
-        List<Contact> filteredContacts = bin.search(searchB.getText().toLowerCase());
-        ObservableList<Contact> observableFilteredContacts = FXCollections.observableArrayList(filteredContacts);
-        TableBin.setItems(observableFilteredContacts);  
-        }
-    }
     
     
      /**
