@@ -19,6 +19,7 @@ import java.io.IOException;
 import javafx.event.ActionEvent;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -29,7 +30,6 @@ import javafx.collections.ObservableList;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.geometry.Rectangle2D;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
@@ -352,7 +352,7 @@ public class PhoneBookController implements Initializable {
     * @post La finestra di creazione del contatto è visibile.
     */
     @FXML
-    private void handleCreateButtonAction(ActionEvent event) {
+    private void onCreateButtonAction(ActionEvent event) {
         ContactView.setVisible(false);
         TableBook.setVisible(false);
         CreateForm.setVisible(true);
@@ -361,17 +361,16 @@ public class PhoneBookController implements Initializable {
     * @brief Salva un nuovo contatto nella rubrica.
     * 
     * @details Raccoglie i dati inseriti nel form, crea un oggetto `Contact`, lo aggiunge alla rubrica
-    * e aggiorna la lista osservabile per riflettere i cambiamenti.
+    * e aggiorna la lista osservabile per riflettere i cambiamenti. Nel caso in cui il contatto non sia valido o la
+    * rubrica sia piena, vengono mostrati degli alert.
     *    
-    * @pre Tutti i campi obbligatori del modulo (nome e cognome) devono essere compilati correttamente.
+    * @pre Tutti i campi obbligatori del modulo (nome e cognome) devono essere compilati correttamente
     * @post Il nuovo contatto è aggiunto alla rubrica e visibile nella tabella.
     * 
     * @param event Evento che attiva l'azione (click su "Salva Contatto")
     */
     @FXML
     private void onSaveContactButton(ActionEvent event) throws InvalidContactException {
-        
-        
         
         String name = nameTextField.getText();
         String surname = surnameTextField.getText();
@@ -388,13 +387,31 @@ public class PhoneBookController implements Initializable {
         Image image = contactImage.getImage();
         boolean isFavorite = favoritesCheckBox.isSelected();
         
-        Contact newContact = new Contact(name, surname, phoneNumbers, emails, address, notes, image, isFavorite);
         try {
+            Contact newContact = new Contact(name, surname, phoneNumbers, emails, address, notes, image, isFavorite);
             contactBook.addContact(newContact);
             observableContacts.add(newContact);
-        } catch (FullGroupException ex) {
-            Logger.getLogger(PhoneBookController.class.getName()).log(Level.SEVERE, null, ex);
+            Collections.sort(observableContacts);
         }
+        catch (InvalidContactException e) {
+        
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Errore");
+        alert.setHeaderText("Contatto non valido");
+        alert.setContentText("Il contatto deve avere almeno un nome o un cognome.");
+        alert.showAndWait();
+        }
+        
+        catch (FullGroupException ex) {
+        
+        Logger.getLogger(PhoneBookController.class.getName()).log(Level.SEVERE, null, ex);
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Errore");
+        alert.setHeaderText("Impossibile aggiungere il contatto");
+        alert.setContentText("Il gruppo è pieno, non è possibile aggiungere più contatti.");
+        alert.showAndWait();
+    }
+        
         TableBook.setItems(observableContacts);
         CreateForm.setVisible(false);
         TableBook.setVisible(true);
@@ -884,7 +901,7 @@ public class PhoneBookController implements Initializable {
             Optional<ButtonType> result = alert.showAndWait();
 
             if (result.isPresent() && result.get() == ButtonType.OK) {
-                bin.deleteContactPermanently(selectedContact, contactBook);
+                bin.removeContact(selectedContact);
                 observableBin.remove(selectedContact);
                 observableContacts.remove(selectedContact);
                 TableBook.refresh();
@@ -1069,6 +1086,7 @@ public class PhoneBookController implements Initializable {
 
         }
      }
+
 }
     
 

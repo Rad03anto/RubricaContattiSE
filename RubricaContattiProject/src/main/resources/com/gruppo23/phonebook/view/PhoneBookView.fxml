@@ -22,7 +22,7 @@
                         <Button fx:id="FavButton" layoutX="22.0" layoutY="419.0" mnemonicParsing="false" onAction="#onFavButton" text="Filtra Preferiti" />
                         <Button fx:id="SearchButton" layoutX="221.0" layoutY="105.0" mnemonicParsing="false" onAction="#onSearchButtonAction" text="Cerca" />
                         <TextField fx:id="searchCB" layoutX="31.0" layoutY="105.0" promptText="Ricerca..." />
-                        <Button fx:id="CreateButton" layoutX="101.0" layoutY="147.0" mnemonicParsing="false" onAction="#handleCreateButtonAction" text="Crea Contatto" />
+                        <Button fx:id="CreateButton" layoutX="101.0" layoutY="147.0" mnemonicParsing="false" onAction="#onCreateButtonAction" text="Crea Contatto" />
                         <Button fx:id="AddToELButton" layoutX="37.0" layoutY="242.0" mnemonicParsing="false" onAction="#onAddToELButton" text="Aggiungi ai Contatti di Emergenza" />
                         <Button fx:id="ViewButton" layoutX="87.0" layoutY="192.0" mnemonicParsing="false" onAction="#onDisplayContactButton" text="Visualizza Contatto" />                
                         <Button fx:id="onMoveToBinButton" layoutX="89.0" layoutY="290.0" mnemonicParsing="false" onAction="#onMoveToBinButton" text="Sposta nel Cestino" />
@@ -61,7 +61,7 @@
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <ImageView fx:id="contactImageView" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <ImageView fx:id="contactImageView" fitHeight="220.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true" translateX="25.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                                     <Label fx:id="number3Label" textFill="WHITE" GridPane.columnIndex="6" GridPane.rowIndex="3">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="13.0" />
@@ -109,12 +109,12 @@
                                  </children>
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="296.0" minWidth="10.0" prefWidth="10.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="296.0" minWidth="10.0" prefWidth="180.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="343.0" minWidth="10.0" prefWidth="180.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="343.0" minWidth="10.0" prefWidth="25.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.0" minWidth="10.0" prefWidth="180.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.0" minWidth="10.0" prefWidth="25.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="444.0" minWidth="10.0" prefWidth="180.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="296.0" minWidth="10.0" prefWidth="145.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="343.0" minWidth="10.0" prefWidth="258.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="343.0" minWidth="2.0" prefWidth="9.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.0" minWidth="10.0" prefWidth="254.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.0" minWidth="3.0" prefWidth="8.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="444.0" minWidth="10.0" prefWidth="234.0" />
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="444.0" minWidth="10.0" prefWidth="10.0" />
                                  </columnConstraints>
                                  <rowConstraints>

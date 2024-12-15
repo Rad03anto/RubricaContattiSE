@@ -42,18 +42,4 @@ public class Bin extends ContactList {
        contactBook.addContact(contact);
     }
     
-     public void deleteContactPermanently(Contact contact, ContactBook contactBook) {
-        contactBook.removeContact(contact);
-        this.removeContact(contact);
-        removeContact(contact);
     }
-/**
- *@brief Elimina automaticamente tutti i contatti dal cestino.
- *@pre Il cestino  contiene uno o più contatti.
- *@post Tutti i contatti presenti nel cestino vengono eliminati definitivamente.
- */
-    public void autodeleteFromBin(){
-        
-    }
-    
-}

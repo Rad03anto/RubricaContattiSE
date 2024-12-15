@@ -49,11 +49,6 @@ public class Contact implements Comparable<Contact> {
 */
     public Contact(String name, String surname, List<String> phoneNumbers, List<String> emails, String address, String notes, Image image, Boolean isFavorite) throws InvalidContactException {    
     if ((name == null || name.trim().isEmpty()) && (surname == null || surname.trim().isEmpty())) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Contatto non creato!");
-        alert.setHeaderText("Il contatto non è stato creato correttamente!");
-        alert.setContentText("Inserire almeno un nome o un cognome.");
-        alert.showAndWait();
         throw new InvalidContactException("Il contatto deve avere almeno un nome o un cognome.");
 
     }
@@ -289,8 +284,43 @@ public class Contact implements Comparable<Contact> {
         this.isFavorite = isFavorite;
     }
     
+    /**
+     * @brief metodo per la comparazione tra due contatti, utile alla visualizzazione in ordine alfabetico
+     * 
+     * @details nel caso in cui il cognome del contatto con cui confrontare non abbia il cognome, se il contatto da
+     * aggiungere non ha il cognome, vengono confrontati i nomi, altrimenti se lo ha si confronta il cognome con il
+     * nome del contatto da confrontare.
+     * Nel caso in cui il cognome del contatto da aggiungere sia assente, si confronta il nome del contatto da aggiungere
+     * con il cognome del contatto da confrontare.
+     * Se entrambi hanno il cognome, si fa confronto tra cognomi.
+     * Se i cognomi sono uguali, vengono confrontati i nomi.
+     * 
+     * @param contact
+     * @return 
+     */
     public int compareTo(Contact contact) {
-        return this.surname.compareTo(contact.surname);
+        
+    if (this.surname == null || this.surname.isEmpty()) {
+        if (contact.surname == null || contact.surname.isEmpty()) {
+            
+            return this.name.compareTo(contact.name);
+        } else {
+            
+            return this.name.compareTo(contact.surname);
+        }
     }
-  
+
+    if (contact.surname == null || contact.surname.isEmpty()) {
+        return this.surname.compareTo(contact.name);
+    }
+
+    int surnameComparison = this.surname.compareTo(contact.surname);
+    if (surnameComparison != 0) {
+        return surnameComparison;
+    }
+    
+    return this.name.compareTo(contact.name);
+    }
 }
+  
+
