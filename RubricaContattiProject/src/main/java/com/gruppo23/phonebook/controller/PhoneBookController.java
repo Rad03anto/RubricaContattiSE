@@ -29,6 +29,7 @@ import javafx.collections.ObservableList;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
@@ -43,6 +44,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.shape.Circle;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -280,6 +282,12 @@ public class PhoneBookController implements Initializable {
     private Button FavButton;
     @FXML
     private Button ContactBookButton;
+    @FXML
+    private ImageView contactImageView;
+    @FXML
+    private ImageView contactImageEL;
+    @FXML
+    private ImageView contactImageBin;
     
 
 
@@ -445,6 +453,7 @@ public class PhoneBookController implements Initializable {
         selectedContact = TableBook.getSelectionModel().getSelectedItem();
         CreateForm.setVisible(false);
         TableBook.setVisible(false);
+        CreateForm1.setVisible(false);
         ContactView.setVisible(true);
         
         int i=0;
@@ -486,8 +495,9 @@ public class PhoneBookController implements Initializable {
          if(selectedContact.getIsFavorite()==true)
          favoritesLabel.setText("Preferito");
          else favoritesLabel.setText("Non preferito");
-         contactImage.setImage(selectedContact.getImage());
-         
+         contactImageView.setImage(selectedContact.getImage());
+         Circle clip = new Circle(contactImageView.getFitWidth() / 3, contactImageView.getFitHeight() / 3, contactImageView.getFitWidth() / 3);
+            contactImageView.setClip(clip);
         }
         else if(source == ViewButton1){
          selectedContact = TableEL.getSelectionModel().getSelectedItem();
@@ -534,8 +544,9 @@ public class PhoneBookController implements Initializable {
          if(selectedContact.getIsFavorite()==true)
          favoritesLabel2.setText("Preferito");
          else favoritesLabel2.setText("Non preferito");
-         contactImage.setImage(selectedContact.getImage());
-         
+         contactImageEL.setImage(selectedContact.getImage());
+         Circle clip = new Circle(contactImageEL.getFitWidth() / 3, contactImageEL.getFitHeight() / 3, contactImageEL.getFitWidth() / 3);
+            contactImageEL.setClip(clip);
         
         }
         else{
@@ -583,8 +594,9 @@ public class PhoneBookController implements Initializable {
          if(selectedContact.getIsFavorite()==true)
          favoritesLabel21.setText("Preferito");
          else favoritesLabel21.setText("Non preferito");
-         contactImage.setImage(selectedContact.getImage());
-         
+         contactImageBin.setImage(selectedContact.getImage());
+         Circle clip = new Circle(contactImageBin.getFitWidth() / 3, contactImageBin.getFitHeight() / 3, contactImageBin.getFitWidth() / 3);
+            contactImageBin.setClip(clip);
         }
         
        
@@ -736,10 +748,12 @@ public class PhoneBookController implements Initializable {
             }
         }
     
-     addressTextField1.setText(selectedContact.getAddress());
+    addressTextField1.setText(selectedContact.getAddress());
     notesTextField1.setText(selectedContact.getNotes());
     favoritesCheckBox1.setSelected(selectedContact.getIsFavorite());
-     contactImage1.setImage(selectedContact.getImage());
+    contactImage1.setImage(selectedContact.getImage());
+    Circle clip = new Circle(contactImage1.getFitWidth() / 3, contactImage1.getFitHeight() / 3, contactImage1.getFitWidth() / 3);
+    contactImage1.setClip(clip);
   
     }
 
@@ -905,15 +919,14 @@ public class PhoneBookController implements Initializable {
      /**
      * @brief Rimuove un contatto dalla lista di emergenza.
      * 
-     * Questo metodo rimuove un contatto selezionato dalla lista di emergenza (`emergencyList`)
+     * @details Questo metodo rimuove un contatto selezionato dalla lista di emergenza (`emergencyList`)
      * e aggiorna la tabella corrispondente.
      * 
      * @param event L'evento che attiva la funzione (clic di "Rimuovi dai Contatti di Emergenza").
      * 
      * @pre Il contatto selezionato deve essere presente nella lista di emergenza.
      * @post Il contatto viene rimosso dalla lista di emergenza e la tabella viene aggiornata.
-     */
-    
+     */ 
   @FXML
     private void onRemoveFromEL(ActionEvent event) {
         Contact selectedContact = TableEL.getSelectionModel().getSelectedItem();
@@ -930,27 +943,33 @@ public class PhoneBookController implements Initializable {
     }
     
     /**
-     * Mostra la rubrica principale senza filtri
+     * @brief Mostra la rubrica principale senza filtri
      * 
      * @param event L'evento che attiva la funzione (click su "Mostra Rubrica")
      * @pre la rubrica è filtrata
      * @pre La rubrica principale viene mostrata con tutti i contatti
      * 
-     */
-    
+     */ 
     @FXML
     private void onContactBookButton(ActionEvent event) {
         TableBook.setItems(observableContacts);
     }
-
+    
+    /**
+     * @brief Esporta la rubrica in un file "Contatti.csv"
+     * 
+     * @details I contatti vengono esportati in un file .csv
+     * @pre sono presenti contatti nella rubrica
+     * @post il file "Contatti.csv" viene creato o sovrascritto e popolato dai contatti presenti in rubrica
+     * @param event
+     * @throws IOException 
+     */
     @FXML
     private void onExportFIle(ActionEvent event) throws IOException {
-             //da implementare
+        
            String filePath = "Contatti.csv";
     
-        // Svuota il file
        try (FileWriter fileWriter = new FileWriter(filePath, false)) {
-        // Non scrive nulla, semplicemente svuota il file
     }
     
      
@@ -961,7 +980,22 @@ public class PhoneBookController implements Initializable {
        alert.showAndWait(); 
             
     }
-
+    
+    /**
+     * @brief Importa la rubrica da un file CSV
+     * 
+     * @details i contatti della rubrica importata saranno aggiunti a quelli della rubrica attuale (se presenti)
+     * e inseriti nelle corrispondenti sezioni
+     * 
+     * @param event
+     * @throws IOException
+     * @throws FileNotFoundException
+     * @throws FullGroupException
+     * @throws InvalidContactException
+     * 
+     * @pre esiste un file Contatti.csv
+     * @post la rubrica viene aggiornata con i nuovi contatti (aggiunti ai precedenti se presenti) e organizzati
+     */
     @FXML
     private void onImportButton(ActionEvent event) throws IOException, FileNotFoundException, FullGroupException, InvalidContactException {
         FileChooser fileChooser = new FileChooser();
@@ -969,28 +1003,23 @@ public class PhoneBookController implements Initializable {
         if(file != null){
             pB.loadFromFile(file.getAbsolutePath());
             
-           // Svuota le liste osservabili prima di aggiornare
         observableContacts.clear();
         observableEL.clear();
         observableBin.clear();
 
-        // Usa una copia della lista per evitare ConcurrentModificationException
         List<Contact> contactBookCopy = new ArrayList<>(pB.getContactBook().getContacts());
         for (Contact c : contactBookCopy) {
-            observableContacts.add(c);  // Aggiungi alla lista osservabile
-            
-            
-            contactBook.addContact(c);   // Aggiungi alla lista principale
+            observableContacts.add(c); 
+                   
+            contactBook.addContact(c);
         }
 
-        // Copia per la lista di emergenza
         List<Contact> emergencyListCopy = new ArrayList<>(pB.geteList().getContacts());
         for (Contact c : emergencyListCopy) {
             observableEL.add(c);  // Aggiungi alla lista osservabile
             emergencyList.addContact(c);   // Aggiungi alla lista principale
         }
 
-        // Copia per il cestino
         List<Contact> binCopy = new ArrayList<>(pB.getBin().getContacts());
         for (Contact c : binCopy) {
             observableBin.add(c);  // Aggiungi alla lista osservabile
@@ -1002,8 +1031,45 @@ public class PhoneBookController implements Initializable {
             TableEL.setItems(observableEL);
             
         }
-        //observableContacts.setAll(pB.getContactBook().getContacts());
-       
+   
     }
+    
+    /**
+    * @brief Metodo per l'inserimento di un'immagine
+    * 
+    * @details Permette di inserire un'immagine da un file presente sul dispositivo e
+    * adattarla a forma di cerchio
+    * 
+    * @pre utente sta creando o modificando un contatto.
+    * @post viene inserita l'immagine al contatto.
+    */
+    @FXML
+     private void onLoadImage(ActionEvent event) {
+        
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.jpeg", "*.gif"));
 
+        File file = fileChooser.showOpenDialog(new Stage());
+
+        if (file != null) {
+            Image image = new Image(file.toURI().toString());
+            Object source = event.getSource();
+            if(source == ImageButton) {
+            contactImage.setImage(image);
+            Circle clip = new Circle(contactImage.getFitWidth() / 3, contactImage.getFitHeight() / 3, contactImage.getFitWidth() / 3);
+            contactImage.setClip(clip);
+        }
+            
+            else if (source == ImageButton1) {
+                contactImage1.setImage(image);
+            Circle clip = new Circle(contactImage1.getFitWidth() / 3, contactImage1.getFitHeight() / 3, contactImage1.getFitWidth() / 3);
+            contactImage1.setClip(clip);
+            }
+           
+
+        }
+     }
 }
+    
+
+

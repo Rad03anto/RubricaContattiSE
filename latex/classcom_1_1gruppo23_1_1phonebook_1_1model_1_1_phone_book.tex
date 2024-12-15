@@ -16,13 +16,28 @@ Inheritance diagram for com.\+gruppo23.\+phonebook.\+model.\+Phone\+Book\+:\begi
 \item 
 \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_phone_book_a02edc46ba54daac92c5a4ebcc92a92a2}{Phone\+Book}} (\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_book}{Contact\+Book}} contact\+Book, \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_emergency_list}{Emergency\+List}} e\+List, \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin}{Bin}} bin)
 \begin{DoxyCompactList}\small\item\em Costruttore di \doxylink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_phone_book}{Phone\+Book}. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_phone_book_a51e38f554908485b088688ab79b55618}{save\+To\+File}} (String filename)
-\begin{DoxyCompactList}\small\item\em Salva la rubrica su un file. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Static Public Member Functions}
-\begin{DoxyCompactItemize}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_phone_book_a2c77709bbd79f36405691ef000be7818}\label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_phone_book_a2c77709bbd79f36405691ef000be7818} 
+\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_book}{Contact\+Book}} {\bfseries get\+Contact\+Book} ()
 \item 
-static \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_phone_book}{Phone\+Book}} \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_phone_book_ad614df0a26f50120f501591d5a2c9dd0}{load\+From\+File}} (String filename)
-\begin{DoxyCompactList}\small\item\em Carica la rubrica da un file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_phone_book_ad2b4a64706517fff9a8eccb55277d8ea}\label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_phone_book_ad2b4a64706517fff9a8eccb55277d8ea} 
+void {\bfseries set\+Contact\+Book} (\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_book}{Contact\+Book}} contact\+Book)
+\item 
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_phone_book_ab1192ffcc446a0bebe7bbab3547cdf43}\label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_phone_book_ab1192ffcc446a0bebe7bbab3547cdf43} 
+\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_emergency_list}{Emergency\+List}} {\bfseries gete\+List} ()
+\item 
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_phone_book_a88a9465c07ccb40c76b401565cb4bdb1}\label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_phone_book_a88a9465c07ccb40c76b401565cb4bdb1} 
+void {\bfseries sete\+List} (\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_emergency_list}{Emergency\+List}} e\+List)
+\item 
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_phone_book_a9a809138f5881648d5ddc91da782e05d}\label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_phone_book_a9a809138f5881648d5ddc91da782e05d} 
+\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin}{Bin}} {\bfseries get\+Bin} ()
+\item 
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_phone_book_a135197ab7dc5e927798a6261788d1949}\label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_phone_book_a135197ab7dc5e927798a6261788d1949} 
+void {\bfseries set\+Bin} (\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin}{Bin}} bin)
+\item 
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_phone_book_a7d785cfe6a90054f7bf684215a867f50}{load\+From\+File}} (String filename)  throws File\+Not\+Found\+Exception, IOException, \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1exceptions_1_1_full_group_exception}{Full\+Group\+Exception}}, \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1exceptions_1_1_invalid_contact_exception}{Invalid\+Contact\+Exception}} 
+\begin{DoxyCompactList}\small\item\em Carica la rubrica da un file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_phone_book_a51e38f554908485b088688ab79b55618}{save\+To\+File}} (String filename)  throws IOException 
+\begin{DoxyCompactList}\small\item\em Salva la rubrica su un file. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -66,11 +81,11 @@ Inizializza la rubrica, la lista di emergenza e il cestino.
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_phone_book_ad614df0a26f50120f501591d5a2c9dd0}\index{com.gruppo23.phonebook.model.PhoneBook@{com.gruppo23.phonebook.model.PhoneBook}!loadFromFile@{loadFromFile}}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_phone_book_a7d785cfe6a90054f7bf684215a867f50}\index{com.gruppo23.phonebook.model.PhoneBook@{com.gruppo23.phonebook.model.PhoneBook}!loadFromFile@{loadFromFile}}
 \index{loadFromFile@{loadFromFile}!com.gruppo23.phonebook.model.PhoneBook@{com.gruppo23.phonebook.model.PhoneBook}}
 \doxysubsubsection{\texorpdfstring{loadFromFile()}{loadFromFile()}}
-{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_phone_book_ad614df0a26f50120f501591d5a2c9dd0} 
-static \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_phone_book}{Phone\+Book}} com.\+gruppo23.\+phonebook.\+model.\+Phone\+Book.\+load\+From\+File (\begin{DoxyParamCaption}\item[{String}]{filename}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_phone_book_a7d785cfe6a90054f7bf684215a867f50} 
+void com.\+gruppo23.\+phonebook.\+model.\+Phone\+Book.\+load\+From\+File (\begin{DoxyParamCaption}\item[{String}]{filename}{}\end{DoxyParamCaption}) throws File\+Not\+Found\+Exception, IOException, \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1exceptions_1_1_full_group_exception}{Full\+Group\+Exception}}, \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1exceptions_1_1_invalid_contact_exception}{Invalid\+Contact\+Exception}}}
 
 
 
@@ -91,7 +106,7 @@ Se il caricamento fallisce, viene restituito {\ttfamily null}.
 \index{saveToFile@{saveToFile}!com.gruppo23.phonebook.model.PhoneBook@{com.gruppo23.phonebook.model.PhoneBook}}
 \doxysubsubsection{\texorpdfstring{saveToFile()}{saveToFile()}}
 {\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_phone_book_a51e38f554908485b088688ab79b55618} 
-void com.\+gruppo23.\+phonebook.\+model.\+Phone\+Book.\+save\+To\+File (\begin{DoxyParamCaption}\item[{String}]{filename}{}\end{DoxyParamCaption})}
+void com.\+gruppo23.\+phonebook.\+model.\+Phone\+Book.\+save\+To\+File (\begin{DoxyParamCaption}\item[{String}]{filename}{}\end{DoxyParamCaption}) throws IOException}
 
 
 

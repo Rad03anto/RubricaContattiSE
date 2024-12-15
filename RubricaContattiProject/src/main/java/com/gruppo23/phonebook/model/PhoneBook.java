@@ -100,13 +100,13 @@ public class PhoneBook implements Serializable {
                 String surname = s.next();
                 List<String> numbers= new ArrayList<>();
                 numbers.add(s.next());
-                  numbers.add(s.next());
-                    numbers.add(s.next());
+                numbers.add(s.next());
+                numbers.add(s.next());
                 
                 List<String> ems= new ArrayList<>();
                 ems.add(s.next());
-                  ems.add(s.next());
-                   ems.add(s.next());
+                ems.add(s.next());
+                ems.add(s.next());
                 String address = s.next(); 
                 String notes =s.next();
                 String image = s.next(); // Salta immagine (null)
@@ -134,101 +134,51 @@ public class PhoneBook implements Serializable {
     public void saveToFile(String filename) throws IOException {
    
         try(PrintWriter pw = new PrintWriter( new BufferedWriter(new FileWriter( filename )))){
-           
+            
             pw.println("Name; Surname; number1; number2; number3; email1; email2; email3; address; notes; image; isFavorite; Type");
-            
-            for(Contact c : contactBook.getContacts()){
-                
-                pw.append(c.getName());
-                pw.append(';');
-                pw.append(c.getSurname());
-                pw.append(';');
-                pw.append(c.getPhoneNumbers().get(0));
-                pw.append(';');
-                pw.append(c.getPhoneNumbers().get(1));
-                pw.append(';');
-                pw.append(c.getPhoneNumbers().get(2));
-                pw.append(';');
-                pw.append(c.getEmails().get(0));
-                pw.append(';');
-                pw.append(c.getEmails().get(1));
-                pw.append(';');
-                pw.append(c.getEmails().get(2));
-                pw.append(';');
-                pw.append(c.getAddress());
-                pw.append(';'); 
-                pw.append(c.getNotes());
-                pw.append(';');
-         
-                pw.append((CharSequence) c.getImage());
-                pw.append(';');
-                pw.append(""+ c.getIsFavorite());
-                pw.append(';');
-                pw.append("CONTACTBOOK");
-                pw.append("\n");
-            }
-           
-            for(Contact c : bin.getContacts()){
-                
-                pw.append(c.getName());
-                pw.append(';');
-                pw.append(c.getSurname());
-                pw.append(';');
-                pw.append(c.getPhoneNumbers().get(0));
-                pw.append(';');
-                pw.append(c.getPhoneNumbers().get(1));
-                pw.append(';');
-                pw.append(c.getPhoneNumbers().get(2));
-                pw.append(';');
-                pw.append(c.getEmails().get(0));
-                pw.append(';');
-                pw.append(c.getEmails().get(1));
-                pw.append(';');
-                pw.append(c.getEmails().get(2));
-                pw.append(';');
-                pw.append(c.getAddress());
-                pw.append(';');
-                 pw.append(c.getNotes());
-                pw.append(';');
-                pw.append((CharSequence) c.getImage());
-                pw.append(';');
-                pw.append(""+ c.getIsFavorite());
-                pw.append(';');
-                pw.append("BIN");
-                pw.append("\n");
-                
-            }
-            
-          
-            for(Contact c : eList.getContacts()){
-                
-                pw.append(c.getName());
-                pw.append(';');
-                pw.append(c.getSurname());
-                pw.append(';');
-                pw.append(c.getPhoneNumbers().get(0));
-                pw.append(';');
-                pw.append(c.getPhoneNumbers().get(1));
-                pw.append(';');
-                pw.append(c.getPhoneNumbers().get(2));
-                pw.append(';');
-                pw.append(c.getEmails().get(0));
-                pw.append(';');
-                pw.append(c.getEmails().get(1));
-                pw.append(';');
-                pw.append(c.getEmails().get(2));
-                pw.append(';');
-                pw.append(c.getAddress());
-                pw.append(';');
-                pw.append(c.getNotes());
-                pw.append(';');
-                pw.append((CharSequence) c.getImage());
-                pw.append(';');
-                pw.append(""+ c.getIsFavorite());
-                pw.append(';');
-                pw.append("EMERGENCYLIST");
-                pw.append("\n");
-            }
-    }
+            writeContactsToFile(pw, contactBook.getContacts(), "CONTACTBOOK");
+            writeContactsToFile(pw, bin.getContacts(), "BIN");
+            writeContactsToFile(pw, eList.getContacts(), "EMERGENCYLIST");
     }
 }
+    
+    /**
+     * @brief Scrive contatti sul file "Contatti.csv"
+     * 
+     * @details Scrive le informazioni di tutti i contatti e le raccoglie nel file .csv
+     * @param pw printwriter
+     * @param contacts la lista di contatti
+     * @param type per identificare la lista
+     */
+    private void writeContactsToFile(PrintWriter pw, List<Contact> contacts, String type) {
+        for (Contact c : contacts) {
+            pw.append(c.getName());
+            pw.append(';');
+            pw.append(c.getSurname());
+            pw.append(';');
+            pw.append(c.getPhoneNumbers().get(0));
+            pw.append(';');
+            pw.append(c.getPhoneNumbers().get(1));
+            pw.append(';');
+            pw.append(c.getPhoneNumbers().get(2));
+            pw.append(';');
+            pw.append(c.getEmails().get(0));
+            pw.append(';');
+            pw.append(c.getEmails().get(1));
+            pw.append(';');
+            pw.append(c.getEmails().get(2));
+            pw.append(';');
+            pw.append(c.getAddress());
+            pw.append(';');
+            pw.append(c.getNotes());
+            pw.append(';');
+            pw.append((CharSequence) c.getImage());
+            pw.append(';');
+            pw.append(""+ c.getIsFavorite());
+            pw.append(';');
+            pw.append(type);  // Il tipo (CONTACTBOOK, BIN, EMERGENCYLIST)
+            pw.append("\n");
+    }
+}
+}
+

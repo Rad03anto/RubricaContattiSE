@@ -18,26 +18,26 @@
             <content>
               <AnchorPane fx:id="rubricaZone" minHeight="0.0" minWidth="0.0" prefHeight="711.0" prefWidth="27.0" styleClass="AnchorPane" stylesheets="@style.css">
                      <children>
-                        <Button fx:id="ContactBookButton" layoutX="171.0" layoutY="419.0" mnemonicParsing="false" onAction="#onContactBookButton" text="Mostra Rubrica" />
-                        <Button fx:id="FavButton" layoutX="24.0" layoutY="419.0" mnemonicParsing="false" onAction="#onFavButton" text="Filtra Preferiti" />
+                        <Button fx:id="ContactBookButton" layoutX="161.0" layoutY="419.0" mnemonicParsing="false" onAction="#onContactBookButton" text="Mostra Rubrica" />
+                        <Button fx:id="FavButton" layoutX="22.0" layoutY="419.0" mnemonicParsing="false" onAction="#onFavButton" text="Filtra Preferiti" />
                         <Button fx:id="SearchButton" layoutX="221.0" layoutY="105.0" mnemonicParsing="false" onAction="#onSearchButtonAction" text="Cerca" />
-                        <TextField fx:id="searchCB" layoutX="61.0" layoutY="105.0" promptText="Ricerca..." />
+                        <TextField fx:id="searchCB" layoutX="31.0" layoutY="105.0" promptText="Ricerca..." />
                         <Button fx:id="CreateButton" layoutX="101.0" layoutY="147.0" mnemonicParsing="false" onAction="#handleCreateButtonAction" text="Crea Contatto" />
-                        <Button fx:id="AddToELButton" layoutX="47.0" layoutY="242.0" mnemonicParsing="false" onAction="#onAddToELButton" text="Aggiungi ai Contatti di Emergenza" />
+                        <Button fx:id="AddToELButton" layoutX="37.0" layoutY="242.0" mnemonicParsing="false" onAction="#onAddToELButton" text="Aggiungi ai Contatti di Emergenza" />
                         <Button fx:id="ViewButton" layoutX="87.0" layoutY="192.0" mnemonicParsing="false" onAction="#onDisplayContactButton" text="Visualizza Contatto" />                
                         <Button fx:id="onMoveToBinButton" layoutX="89.0" layoutY="290.0" mnemonicParsing="false" onAction="#onMoveToBinButton" text="Sposta nel Cestino" />
-                        <Button fx:id="ImportButton" layoutX="91.0" layoutY="490.0" mnemonicParsing="false" onAction="#onImportButton" text="Importa Rubrica" />
-                        <Button fx:id="ExportButton" layoutX="92.0" layoutY="534.0" mnemonicParsing="false" onAction="#onExportFIle" text="Esporta Rubrica" />
+                        <Button fx:id="ImportButton" layoutX="87.0" layoutY="489.0" mnemonicParsing="false" onAction="#onImportButton" text="Importa Rubrica" />
+                        <Button fx:id="ExportButton" layoutX="89.0" layoutY="531.0" mnemonicParsing="false" onAction="#onExportFIle" text="Esporta Rubrica" />
                         <StackPane layoutX="315.0" prefHeight="712.0" prefWidth="929.0">
                            <children>
-                              <GridPane fx:id="ContactView" prefHeight="750.0" prefWidth="947.0" styleClass="GridPane" stylesheets="@style.css" visible="false">
+                              <GridPane fx:id="ContactView" prefHeight="750.0" prefWidth="947.0" styleClass="GridPane" stylesheets="@style.css">
                                  <children>
                                     <Label layoutX="195.0" layoutY="209.0" prefHeight="74.0" prefWidth="191.0" text="Cognome:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                        <font>
                                           <Font name="Yu Gothic Regular" size="15.0" />
                                        </font>
                                     </Label>
-                                    <Label layoutX="195.0" layoutY="279.0" prefHeight="76.0" prefWidth="222.0" text="Numeri di telefono:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <Label layoutX="195.0" layoutY="279.0" prefHeight="76.0" prefWidth="222.0" text="Numeri di telefono:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
@@ -45,48 +45,48 @@
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <Label layoutX="195.0" layoutY="415.0" prefHeight="72.0" prefWidth="231.0" text="Indirizzo:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                    <Label layoutX="195.0" layoutY="415.0" prefHeight="72.0" prefWidth="231.0" text="Indirizzo:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <Label layoutX="195.0" layoutY="351.0" prefHeight="67.0" prefWidth="230.0" text="Email:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                    <Label layoutX="195.0" layoutY="351.0" prefHeight="67.0" prefWidth="230.0" text="Email:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <Label layoutX="195.0" layoutY="553.0" prefHeight="45.0" prefWidth="109.0" text="Preferiti:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                    <Label layoutX="195.0" layoutY="553.0" prefHeight="45.0" prefWidth="109.0" text="Preferiti:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <Label layoutX="195.0" layoutY="484.0" prefHeight="72.0" prefWidth="260.0" text="Note:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                    <Label layoutX="195.0" layoutY="484.0" prefHeight="72.0" prefWidth="260.0" text="Note:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="7">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <ImageView fitHeight="148.0" fitWidth="203.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" />
-                                    <Label fx:id="number3Label" textFill="WHITE" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                                    <ImageView fx:id="contactImageView" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <Label fx:id="number3Label" textFill="WHITE" GridPane.columnIndex="6" GridPane.rowIndex="3">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="13.0" />
                                        </font></Label>
-                                    <Label fx:id="email3Label" textFill="WHITE" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                                    <Label fx:id="email3Label" textFill="WHITE" GridPane.columnIndex="6" GridPane.rowIndex="4">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="13.0" />
                                        </font></Label>
-                                    <Label fx:id="addressLabel" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                    <Label fx:id="addressLabel" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="5">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="13.0" />
                                        </font></Label>
-                                    <Label fx:id="favoritesLabel" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                    <Label fx:id="favoritesLabel" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="6">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="13.0" />
                                        </font></Label>
-                                    <Label fx:id="notesLabel" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                    <Label fx:id="notesLabel" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="7">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="13.0" />
                                        </font></Label>
-                                    <Label fx:id="email1Label" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                    <Label fx:id="email1Label" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="13.0" />
                                        </font></Label>
-                                    <Label fx:id="email2Label" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                                    <Label fx:id="email2Label" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="4">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="13.0" />
                                        </font></Label>
@@ -98,13 +98,14 @@
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="13.0" />
                                        </font></Label>
-                                    <Label fx:id="number1Label" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                    <Label fx:id="number1Label" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="13.0" />
                                        </font></Label>
-                                    <Button fx:id="goBackButton" mnemonicParsing="false" onAction="#onGoBackButton" text="Indietro" GridPane.columnIndex="6" GridPane.rowIndex="6" />
-                                    <Label fx:id="number2Label" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-                                    <Button fx:id="editContactButton" mnemonicParsing="false" onAction="#onEditContactButton" text="Modifica Contatto" translateX="27.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                                    <Button fx:id="goBackButton" mnemonicParsing="false" onAction="#onGoBackButton" text="Indietro" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+                                    <Label fx:id="number2Label" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                                    <Button fx:id="editContactButton" mnemonicParsing="false" onAction="#onEditContactButton" text="Modifica Contatto" translateX="27.0" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                                    <Label text="Immagine:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                  </children>
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="296.0" minWidth="10.0" prefWidth="10.0" />
@@ -117,91 +118,22 @@
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="444.0" minWidth="10.0" prefWidth="10.0" />
                                  </columnConstraints>
                                  <rowConstraints>
-                                    <RowConstraints maxHeight="102.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="165.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="183.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="164.0" minHeight="10.0" prefHeight="66.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="138.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="115.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="102.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="318.0" minHeight="10.0" prefHeight="284.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="184.0" minHeight="10.0" prefHeight="63.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="183.0" minHeight="10.0" prefHeight="62.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="167.0" minHeight="10.0" prefHeight="62.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="144.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="66.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                               </GridPane>
-                              <TableView fx:id="TableBook" prefHeight="636.0" prefWidth="931.0" styleClass="TableView" stylesheets="@style.css">
+                              <TableView fx:id="TableBook" prefHeight="636.0" prefWidth="931.0" styleClass="TableView" stylesheets="@style.css" visible="false">
                                  <columns>
                                     <TableColumn fx:id="surnameClm" prefWidth="150.0" text="Cognome" />
                                     <TableColumn fx:id="nameClm" prefWidth="150.0" text="Nome" />
                                  </columns>
                               </TableView>
-                              <GridPane fx:id="CreateForm" prefHeight="1221.0" prefWidth="1244.0" styleClass="GridPane" stylesheets="@style.css" visible="false">
-                                 <children>
-                                    <Label layoutX="195.0" layoutY="209.0" prefHeight="74.0" prefWidth="191.0" text="Cognome:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                                       <font>
-                                          <Font name="Yu Gothic UI Regular" size="15.0" />
-                                       </font>
-                                    </Label>
-                                    <Label layoutX="195.0" layoutY="279.0" prefHeight="76.0" prefWidth="222.0" text="Numeri di telefono:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                                       <font>
-                                          <Font name="Yu Gothic UI Regular" size="15.0" />
-                                       </font></Label>
-                                    <Label layoutX="195.0" layoutY="97.0" prefHeight="69.0" prefWidth="198.0" text="Nome:" textFill="WHITE" GridPane.columnIndex="1">
-                                       <font>
-                                          <Font name="Yu Gothic UI Regular" size="15.0" />
-                                       </font></Label>
-                                    <Label layoutX="195.0" layoutY="415.0" prefHeight="72.0" prefWidth="231.0" text="Indirizzo:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
-                                       <font>
-                                          <Font name="Yu Gothic UI Regular" size="15.0" />
-                                       </font></Label>
-                                    <Label layoutX="195.0" layoutY="351.0" prefHeight="67.0" prefWidth="230.0" text="Email:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                                       <font>
-                                          <Font name="Yu Gothic UI Regular" size="15.0" />
-                                       </font></Label>
-                                    <Label layoutX="195.0" layoutY="553.0" prefHeight="45.0" prefWidth="109.0" text="Preferiti:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
-                                       <font>
-                                          <Font name="Yu Gothic UI Regular" size="15.0" />
-                                       </font></Label>
-                                    <Label layoutX="195.0" layoutY="484.0" prefHeight="72.0" prefWidth="260.0" text="Note:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6">
-                                       <font>
-                                          <Font name="Yu Gothic UI Regular" size="15.0" />
-                                       </font></Label>
-                                    <TextField fx:id="nameTextField" promptText="Nome" GridPane.columnIndex="2" />
-                                    <TextField fx:id="surnameTextField" promptText="Cognome" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                                    <TextField fx:id="number1TextField" prefHeight="23.0" prefWidth="159.0" promptText="Numero di telefono" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                                    <TextField fx:id="email1TextField" promptText="Email" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                                    <TextField fx:id="addressTextField" promptText="Indirizzo" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                                    <TextField fx:id="notesTextField" prefHeight="73.0" prefWidth="218.0" promptText="Inserisci qui le note..." GridPane.columnIndex="2" GridPane.rowIndex="6" />
-                                    <TextField fx:id="number2TextField" promptText="Numero di telefono" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-                                    <TextField fx:id="number3TextField" prefHeight="31.0" prefWidth="153.0" promptText="Numero di telefono" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-                                    <TextField fx:id="email2TextField" promptText="Email" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-                                    <TextField fx:id="email3TextField" promptText="Email" GridPane.columnIndex="6" GridPane.rowIndex="3" />
-                                    <CheckBox fx:id="favoritesCheckBox" mnemonicParsing="false" text="Aggiungi" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="5">
-                                       <font>
-                                          <Font name="Yu Gothic UI Regular" size="15.0" />
-                                       </font></CheckBox>
-                                    <ImageView fx:id="contactImage" fitHeight="140.0" fitWidth="203.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowSpan="2" />
-                                    <Button fx:id="SaveContactButton" mnemonicParsing="false" onAction="#onSaveContactButton" text="Salva Contatto" GridPane.columnIndex="6" GridPane.rowIndex="6" />
-                                    <Button fx:id="ImageButton" alignment="CENTER" mnemonicParsing="false" text="Inserisci Immagine" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-                                    <Button fx:id="CancelButton" mnemonicParsing="false" onAction="#onCancelButton" text="Annulla" GridPane.columnIndex="4" GridPane.rowIndex="6" />
-                                 </children>
-                                 <columnConstraints>
-                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="296.0" minWidth="10.0" prefWidth="10.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="296.0" minWidth="10.0" prefWidth="180.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="343.0" minWidth="10.0" prefWidth="180.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="343.0" minWidth="10.0" prefWidth="25.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.0" minWidth="10.0" prefWidth="180.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.0" minWidth="10.0" prefWidth="25.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="444.0" minWidth="10.0" prefWidth="180.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="444.0" minWidth="10.0" prefWidth="10.0" />
-                                 </columnConstraints>
-                                 <rowConstraints>
-                                    <RowConstraints maxHeight="102.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="165.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="183.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="164.0" minHeight="10.0" prefHeight="94.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="208.0" minHeight="10.0" prefHeight="208.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="115.0" vgrow="SOMETIMES" />
-                                 </rowConstraints>
-                              </GridPane>
                               <GridPane fx:id="CreateForm1" layoutX="10.0" layoutY="10.0" prefHeight="1221.0" prefWidth="1244.0" visible="false">
                                  <children>
                                     <Label layoutX="195.0" layoutY="209.0" prefHeight="74.0" prefWidth="191.0" text="Cognome:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -209,7 +141,7 @@
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font>
                                     </Label>
-                                    <Label layoutX="195.0" layoutY="279.0" prefHeight="76.0" prefWidth="222.0" text="Numeri di telefono:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <Label layoutX="195.0" layoutY="279.0" prefHeight="76.0" prefWidth="222.0" text="Numeri di telefono:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
@@ -217,45 +149,45 @@
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <Label layoutX="195.0" layoutY="415.0" prefHeight="72.0" prefWidth="231.0" text="Indirizzo:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                    <Label layoutX="195.0" layoutY="415.0" prefHeight="72.0" prefWidth="231.0" text="Indirizzo:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <Label layoutX="195.0" layoutY="351.0" prefHeight="67.0" prefWidth="230.0" text="Email:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                    <Label layoutX="195.0" layoutY="351.0" prefHeight="67.0" prefWidth="230.0" text="Email:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <Label layoutX="195.0" layoutY="553.0" prefHeight="45.0" prefWidth="109.0" text="Preferiti:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                    <Label layoutX="195.0" layoutY="553.0" prefHeight="45.0" prefWidth="109.0" text="Preferiti:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <Label layoutX="195.0" layoutY="484.0" prefHeight="72.0" prefWidth="260.0" text="Note:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                    <Label layoutX="195.0" layoutY="484.0" prefHeight="72.0" prefWidth="260.0" text="Note:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="7">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
                                     <TextField fx:id="nameTextField1" promptText="Nome" GridPane.columnIndex="2" />
                                     <TextField fx:id="surnameTextField1" promptText="Cognome" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                                    <TextField fx:id="number1TextField1" prefHeight="23.0" prefWidth="159.0" promptText="Numero di telefono" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                                    <TextField fx:id="email1TextField1" promptText="Email" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                                    <TextField fx:id="addressTextField1" promptText="Indirizzo" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                                    <TextField fx:id="notesTextField1" prefHeight="73.0" prefWidth="218.0" promptText="Inserisci qui le note..." GridPane.columnIndex="2" GridPane.rowIndex="6" />
-                                    <TextField fx:id="number2TextField1" promptText="Numero di telefono" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-                                    <TextField fx:id="number3TextField1" prefHeight="31.0" prefWidth="153.0" promptText="Numero di telefono" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-                                    <TextField fx:id="email2TextField1" promptText="Email" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-                                    <TextField fx:id="email3TextField1" promptText="Email" GridPane.columnIndex="6" GridPane.rowIndex="3" />
-                                    <CheckBox fx:id="favoritesCheckBox1" mnemonicParsing="false" text="Aggiungi" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                    <TextField fx:id="number1TextField1" prefHeight="23.0" prefWidth="159.0" promptText="Numero di telefono" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                    <TextField fx:id="email1TextField1" promptText="Email" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                    <TextField fx:id="addressTextField1" promptText="Indirizzo" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                    <TextField fx:id="notesTextField1" prefHeight="73.0" prefWidth="218.0" promptText="Inserisci qui le note..." GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                                    <TextField fx:id="number2TextField1" promptText="Numero di telefono" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                                    <TextField fx:id="number3TextField1" prefHeight="31.0" prefWidth="153.0" promptText="Numero di telefono" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                                    <TextField fx:id="email2TextField1" promptText="Email" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                                    <TextField fx:id="email3TextField1" promptText="Email" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+                                    <CheckBox fx:id="favoritesCheckBox1" mnemonicParsing="false" text="Aggiungi" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="6">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></CheckBox>
-                                    <ImageView fx:id="contactImage1" fitHeight="140.0" fitWidth="203.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowSpan="2" />
-                                    <Button fx:id="SaveEditButton1" mnemonicParsing="false" onAction="#onSaveEditButton" text="Salva Contatto" GridPane.columnIndex="6" GridPane.rowIndex="6" />
-                                    <Button fx:id="ImageButton1" alignment="CENTER" mnemonicParsing="false" text="Inserisci Immagine" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-                                    <Button fx:id="CancelButton1" mnemonicParsing="false" onAction="#onCancelButton" text="Annulla" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                                    <ImageView fx:id="contactImage1" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateX="20.0" translateY="-30.0" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.rowSpan="2" />
+                                    <Button fx:id="SaveEditButton1" mnemonicParsing="false" onAction="#onSaveEditButton" text="Salva Contatto" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+                                    <Button fx:id="ImageButton1" alignment="CENTER" mnemonicParsing="false" onAction="#onLoadImage" text="Modifica Immagine" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Button fx:id="CancelButton1" mnemonicParsing="false" onAction="#onCancelButton" text="Annulla" GridPane.columnIndex="4" GridPane.rowIndex="7" />
                                  </children>
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="296.0" minWidth="10.0" prefWidth="10.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="296.0" minWidth="10.0" prefWidth="180.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="343.0" minWidth="10.0" prefWidth="180.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="296.0" minWidth="10.0" prefWidth="173.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="343.0" minWidth="10.0" prefWidth="223.0" />
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="343.0" minWidth="10.0" prefWidth="25.0" />
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.0" minWidth="10.0" prefWidth="180.0" />
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.0" minWidth="10.0" prefWidth="25.0" />
@@ -264,17 +196,89 @@
                                  </columnConstraints>
                                  <rowConstraints>
                                     <RowConstraints maxHeight="102.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="165.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="183.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="164.0" minHeight="10.0" prefHeight="94.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="208.0" minHeight="10.0" prefHeight="208.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="243.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="340.0" minHeight="10.0" prefHeight="224.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="239.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="254.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="265.0" minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="208.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="105.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <GridPane fx:id="CreateForm" prefHeight="1221.0" prefWidth="1244.0" styleClass="GridPane" stylesheets="@style.css" visible="false">
+                                 <children>
+                                    <Label layoutX="195.0" layoutY="209.0" prefHeight="74.0" prefWidth="191.0" text="Cognome:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="195.0" layoutY="279.0" prefHeight="76.0" prefWidth="222.0" text="Numeri di telefono:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label layoutX="195.0" layoutY="97.0" prefHeight="69.0" prefWidth="198.0" text="Nome:" textFill="WHITE" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label layoutX="195.0" layoutY="415.0" prefHeight="72.0" prefWidth="231.0" text="Indirizzo:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label layoutX="195.0" layoutY="351.0" prefHeight="67.0" prefWidth="230.0" text="Email:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label layoutX="195.0" layoutY="553.0" prefHeight="45.0" prefWidth="109.0" text="Preferiti:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <Label layoutX="195.0" layoutY="484.0" prefHeight="72.0" prefWidth="260.0" text="Note:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></Label>
+                                    <TextField fx:id="nameTextField" promptText="Nome" GridPane.columnIndex="2" />
+                                    <TextField fx:id="surnameTextField" promptText="Cognome" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <TextField fx:id="number1TextField" prefHeight="23.0" prefWidth="159.0" promptText="Numero di telefono" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                    <TextField fx:id="email1TextField" promptText="Email" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                    <TextField fx:id="addressTextField" promptText="Indirizzo" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                    <TextField fx:id="notesTextField" prefHeight="73.0" prefWidth="218.0" promptText="Inserisci qui le note..." GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                                    <TextField fx:id="number2TextField" promptText="Numero di telefono" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                                    <TextField fx:id="number3TextField" prefHeight="31.0" prefWidth="153.0" promptText="Numero di telefono" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                                    <TextField fx:id="email2TextField" promptText="Email" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                                    <TextField fx:id="email3TextField" promptText="Email" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+                                    <CheckBox fx:id="favoritesCheckBox" mnemonicParsing="false" text="Aggiungi" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="15.0" />
+                                       </font></CheckBox>
+                                    <ImageView fx:id="contactImage" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateX="20.0" translateY="-30.0" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.rowSpan="2" />
+                                    <Button fx:id="SaveContactButton" mnemonicParsing="false" onAction="#onSaveContactButton" text="Salva Contatto" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+                                    <Button fx:id="ImageButton" alignment="CENTER" mnemonicParsing="false" onAction="#onLoadImage" text="Inserisci Immagine" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Button fx:id="CancelButton" mnemonicParsing="false" onAction="#onCancelButton" text="Annulla" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="296.0" minWidth="10.0" prefWidth="10.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="296.0" minWidth="10.0" prefWidth="180.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="343.0" minWidth="10.0" prefWidth="195.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="343.0" minWidth="10.0" prefWidth="18.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.0" minWidth="10.0" prefWidth="233.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.0" minWidth="10.0" prefWidth="25.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="444.0" minWidth="10.0" prefWidth="180.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="444.0" minWidth="10.0" prefWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="293.0" minHeight="10.0" prefHeight="73.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="300.0" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="300.0" minHeight="10.0" prefHeight="250.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="286.0" minHeight="0.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="287.0" minHeight="10.0" prefHeight="68.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="208.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
                                     <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="115.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                               </GridPane>
                            </children>
                         </StackPane>
-                        <Separator layoutX="305.0" orientation="VERTICAL" prefHeight="713.0" prefWidth="13.0" />
+                        <Separator layoutX="309.0" orientation="VERTICAL" prefHeight="713.0" prefWidth="13.0" />
                      </children>
                   </AnchorPane>
             </content>
@@ -284,8 +288,8 @@
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="711.0" prefWidth="1233.0" styleClass="AnchorPane" stylesheets="@style.css">
                      <children>
 
-                        <TextField fx:id="searchEL" layoutX="60.0" layoutY="177.0" promptText="Ricerca..." />
-                        <Button fx:id="RemoveELButton" layoutX="39.0" layoutY="262.0" mnemonicParsing="false" text="Rimuovi dai contatti di Emergenza" onAction="#onRemoveFromEL" />           
+                        <TextField fx:id="searchEL" layoutX="33.0" layoutY="177.0" promptText="Ricerca..." />
+                        <Button fx:id="RemoveELButton" layoutX="33.0" layoutY="262.0" mnemonicParsing="false" onAction="#onRemoveFromEL" text="Rimuovi dai contatti di Emergenza" />           
                         <Button fx:id="ViewButton1" layoutX="83.0" layoutY="304.0" mnemonicParsing="false" onAction="#onDisplayContactButton" text="Visualizza Contatto" />
                         <StackPane layoutX="315.0" prefHeight="712.0" prefWidth="929.0">
                            <children>
@@ -296,7 +300,7 @@
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font>
                                     </Label>
-                                    <Label layoutX="195.0" layoutY="279.0" prefHeight="76.0" prefWidth="222.0" text="Numeri di telefono:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <Label layoutX="195.0" layoutY="279.0" prefHeight="76.0" prefWidth="222.0" text="Numeri di telefono:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
@@ -304,48 +308,48 @@
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <Label layoutX="195.0" layoutY="415.0" prefHeight="72.0" prefWidth="231.0" text="Indirizzo:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                    <Label layoutX="195.0" layoutY="415.0" prefHeight="72.0" prefWidth="231.0" text="Indirizzo:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <Label layoutX="195.0" layoutY="351.0" prefHeight="67.0" prefWidth="230.0" text="Email:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                    <Label layoutX="195.0" layoutY="351.0" prefHeight="67.0" prefWidth="230.0" text="Email:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <Label layoutX="195.0" layoutY="553.0" prefHeight="45.0" prefWidth="109.0" text="Preferiti:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                    <Label layoutX="195.0" layoutY="553.0" prefHeight="45.0" prefWidth="109.0" text="Preferiti:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <Label layoutX="195.0" layoutY="484.0" prefHeight="72.0" prefWidth="260.0" text="Note:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                    <Label layoutX="195.0" layoutY="484.0" prefHeight="72.0" prefWidth="260.0" text="Note:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="7">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <ImageView fitHeight="148.0" fitWidth="203.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" />
-                                    <Label fx:id="number3Label2" textFill="WHITE" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                                    <ImageView fx:id="contactImageEL" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <Label fx:id="number3Label2" textFill="WHITE" GridPane.columnIndex="6" GridPane.rowIndex="3">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <Label fx:id="email3Label2" textFill="WHITE" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                                    <Label fx:id="email3Label2" textFill="WHITE" GridPane.columnIndex="6" GridPane.rowIndex="4">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <Label fx:id="addressLabel2" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                    <Label fx:id="addressLabel2" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="5">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <Label fx:id="favoritesLabel2" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                    <Label fx:id="favoritesLabel2" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="6">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <Label fx:id="notesLabel2" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                    <Label fx:id="notesLabel2" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="7">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <Label fx:id="email1Label2" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                    <Label fx:id="email1Label2" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <Label fx:id="email2Label2" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                                    <Label fx:id="email2Label2" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="4">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
@@ -357,15 +361,16 @@
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <Label fx:id="number1Label2" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                    <Label fx:id="number1Label2" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <Button fx:id="goBackButton2" mnemonicParsing="false" onAction="#onGoBackButton" text="Indietro" GridPane.columnIndex="6" GridPane.rowIndex="6" />
-                                    <Label fx:id="number2Label2" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                                    <Button fx:id="goBackButton2" mnemonicParsing="false" onAction="#onGoBackButton" text="Indietro" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+                                    <Label fx:id="number2Label2" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="3">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
+                                    <Label text="Immagine:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                  </children>
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="296.0" minWidth="10.0" prefWidth="10.0" />
@@ -378,13 +383,14 @@
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="444.0" minWidth="10.0" prefWidth="10.0" />
                                  </columnConstraints>
                                  <rowConstraints>
-                                    <RowConstraints maxHeight="102.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="165.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="183.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="164.0" minHeight="10.0" prefHeight="66.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="138.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="115.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="102.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="150.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="289.0" minHeight="10.0" prefHeight="286.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="312.0" minHeight="10.0" prefHeight="82.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="183.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="164.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="138.0" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="62.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                               </GridPane>
                               <TableView fx:id="TableEL" layoutX="315.0" prefHeight="712.0" prefWidth="1318.0" styleClass="GridPane" stylesheets="@style.css">
@@ -406,9 +412,9 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="711.0" prefWidth="369.0" styleClass="AnchorPane" stylesheets="@style.css">
                      <children>
-                        <TextField fx:id="searchB" layoutX="53.0" layoutY="97.0" promptText="Ricerca..." />
+                        <TextField fx:id="searchB" layoutX="30.0" layoutY="176.0" promptText="Ricerca..." />
                         <Button fx:id="onRestoreButton" layoutX="86.0" layoutY="255.0" mnemonicParsing="false" onAction="#onRestoreButton" text="Ripristina Contatto" />
-                        <Button fx:id="onRemoveBinButton" layoutX="41.0" layoutY="299.0" mnemonicParsing="false" onAction="#onRemoveBinButton" text="Rimuovi definitivamente dai contatti" />
+                        <Button fx:id="onRemoveBinButton" layoutX="30.0" layoutY="300.0" mnemonicParsing="false" onAction="#onRemoveBinButton" text="Rimuovi definitivamente dai contatti" />
                         <Button fx:id="ViewButton11" layoutX="86.0" layoutY="343.0" mnemonicParsing="false" onAction="#onDisplayContactButton" text="Visualizza Contatto" />
                         <StackPane layoutX="315.0" prefHeight="712.0" prefWidth="929.0">
                            <children>
@@ -419,7 +425,7 @@
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font>
                                     </Label>
-                                    <Label layoutX="195.0" layoutY="279.0" prefHeight="76.0" prefWidth="222.0" text="Numeri di telefono:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <Label layoutX="195.0" layoutY="279.0" prefHeight="76.0" prefWidth="222.0" text="Numeri di telefono:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
@@ -427,48 +433,48 @@
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <Label layoutX="195.0" layoutY="415.0" prefHeight="72.0" prefWidth="231.0" text="Indirizzo:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                    <Label layoutX="195.0" layoutY="415.0" prefHeight="72.0" prefWidth="231.0" text="Indirizzo:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <Label layoutX="195.0" layoutY="351.0" prefHeight="67.0" prefWidth="230.0" text="Email:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                    <Label layoutX="195.0" layoutY="351.0" prefHeight="67.0" prefWidth="230.0" text="Email:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <Label layoutX="195.0" layoutY="553.0" prefHeight="45.0" prefWidth="109.0" text="Preferiti:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                    <Label layoutX="195.0" layoutY="553.0" prefHeight="45.0" prefWidth="109.0" text="Preferiti:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <Label layoutX="195.0" layoutY="484.0" prefHeight="72.0" prefWidth="260.0" text="Note:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                    <Label layoutX="195.0" layoutY="484.0" prefHeight="72.0" prefWidth="260.0" text="Note:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="7">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <ImageView fitHeight="148.0" fitWidth="203.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" />
-                                    <Label fx:id="number3Label21" textFill="WHITE" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                                    <ImageView fx:id="contactImageBin" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateX="5.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <Label fx:id="number3Label21" textFill="WHITE" GridPane.columnIndex="6" GridPane.rowIndex="3">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <Label fx:id="email3Label21" textFill="WHITE" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                                    <Label fx:id="email3Label21" textFill="WHITE" GridPane.columnIndex="6" GridPane.rowIndex="4">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <Label fx:id="addressLabel21" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                    <Label fx:id="addressLabel21" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="5">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <Label fx:id="favoritesLabel21" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                    <Label fx:id="favoritesLabel21" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="6">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <Label fx:id="notesLabel21" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                    <Label fx:id="notesLabel21" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="7">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <Label fx:id="email1Label21" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                    <Label fx:id="email1Label21" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <Label fx:id="email2Label21" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                                    <Label fx:id="email2Label21" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="4">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
@@ -480,34 +486,36 @@
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <Label fx:id="number1Label21" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                    <Label fx:id="number1Label21" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
-                                    <Button fx:id="goBackButton21" mnemonicParsing="false" onAction="#onGoBackButton" text="Indietro" GridPane.columnIndex="6" GridPane.rowIndex="6" />
-                                    <Label fx:id="number2Label21" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                                    <Button fx:id="goBackButton21" mnemonicParsing="false" onAction="#onGoBackButton" text="Indietro" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+                                    <Label fx:id="number2Label21" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="3">
                                        <font>
                                           <Font name="Yu Gothic UI Regular" size="15.0" />
                                        </font></Label>
+                                    <Label text="Immagine:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                  </children>
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="296.0" minWidth="10.0" prefWidth="10.0" />
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="296.0" minWidth="10.0" prefWidth="180.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="343.0" minWidth="10.0" prefWidth="180.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="343.0" minWidth="10.0" prefWidth="25.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="343.0" minWidth="10.0" prefWidth="199.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="343.0" minWidth="10.0" prefWidth="41.0" />
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.0" minWidth="10.0" prefWidth="180.0" />
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.0" minWidth="10.0" prefWidth="25.0" />
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="444.0" minWidth="10.0" prefWidth="180.0" />
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="444.0" minWidth="10.0" prefWidth="10.0" />
                                  </columnConstraints>
                                  <rowConstraints>
-                                    <RowConstraints maxHeight="102.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="165.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="183.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="164.0" minHeight="10.0" prefHeight="66.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="138.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="115.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="102.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="298.0" minHeight="10.0" prefHeight="86.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="490.0" minHeight="10.0" prefHeight="254.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="290.0" minHeight="10.0" prefHeight="76.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="271.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="225.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="223.0" minHeight="10.0" prefHeight="63.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="72.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                               </GridPane>
                               <TableView fx:id="TableBin" layoutX="315.0" prefHeight="712.0" prefWidth="929.0" styleClass="TableView" stylesheets="@style.css">
@@ -519,7 +527,7 @@
                            </children>
                         </StackPane>
                         <Separator layoutX="309.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="713.0" prefWidth="13.0" />
-                        <Button fx:id="SearchButton2" layoutX="217.0" layoutY="97.0" mnemonicParsing="false" onAction="#onSearchButtonAction" text="Cerca" />
+                        <Button fx:id="SearchButton2" layoutX="230.0" layoutY="176.0" mnemonicParsing="false" onAction="#onSearchButtonAction" text="Cerca" />
                      </children>
                   </AnchorPane>
                </content>
