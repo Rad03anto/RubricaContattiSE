@@ -25,15 +25,12 @@ var searchData=
   ['contactlist_22',['ContactList',['../classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list.html',1,'com::gruppo23::phonebook::model']]],
   ['contactlist_23',['contactList',['../classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list.html#a0e75920785441602596847de30011001',1,'com::gruppo23::phonebook::model::ContactList']]],
   ['contactlist_2ejava_24',['ContactList.java',['../_contact_list_8java.html',1,'']]],
-  ['contactlistimpl_25',['ContactListImpl',['../classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_test_1_1_contact_list_impl.html',1,'com::gruppo23::phonebook::model::ContactListTest']]],
-  ['contactlisttest_26',['ContactListTest',['../classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_test.html',1,'com.gruppo23.phonebook.model.ContactListTest'],['../classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_test.html#a70fc88519fb00925a5d47940a6ab69c1',1,'com.gruppo23.phonebook.model.ContactListTest.ContactListTest()']]],
-  ['contactlisttest_2ejava_27',['ContactListTest.java',['../_contact_list_test_8java.html',1,'']]],
-  ['contacttest_28',['ContactTest',['../classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_test.html',1,'com::gruppo23::phonebook::model']]],
-  ['contacttest_2ejava_29',['ContactTest.java',['../_contact_test_8java.html',1,'']]],
-  ['contactview_30',['ContactView',['../classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller.html#a2d891fa5ad86b6556955ca1b598ba3ab',1,'com::gruppo23::phonebook::controller::PhoneBookController']]],
-  ['contactview1_31',['ContactView1',['../classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller.html#ac0cae0f8f240dcb7524754ef015560cc',1,'com::gruppo23::phonebook::controller::PhoneBookController']]],
-  ['contactview11_32',['ContactView11',['../classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller.html#a56546aefcae006c72e37167bd945ae2b',1,'com::gruppo23::phonebook::controller::PhoneBookController']]],
-  ['createbutton_33',['CreateButton',['../classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller.html#a8e6ec3869a1223d4c2b4fb2dec53a77c',1,'com::gruppo23::phonebook::controller::PhoneBookController']]],
-  ['createform_34',['CreateForm',['../classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller.html#acbe5bfd85e475dbe3522ad56dce0ba24',1,'com::gruppo23::phonebook::controller::PhoneBookController']]],
-  ['createform1_35',['CreateForm1',['../classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller.html#acc5974563ce603e01bf0107939aa1d2a',1,'com::gruppo23::phonebook::controller::PhoneBookController']]]
+  ['contacttest_25',['ContactTest',['../classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_test.html',1,'com::gruppo23::phonebook::model']]],
+  ['contacttest_2ejava_26',['ContactTest.java',['../_contact_test_8java.html',1,'']]],
+  ['contactview_27',['ContactView',['../classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller.html#a2d891fa5ad86b6556955ca1b598ba3ab',1,'com::gruppo23::phonebook::controller::PhoneBookController']]],
+  ['contactview1_28',['ContactView1',['../classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller.html#ac0cae0f8f240dcb7524754ef015560cc',1,'com::gruppo23::phonebook::controller::PhoneBookController']]],
+  ['contactview11_29',['ContactView11',['../classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller.html#a56546aefcae006c72e37167bd945ae2b',1,'com::gruppo23::phonebook::controller::PhoneBookController']]],
+  ['createbutton_30',['CreateButton',['../classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller.html#a8e6ec3869a1223d4c2b4fb2dec53a77c',1,'com::gruppo23::phonebook::controller::PhoneBookController']]],
+  ['createform_31',['CreateForm',['../classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller.html#acbe5bfd85e475dbe3522ad56dce0ba24',1,'com::gruppo23::phonebook::controller::PhoneBookController']]],
+  ['createform1_32',['CreateForm1',['../classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller.html#acc5974563ce603e01bf0107939aa1d2a',1,'com::gruppo23::phonebook::controller::PhoneBookController']]]
 ];

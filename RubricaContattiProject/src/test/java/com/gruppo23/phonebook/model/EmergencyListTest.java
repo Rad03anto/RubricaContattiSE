@@ -8,6 +8,7 @@ import com.gruppo23.phonebook.exceptions.FullGroupException;
 import com.gruppo23.phonebook.exceptions.InvalidContactException;
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import javafx.scene.image.Image;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
@@ -15,6 +16,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Timeout;
 
 /**
  *
@@ -51,6 +53,7 @@ public class EmergencyListTest {
      * @throws FullGroupException
      */
     @Test
+    @Timeout(value=2, unit=TimeUnit.SECONDS)
     public void testAddContact() throws InvalidContactException, FullGroupException {
         List<String> phoneNumbers = Arrays.asList("1234567890", "0987654321", "8908394302");
         List<String> emails = Arrays.asList("email@esempio.com", "email@esempio2.com", "email@esempio3.com");
@@ -68,6 +71,7 @@ public class EmergencyListTest {
      * @throws FullGroupException 
      */
     @Test
+    @Timeout(value=2, unit=TimeUnit.SECONDS)
     public void testAddContactMaxSize() throws InvalidContactException, FullGroupException {
         List<String> phoneNumbers = Arrays.asList("1234567890", "0987654321", "8908394302");
         List<String> emails = Arrays.asList("email@esempio.com", "email@esempio2.com", "email@esempio3.com");

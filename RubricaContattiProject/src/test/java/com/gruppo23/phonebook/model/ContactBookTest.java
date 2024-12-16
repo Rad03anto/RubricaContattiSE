@@ -8,12 +8,14 @@ import com.gruppo23.phonebook.exceptions.FullGroupException;
 import com.gruppo23.phonebook.exceptions.InvalidContactException;
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Timeout;
 
 /**
  *
@@ -64,6 +66,7 @@ public class ContactBookTest {
      * Aggiunge un contatto alla contactbook, cioè alla rubrica principale.
      */
     @Test
+    @Timeout(value=2, unit=TimeUnit.SECONDS)
     public void testAddContact() throws Exception {
         assertTrue(contactBook.getContacts().contains(contact), "Il contatto dovrebbe essere presente nella rubrica principale.");
     }
@@ -73,6 +76,7 @@ public class ContactBookTest {
      * Verifica che il contatto sia rimosso dalla rubrica principale
      */
     @Test
+    @Timeout(value=2, unit=TimeUnit.SECONDS)
     public void testRemoveContact() {
         contactBook.removeContact(contact);
         assertFalse(contactBook.getContacts().contains(contact), "Il contatto dovrebbe essere stato rimosso dalla rubrica principale.");
@@ -84,6 +88,7 @@ public class ContactBookTest {
      * verifica che il contatto venga aggiunto al cestino
      */
     @Test
+    @Timeout(value=2, unit=TimeUnit.SECONDS)
     public void testMoveToBin() throws Exception {
        
         assertTrue(contactBook.getContacts().contains(contact), "Il contatto dovrebbe essere nella rubrica.");
@@ -97,6 +102,7 @@ public class ContactBookTest {
      * verifica che un contatto venga aggiunto ai contatti di emergenza e che non venga eliminato dalla rubrica
      */
     @Test
+    @Timeout(value=2, unit=TimeUnit.SECONDS)
     public void testMoveToEmergencyList() throws Exception {
         
         contactBook.moveToEmergencyList(contact, emergencyList);
@@ -109,6 +115,7 @@ public class ContactBookTest {
      * verifica che il contatto preferito sia aggiunto nel display
      */
     @Test
+    @Timeout(value=2, unit=TimeUnit.SECONDS)
     public void testDisplayFavorites() throws InvalidContactException, FullGroupException {
         List<Contact> favorites = contactBook.displayFavorites();
         assertTrue(favorites.contains(favoriteContact), "La lista dei preferiti dovrebbe contenere il contatto preferito.");

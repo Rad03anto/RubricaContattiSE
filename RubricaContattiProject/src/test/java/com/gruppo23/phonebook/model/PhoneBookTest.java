@@ -12,12 +12,14 @@ import java.io.FileWriter;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Timeout;
 
 /**
  *
@@ -115,6 +117,7 @@ public class PhoneBookTest {
      * per il caricamento da file csv.
      */
     @Test
+    @Timeout(value=2, unit=TimeUnit.SECONDS)
     public void testLoadFromFile() throws Exception {
         String filename = "Contatti.csv";
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
@@ -135,6 +138,7 @@ public class PhoneBookTest {
      * per il salvataggio su file csv.
      */
     @Test
+    @Timeout(value=2, unit=TimeUnit.SECONDS)
     public void testSaveToFile() throws Exception {
         Contact contact = new Contact("Mario", "Rossi", Arrays.asList("12345", "67890", "54321"),
                 Arrays.asList("mail1@mail.com", "mail2@mail.com", "mail3@mail.com"), 

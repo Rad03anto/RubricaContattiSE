@@ -8,6 +8,7 @@ import com.gruppo23.phonebook.exceptions.FullGroupException;
 import com.gruppo23.phonebook.exceptions.InvalidContactException;
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import javafx.scene.image.Image;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
@@ -15,6 +16,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Timeout;
 
 /**
  *
@@ -60,6 +62,7 @@ public class BinTest {
      * @throws Exception 
      */
     @Test
+    @Timeout(value=2, unit=TimeUnit.SECONDS)
     public void testRestoreContact() throws Exception {
         assertTrue(bin.getContacts().contains(contact), "Il contatto dovrebbe essere nel cestino.");
         bin.restoreContact(contact, contactBook);
