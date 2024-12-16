@@ -1,7 +1,7 @@
 var searchData=
 [
   ['editcontactbutton_0',['editContactButton',['../classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller.html#a59d0450742e97109c6ee6a4dc6fb7025',1,'com::gruppo23::phonebook::controller::PhoneBookController']]],
-  ['elist_1',['eList',['../classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_phone_book.html#aa59551e308a9a3160ff65fc79725bc9f',1,'com::gruppo23::phonebook::model::PhoneBook']]],
+  ['elist_1',['eList',['../classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_phone_book.html#aa59551e308a9a3160ff65fc79725bc9f',1,'com.gruppo23.phonebook.model.PhoneBook.eList'],['../classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_emergency_list_test.html#a0ce97ee8e81da00386600f50d8035ff9',1,'com.gruppo23.phonebook.model.EmergencyListTest.eList'],['../classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_phone_book_test.html#ac7630f102c78e4a65cc4f09c7997e21e',1,'com.gruppo23.phonebook.model.PhoneBookTest.eList']]],
   ['email1label_2',['email1Label',['../classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller.html#ab503a24a92cc862b45dd85c5decb903b',1,'com::gruppo23::phonebook::controller::PhoneBookController']]],
   ['email1label2_3',['email1Label2',['../classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller.html#a864f6e401a9357e990c252742e6adf44',1,'com::gruppo23::phonebook::controller::PhoneBookController']]],
   ['email1label21_4',['email1Label21',['../classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller.html#a08d7e2752271912975ef33a4b5154dd8',1,'com::gruppo23::phonebook::controller::PhoneBookController']]],
@@ -18,7 +18,7 @@ var searchData=
   ['email3textfield_15',['email3TextField',['../classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller.html#a6ab0d46c8f26cfa8e00ecc28116cd996',1,'com::gruppo23::phonebook::controller::PhoneBookController']]],
   ['email3textfield1_16',['email3TextField1',['../classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller.html#ab4ca02f2b00ef019c9901bd7e37b3da9',1,'com::gruppo23::phonebook::controller::PhoneBookController']]],
   ['emails_17',['emails',['../classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact.html#a528a3c18e173a98d739413a59d7e07b2',1,'com::gruppo23::phonebook::model::Contact']]],
-  ['emergencylist_18',['emergencyList',['../classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller.html#a299210f8723edeb7f16e833fedcb60f1',1,'com::gruppo23::phonebook::controller::PhoneBookController']]],
+  ['emergencylist_18',['emergencyList',['../classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller.html#a299210f8723edeb7f16e833fedcb60f1',1,'com.gruppo23.phonebook.controller.PhoneBookController.emergencyList'],['../classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_book_test.html#a6ff0f6dc4db7c64bfa65a9f74065947b',1,'com.gruppo23.phonebook.model.ContactBookTest.emergencyList']]],
   ['emergencytab_19',['emergencyTab',['../classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller.html#a8a8c547cae8e15ef6a0d8ff61f3c417d',1,'com::gruppo23::phonebook::controller::PhoneBookController']]],
   ['exportbutton_20',['ExportButton',['../classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller.html#aba9bc7084a18d544ad49a6f66055db1b',1,'com::gruppo23::phonebook::controller::PhoneBookController']]]
 ];

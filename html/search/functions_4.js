@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['editcontact_0',['editContact',['../classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_book.html#acab20ede9e7a9ce1ccbdf1921211832c',1,'com::gruppo23::phonebook::model::ContactBook']]]
+  ['emergencylisttest_0',['EmergencyListTest',['../classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_emergency_list_test.html#a34f5409a3695b41e9d9afdc3169e8bd9',1,'com::gruppo23::phonebook::model::EmergencyListTest']]]
 ];

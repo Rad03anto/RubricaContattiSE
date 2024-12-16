@@ -23,9 +23,7 @@ void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_boo
 void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_book_af500f5142d75cda13bb658102320c477}{move\+To\+Emergency\+List}} (\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} contact, \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_emergency_list}{Emergency\+List}} e\+List)  throws \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1exceptions_1_1_full_group_exception}{Full\+Group\+Exception}} 
 \begin{DoxyCompactList}\small\item\em Aggiunge un contatto a una lista di emergenza. \end{DoxyCompactList}\item 
 List$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} $>$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_book_a28ccfa82445d925164d21325a1cb3703}{display\+Favorites}} ()
-\begin{DoxyCompactList}\small\item\em Restituisce il numero totale di contatti presenti nella rubrica a livello globale. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_book_acab20ede9e7a9ce1ccbdf1921211832c}{edit\+Contact}} (\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} contact)  throws \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1exceptions_1_1_invalid_contact_exception}{Invalid\+Contact\+Exception}} 
-\begin{DoxyCompactList}\small\item\em Modifica un contatto passato per parametro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Restituisce il numero totale di contatti presenti nella rubrica a livello globale. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list}{com.\+gruppo23.\+phonebook.\+model.\+Contact\+List}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -38,11 +36,18 @@ List$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}
 \item 
 static int \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_book_a6bcdf2136a7fce8d153897082ec97c4b}{get\+Global\+Contact\+Count}} ()
 \begin{DoxyCompactList}\small\item\em Restituisce il numero totale di contatti presenti nella rubrica a livello globale. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final int \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_book_a7bef979208f00dc0ae689edcc44af618}{MAX\+\_\+\+CONTACTS}} = 1000
+\item 
+static int \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_book_a12ca64757e5a0ed3e38c3c99c69c29e6}{global\+Contact\+Count}} = 0
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list}{com.\+gruppo23.\+phonebook.\+model.\+Contact\+List}}}
 \begin{DoxyCompactItemize}
 \item 
-List$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} $>$ {\bfseries contact\+List} = new Array\+List$<$$>$()
+List$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} $>$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list_a0e75920785441602596847de30011001}{contact\+List}} = new Array\+List$<$$>$()
 \end{DoxyCompactItemize}
 
 
@@ -115,27 +120,6 @@ La rubrica deve contenere almeno un contatto. Ogni contatto deve avere un attrib
 \begin{DoxyPostcond}{Postcondition}
 Viene visualizzata la lista dei contatti preferiti, se presenti. 
 \end{DoxyPostcond}
-\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_book_acab20ede9e7a9ce1ccbdf1921211832c}\index{com.gruppo23.phonebook.model.ContactBook@{com.gruppo23.phonebook.model.ContactBook}!editContact@{editContact}}
-\index{editContact@{editContact}!com.gruppo23.phonebook.model.ContactBook@{com.gruppo23.phonebook.model.ContactBook}}
-\doxysubsubsection{\texorpdfstring{editContact()}{editContact()}}
-{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_book_acab20ede9e7a9ce1ccbdf1921211832c} 
-void com.\+gruppo23.\+phonebook.\+model.\+Contact\+Book.\+edit\+Contact (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}}}]{contact}{}\end{DoxyParamCaption}) throws \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1exceptions_1_1_invalid_contact_exception}{Invalid\+Contact\+Exception}}}
-
-
-
-Modifica un contatto passato per parametro. 
-
-\begin{DoxyPrecond}{Precondition}
-La rubrica principale deve avere almeno un contatto (da modificare) 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondition}
-Il contatto viene aggiornato 
-\end{DoxyPostcond}
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in,out}}  & {\em contact} & \\
-\hline
-\end{DoxyParams}
 \Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_book_a6bcdf2136a7fce8d153897082ec97c4b}\index{com.gruppo23.phonebook.model.ContactBook@{com.gruppo23.phonebook.model.ContactBook}!getGlobalContactCount@{getGlobalContactCount}}
 \index{getGlobalContactCount@{getGlobalContactCount}!com.gruppo23.phonebook.model.ContactBook@{com.gruppo23.phonebook.model.ContactBook}}
 \doxysubsubsection{\texorpdfstring{getGlobalContactCount()}{getGlobalContactCount()}}
@@ -228,6 +212,21 @@ Reimplemented from \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1
 
 
 
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_book_a12ca64757e5a0ed3e38c3c99c69c29e6}\index{com.gruppo23.phonebook.model.ContactBook@{com.gruppo23.phonebook.model.ContactBook}!globalContactCount@{globalContactCount}}
+\index{globalContactCount@{globalContactCount}!com.gruppo23.phonebook.model.ContactBook@{com.gruppo23.phonebook.model.ContactBook}}
+\doxysubsubsection{\texorpdfstring{globalContactCount}{globalContactCount}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_book_a12ca64757e5a0ed3e38c3c99c69c29e6} 
+int com.\+gruppo23.\+phonebook.\+model.\+Contact\+Book.\+global\+Contact\+Count = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_book_a7bef979208f00dc0ae689edcc44af618}\index{com.gruppo23.phonebook.model.ContactBook@{com.gruppo23.phonebook.model.ContactBook}!MAX\_CONTACTS@{MAX\_CONTACTS}}
+\index{MAX\_CONTACTS@{MAX\_CONTACTS}!com.gruppo23.phonebook.model.ContactBook@{com.gruppo23.phonebook.model.ContactBook}}
+\doxysubsubsection{\texorpdfstring{MAX\_CONTACTS}{MAX\_CONTACTS}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_book_a7bef979208f00dc0ae689edcc44af618} 
+final int com.\+gruppo23.\+phonebook.\+model.\+Contact\+Book.\+MAX\+\_\+\+CONTACTS = 1000\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Rubrica\+Contatti\+Project/src/main/java/com/gruppo23/phonebook/model/Contact\+Book.\+java\end{DoxyCompactItemize}
+Rubrica\+Contatti\+Project/src/main/java/com/gruppo23/phonebook/model/\mbox{\hyperlink{_contact_book_8java}{Contact\+Book.\+java}}\end{DoxyCompactItemize}

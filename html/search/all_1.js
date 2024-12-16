@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['addcontact_0',['addContact',['../classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_book.html#a21623b37b7b2c51409d6869a36c525a7',1,'com.gruppo23.phonebook.model.ContactBook.addContact()'],['../classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_list.html#ae5b3e5500f8b0a56c5d9154f6fac9c7f',1,'com.gruppo23.phonebook.model.ContactList.addContact()'],['../classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_emergency_list.html#ab29ce7b42a98d7066c28f07a9c07cae9',1,'com.gruppo23.phonebook.model.EmergencyList.addContact()']]],
-  ['adoperate_1',['🖥️ Tecnologie adoperate',['../md__r_e_a_d_m_e.html#autotoc_md2',1,'']]],
-  ['autodeletefrombin_2',['autodeleteFromBin',['../classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin.html#a33ce696fe9f2f4cb95eb2c1e8abe18e0',1,'com::gruppo23::phonebook::model::Bin']]]
+  ['bin_0',['Bin',['../classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin.html',1,'com.gruppo23.phonebook.model.Bin'],['../classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin.html#a423262616e955b49c09a767d48ff01ca',1,'com.gruppo23.phonebook.model.Bin.Bin()']]],
+  ['bin_1',['bin',['../classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller.html#a266ba0e6a29da464f694ebfc534228bb',1,'com.gruppo23.phonebook.controller.PhoneBookController.bin'],['../classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_phone_book.html#a8b155c58ac5d649e179285d988a8fd6e',1,'com.gruppo23.phonebook.model.PhoneBook.bin'],['../classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin_test.html#ac20c3464dc8f921aa6398af5423318b5',1,'com.gruppo23.phonebook.model.BinTest.bin'],['../classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_book_test.html#a0dd36c6630a033f668640e1b6e6d6737',1,'com.gruppo23.phonebook.model.ContactBookTest.bin'],['../classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_phone_book_test.html#acbd794ca1dde19164111e80dc9aeb90f',1,'com.gruppo23.phonebook.model.PhoneBookTest.bin']]],
+  ['bin_2ejava_2',['Bin.java',['../_bin_8java.html',1,'']]],
+  ['bintab_3',['binTab',['../classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller.html#aa609a90e9e09344f3ef84b8691a22745',1,'com::gruppo23::phonebook::controller::PhoneBookController']]],
+  ['bintest_4',['BinTest',['../classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin_test.html',1,'com.gruppo23.phonebook.model.BinTest'],['../classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin_test.html#aa1717ee2ee0bbd161f023a9e4529ca31',1,'com.gruppo23.phonebook.model.BinTest.BinTest()']]],
+  ['bintest_2ejava_5',['BinTest.java',['../_bin_test_8java.html',1,'']]]
 ];

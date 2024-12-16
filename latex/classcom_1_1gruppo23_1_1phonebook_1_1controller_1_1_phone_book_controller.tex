@@ -11,9 +11,308 @@ Inheritance diagram for com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+C
 \item 
 void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aa8b8a2e60c9779972d5f113c8e72fd73}{initialize}} (URL url, Resource\+Bundle rb)
 \begin{DoxyCompactList}\small\item\em Inizializza la GUI e le risorse associate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a46c885e5ff199ed6d4567bfb749b12d0}{on\+Create\+Button\+Action}} (Action\+Event event)
+\begin{DoxyCompactList}\small\item\em Gestisce l\textquotesingle{}azione del pulsante "{}\+Crea Contatto"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a4b96f676f40ff0204c37f3f6a766ac69}{on\+Save\+Contact\+Button}} (Action\+Event event)  throws \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1exceptions_1_1_invalid_contact_exception}{Invalid\+Contact\+Exception}} 
+\begin{DoxyCompactList}\small\item\em Salva un nuovo contatto nella rubrica. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a3b95fd28382f58f4d4563d3a7f45a0e5}{on\+Add\+To\+ELButton}} (Action\+Event event)  throws \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1exceptions_1_1_full_group_exception}{Full\+Group\+Exception}} 
+\begin{DoxyCompactList}\small\item\em Aggiunge un contatto alla lista di emergenza. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a7fece83a3ea2b3b3071e1c0af39da2c3}{on\+Display\+Contact\+Button}} (Action\+Event event)
+\begin{DoxyCompactList}\small\item\em Visualizza i dettagli di un contatto selezionato. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a47ce4beb19fcefeb71807cf5b324352b}{on\+Go\+Back\+Button}} (Action\+Event event)
+\begin{DoxyCompactList}\small\item\em Torna alla visualizzazione della tabella principale. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a8d65c1b6c4e7d4c50844e3de761089b4}{handle\+Emergency\+Tab}} (Event event)
+\begin{DoxyCompactList}\small\item\em Passa alla scheda dei contatti di emergenza. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a72b7d4cc21cd319eb8a6412233c0f6d5}{on\+Contact\+Book\+Tab}} (Event event)
+\begin{DoxyCompactList}\small\item\em Passa alla scheda della rubrica principale. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a583a82ab6e5ade4cc999270e6949b0e5}{on\+Bin\+Tab}} (Event event)
+\begin{DoxyCompactList}\small\item\em Passa alla scheda del cestino. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a1c0c1a38eaeec6a4b6c40ae46926bbd1}{on\+Move\+To\+Bin\+Button}} (Action\+Event event)  throws \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1exceptions_1_1_full_group_exception}{Full\+Group\+Exception}} 
+\begin{DoxyCompactList}\small\item\em Sposta un contatto nel cestino. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a6c869970b6663243f2373d9ce6a43e54}{on\+Edit\+Contact\+Button}} (Action\+Event event)
+\begin{DoxyCompactList}\small\item\em Gestisce l\textquotesingle{}evento del pulsante per la modifica di un contatto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a51cb48f127913317040115f140da6343}{on\+Save\+Edit\+Button}} (Action\+Event event)  throws \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1exceptions_1_1_invalid_contact_exception}{Invalid\+Contact\+Exception}} 
+\begin{DoxyCompactList}\small\item\em Salva le modifiche apportate al contatto selezionato. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a62ae8336a3e6427ce803d8609e4d8b38}{on\+Cancel\+Button}} (Action\+Event event)
+\begin{DoxyCompactList}\small\item\em Annulla l\textquotesingle{}operazione di modifica di un contatto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_abd482b9364fb24ca9c7f984bb59442e5}{on\+Search\+Button\+Action}} (Action\+Event event)
+\begin{DoxyCompactList}\small\item\em Gestisce la ricerca dei contatti. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a6ed3a41b3ee141194d9ec333b3192fe3}{on\+Restore\+Button}} (Action\+Event event)  throws \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1exceptions_1_1_full_group_exception}{Full\+Group\+Exception}} 
+\begin{DoxyCompactList}\small\item\em Ripristina un contatto dal cestino. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aaf268b699e4693ea59653d2b4e6a95b1}{on\+Remove\+Bin\+Button}} (Action\+Event event)
+\begin{DoxyCompactList}\small\item\em Rimuove definitivamente un contatto dal cestino. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a23d1f5973f5c89fe25207eabf008edd1}{on\+Fav\+Button}} (Action\+Event event)
+\begin{DoxyCompactList}\small\item\em Visualizza i contatti preferiti nella rubrica principale. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a0d11704da43897787c784592ade38866}{on\+Remove\+From\+EL}} (Action\+Event event)
+\begin{DoxyCompactList}\small\item\em Rimuove un contatto dalla lista di emergenza. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a34ba3d6cffba6fb9277106934bd5a0af}{on\+Contact\+Book\+Button}} (Action\+Event event)
+\begin{DoxyCompactList}\small\item\em Mostra la rubrica principale senza filtri. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ac1cc27fde20a76b72f3ae8cfebf8af3f}{on\+Export\+FIle}} (Action\+Event event)  throws IOException 
+\begin{DoxyCompactList}\small\item\em Esporta la rubrica in un file "{}\+Contatti.\+csv"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_abb337213042eef3a0471e4031073f7dd}{on\+Import\+Button}} (Action\+Event event)  throws IOException, File\+Not\+Found\+Exception, \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1exceptions_1_1_full_group_exception}{Full\+Group\+Exception}}, \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1exceptions_1_1_invalid_contact_exception}{Invalid\+Contact\+Exception}} 
+\begin{DoxyCompactList}\small\item\em Importa la rubrica da un file CSV. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a2a2be1e6dd7ea72cf098184448d882a9}{on\+Load\+Image}} (Action\+Event event)
+\begin{DoxyCompactList}\small\item\em Metodo per l\textquotesingle{}inserimento di un\textquotesingle{}immagine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Text\+Field \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a293d579a6623ea99c5859017ff9aa799}{search\+CB}}
+\item 
+Button \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a8e6ec3869a1223d4c2b4fb2dec53a77c}{Create\+Button}}
+\item 
+Button \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a32c00a4880c548e752300be38e6c8452}{View\+Button}}
+\item 
+Button \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a28fa5ad1354f226d6c8a1bbca487b50c}{Add\+To\+ELButton}}
+\item 
+Button \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aa409fd6fc70c2d9f8e78cc254ed62cb4}{Import\+Button}}
+\item 
+Button \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aba9bc7084a18d544ad49a6f66055db1b}{Export\+Button}}
+\item 
+Text\+Field \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a1ee62f61be9e4f7bf24e96328a6ea8f9}{search\+EL}}
+\item 
+Button \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ab844aabb30606508b228c8bd9d7292dc}{Remove\+ELButton}}
+\item 
+Text\+Field \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a4f0292b2d3d9ec1695b6cf30160e7936}{searchB}}
+\item 
+Grid\+Pane \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_acbe5bfd85e475dbe3522ad56dce0ba24}{Create\+Form}}
+\item 
+Text\+Field \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a8c4ec8e8327d1ed4cd474004f82450a4}{name\+Text\+Field}}
+\item 
+Text\+Field \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a11381b02a1778a2422dda0b1488a7f53}{surname\+Text\+Field}}
+\item 
+Text\+Field \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ad5d478db73da70ad2956269641204231}{number1\+Text\+Field}}
+\item 
+Text\+Field \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a66b2e25b2eb45db90468c9bff08c7bcb}{email1\+Text\+Field}}
+\item 
+Text\+Field \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aa307cd6867629b80da2618deeab9bcfc}{address\+Text\+Field}}
+\item 
+Text\+Field \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a5338be625640a17a3e9aae9d0e6fa307}{notes\+Text\+Field}}
+\item 
+Text\+Field \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_acf3a81e7900b136c9fa6c9b7dbce8e1e}{number2\+Text\+Field}}
+\item 
+Text\+Field \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aab97ac18bc5177e372940a19cbd6e744}{number3\+Text\+Field}}
+\item 
+Text\+Field \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ae7c9bd730323505cc5be95f37786704c}{email2\+Text\+Field}}
+\item 
+Text\+Field \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a6ab0d46c8f26cfa8e00ecc28116cd996}{email3\+Text\+Field}}
+\item 
+Check\+Box \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_afac7412a299a3b6573c2efe8f620e7ef}{favorites\+Check\+Box}}
+\item 
+Table\+View$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} $>$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ae52bb9b771a6c9205b7f174020deed54}{Table\+Book}}
+\item 
+Grid\+Pane \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a2d891fa5ad86b6556955ca1b598ba3ab}{Contact\+View}}
+\item 
+Label \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a54f2730a8fd3b37d41a3e8861214cb23}{number3\+Label}}
+\item 
+Label \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_acd117395d10327bb25c291fa0b9aaa6b}{email3\+Label}}
+\item 
+Label \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ac6e24260fb268922a7d1ecc051f52873}{address\+Label}}
+\item 
+Label \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a6fa33ffda96167ba280788cd7cba4c6f}{favorites\+Label}}
+\item 
+Label \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_afb9c549d5cc26f5c6d6dc9d0912b3c40}{notes\+Label}}
+\item 
+Label \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ab503a24a92cc862b45dd85c5decb903b}{email1\+Label}}
+\item 
+Label \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a588f1c362a03a57681f9c96f189730ed}{email2\+Label}}
+\item 
+Label \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a76cdcac30878a408cc05e4ae7b877f68}{name\+Label}}
+\item 
+Label \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_afad17d8de7ab2fea0493b832267b58a1}{surname\+Label}}
+\item 
+Label \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a131fa68d84926461554ce2796697ea71}{number1\+Label}}
+\item 
+Label \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a28eb58ea232692c0efb98057452d3b53}{number2\+Label}}
+\item 
+Table\+Column$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}}, String $>$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aa33837495c562242879515ceca467bdb}{surname\+Clm}}
+\item 
+Table\+Column$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}}, String $>$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ab8a8053360837d8f9f422f8679c8507d}{name\+Clm}}
+\item 
+Button \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ad60ab7b07c48ceac22d65e31cd895052}{Save\+Contact\+Button}}
+\item 
+Button \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a0737553b65a05850f8cea05506edd667}{Image\+Button}}
+\item 
+Image\+View \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a9e869df059f725b98852d08da9331fe1}{contact\+Image}}
+\item 
+Button \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a7b91bb55bcbd641cbc68bb3f5dc8f29a}{on\+Move\+To\+Bin\+Button}}
+\item 
+Table\+View$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} $>$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a8752c383621273019364fda044342ce4}{Table\+EL}}
+\item 
+Table\+Column$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}}, String $>$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ab3fd5ad0d00ee34196e037396a769c2f}{surname\+Clm1}}
+\item 
+Table\+Column$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}}, String $>$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ae0867eddadc2447c4bdc8f9087fb299b}{name\+Clm1}}
+\item 
+Table\+View$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} $>$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a818d1bc394cea5195a03cd8c3d5c7bbc}{Table\+Bin}}
+\item 
+Table\+Column$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}}, String $>$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ab2f239056cab34b8bca4f562ee63d7aa}{surname\+Clm2}}
+\item 
+Table\+Column$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}}, String $>$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ab51189012f2935536bbaede52bfb1815}{name\+Clm2}}
+\item 
+Button \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ac3d1fdb98d684a6caafd8feba3c57a09}{go\+Back\+Button}}
+\item 
+Button \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a1ffd68a7636c26eb4adb4dcd9dd44c29}{View\+Button1}}
+\item 
+Button \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a575ec95679983f805f1af0c06e96eaff}{View\+Button11}}
+\item 
+Tab \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a8a8c547cae8e15ef6a0d8ff61f3c417d}{emergency\+Tab}}
+\item 
+Tab \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a613513872a7545555e562f7437b4b22d}{contact\+Book\+Tab}}
+\item 
+Tab \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aa609a90e9e09344f3ef84b8691a22745}{bin\+Tab}}
+\item 
+Label \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a2245052c74978ab1e1d2ae9c443c0ff3}{number3\+Label2}}
+\item 
+Label \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a5d8a6c21b55f6607de16f666358e66ad}{email3\+Label2}}
+\item 
+Label \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a0e5c84cc7236493e4359da84fe7e724f}{address\+Label2}}
+\item 
+Label \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a263ef7f8240f5bd3068b512a700892ae}{favorites\+Label2}}
+\item 
+Label \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a5d3d9a076e5374a71cd28317c05d2118}{notes\+Label2}}
+\item 
+Label \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a864f6e401a9357e990c252742e6adf44}{email1\+Label2}}
+\item 
+Label \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a2e96114d075f362a15c3e0bc1b22c721}{email2\+Label2}}
+\item 
+Label \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a0bf11c448183a4a9bb6c808e31d42720}{name\+Label2}}
+\item 
+Label \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a44269189d01463ca5cd758eff69d5240}{surname\+Label2}}
+\item 
+Label \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a1a22bd2ca35de8fc5b572e5b128053f8}{number1\+Label2}}
+\item 
+Button \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a26e6260c603c9e86fe9698810bb63cd0}{go\+Back\+Button2}}
+\item 
+Label \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_af10217e66fcd388086cb486dbca926b0}{number2\+Label2}}
+\item 
+Label \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a18f08cd8e6e2103974e6281971cfac3a}{number3\+Label21}}
+\item 
+Label \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a257806352a73877579bc56ff7fadc50d}{email3\+Label21}}
+\item 
+Label \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ad1fdf2a9b207598099deb06e8453caa2}{address\+Label21}}
+\item 
+Label \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a66663821088634368fa1062dee4c29fe}{favorites\+Label21}}
+\item 
+Label \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_af16d3d30e1a54f1726fe011980c8dc21}{notes\+Label21}}
+\item 
+Label \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a08d7e2752271912975ef33a4b5154dd8}{email1\+Label21}}
+\item 
+Label \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a6dc2f13bd0c5336a6edcb896888d111d}{email2\+Label21}}
+\item 
+Label \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_abc612cfb62a77d7782a326ccf8040f35}{name\+Label21}}
+\item 
+Label \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aef47297ffbbf407c969744c37091773e}{surname\+Label21}}
+\item 
+Label \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a088cb0793100930d0b1b16d68542fb51}{number1\+Label21}}
+\item 
+Button \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a38e57ee0d026cd297f6abd5845d00126}{go\+Back\+Button21}}
+\item 
+Label \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ade8b8a19c5ba1e846294ed3bb1c3cc8e}{number2\+Label21}}
+\item 
+Grid\+Pane \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ac0cae0f8f240dcb7524754ef015560cc}{Contact\+View1}}
+\item 
+Grid\+Pane \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a56546aefcae006c72e37167bd945ae2b}{Contact\+View11}}
+\item 
+Button \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a6f5b36c175e940780c16896859f88970}{Search\+Button}}
+\item 
+Button \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ae3e80c7370bd695349073c34549b017b}{Search\+Button1}}
+\item 
+Button \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a29a51b234f2ea19793d8d93c8995895b}{Search\+Button2}}
+\item 
+Button \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a2ddd43e32e6cccf2e0deb5358a4b6673}{on\+Restore\+Button}}
+\item 
+Button \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aa3f851231674122bbcbe7bd56e5fcf7b}{on\+Remove\+Bin\+Button}}
+\item 
+Button \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a59d0450742e97109c6ee6a4dc6fb7025}{edit\+Contact\+Button}}
+\item 
+Grid\+Pane \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_acc5974563ce603e01bf0107939aa1d2a}{Create\+Form1}}
+\item 
+Text\+Field \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a4a82b28a7831b974bb3cd8f028a1acbe}{name\+Text\+Field1}}
+\item 
+Text\+Field \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ae5a07b587b89f66d70743a871d08c05b}{surname\+Text\+Field1}}
+\item 
+Text\+Field \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a3b52bb8ee4be1a4515a92e9195a4d80c}{number1\+Text\+Field1}}
+\item 
+Text\+Field \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a0e62ef56dc03d537cebb088f6e75094d}{email1\+Text\+Field1}}
+\item 
+Text\+Field \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a83ec1d480aaae6e7bb5fe1378afcb392}{address\+Text\+Field1}}
+\item 
+Text\+Field \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a8f853b121fb655b82021cf23f66215cb}{notes\+Text\+Field1}}
+\item 
+Text\+Field \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ac52d8c99ca0f38961c4e4b5be5d43989}{number2\+Text\+Field1}}
+\item 
+Text\+Field \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a62c46faac7fe911e5f1b74e922667a07}{number3\+Text\+Field1}}
+\item 
+Text\+Field \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a13efe3f4b14e0e68a3f679c6e7a076f2}{email2\+Text\+Field1}}
+\item 
+Text\+Field \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ab4ca02f2b00ef019c9901bd7e37b3da9}{email3\+Text\+Field1}}
+\item 
+Check\+Box \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a5e2a933ca658f49fb93627f286b671b0}{favorites\+Check\+Box1}}
+\item 
+Image\+View \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_af7b8ebdb2f4319f085f995ee2454d912}{contact\+Image1}}
+\item 
+Button \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a3067be5c99a6d30055bd59f57bfd083a}{Image\+Button1}}
+\item 
+Button \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aad37719540ec00c20d92332322d1ac75}{Cancel\+Button}}
+\item 
+Button \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_af741cd886afe833b155d0515231653e6}{Save\+Edit\+Button1}}
+\item 
+Button \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a5245793f4abe31a267784894c4dc7e2e}{Cancel\+Button1}}
+\item 
+Anchor\+Pane \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_af85ff6bb014631f8c346c570be94e470}{rubrica\+Zone}}
+\item 
+Button \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a6fabc0cf598f525abae1f12428735267}{Fav\+Button}}
+\item 
+Button \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a6b7a040670e5140c8d6ad05a106ea779}{Contact\+Book\+Button}}
+\item 
+Image\+View \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aa07e1a31841ab5ed0e314a748ae79af6}{contact\+Image\+View}}
+\item 
+Image\+View \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ab6137d52c2a7e3d192788091b6e26884}{contact\+Image\+EL}}
+\item 
+Image\+View \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aba0cd713fd7794fb30839e6ff08d2c36}{contact\+Image\+Bin}}
+\item 
+\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_phone_book}{Phone\+Book}} \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a87223072088b457443ddd15c37d2bdd8}{pB}}
+\item 
+\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_book}{Contact\+Book}} \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a9f043dcf727551fca0c038ef11439383}{contact\+Book}}
+\item 
+\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_emergency_list}{Emergency\+List}} \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a299210f8723edeb7f16e833fedcb60f1}{emergency\+List}}
+\item 
+Observable\+List$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} $>$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a46e2940e353ca9530b25b6e01d35d02c}{observable\+Contacts}}
+\item 
+Observable\+List$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} $>$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a0fb9bb50f010e888a169759f3f087399}{observable\+EL}}
+\item 
+\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin}{Bin}} \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a266ba0e6a29da464f694ebfc534228bb}{bin}}
+\item 
+Observable\+List$<$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}} $>$ \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ac8f65e9783d2e8eb5d5f2964cd68520b}{observable\+Bin}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a8d65c1b6c4e7d4c50844e3de761089b4}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!handleEmergencyTab@{handleEmergencyTab}}
+\index{handleEmergencyTab@{handleEmergencyTab}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{handleEmergencyTab()}{handleEmergencyTab()}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a8d65c1b6c4e7d4c50844e3de761089b4} 
+void com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+handle\+Emergency\+Tab (\begin{DoxyParamCaption}\item[{Event}]{event}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Passa alla scheda dei contatti di emergenza. 
+
+Cambia la visualizzazione per mostrare la lista dei contatti di emergenza.
+
+\begin{DoxyPrecond}{Precondition}
+Nessuna. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La scheda dei contatti di emergenza è visibile. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Evento che attiva l\textquotesingle{}azione. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aa8b8a2e60c9779972d5f113c8e72fd73}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!initialize@{initialize}}
 \index{initialize@{initialize}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
 \doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
@@ -30,8 +329,1159 @@ Nessuna finestra grafica è aperta e il controller è stato caricato correttamen
 \begin{DoxyPostcond}{Postcondition}
 L\textquotesingle{}interfaccia è pronta per essere utilizzata. 
 \end{DoxyPostcond}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a3b95fd28382f58f4d4563d3a7f45a0e5}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!onAddToELButton@{onAddToELButton}}
+\index{onAddToELButton@{onAddToELButton}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{onAddToELButton()}{onAddToELButton()}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a3b95fd28382f58f4d4563d3a7f45a0e5} 
+void com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+on\+Add\+To\+ELButton (\begin{DoxyParamCaption}\item[{Action\+Event}]{event}{}\end{DoxyParamCaption}) throws \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1exceptions_1_1_full_group_exception}{Full\+Group\+Exception}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Aggiunge un contatto alla lista di emergenza. 
+
+Sposta un contatto selezionato dalla rubrica alla lista dei contatti di emergenza.
+
+\begin{DoxyPrecond}{Precondition}
+Il contatto selezionato deve esistere nella rubrica. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Il contatto è aggiunto alla lista di emergenza e rimosso dalla rubrica. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Evento che attiva l\textquotesingle{}azione (click su "{}\+Aggiungi ai Contatti di Emergenza"{}). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyInvariant}{Invariant}
+Le liste osservabili devono essere sincronizzate con i rispettivi modelli. 
+\end{DoxyInvariant}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a583a82ab6e5ade4cc999270e6949b0e5}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!onBinTab@{onBinTab}}
+\index{onBinTab@{onBinTab}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{onBinTab()}{onBinTab()}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a583a82ab6e5ade4cc999270e6949b0e5} 
+void com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+on\+Bin\+Tab (\begin{DoxyParamCaption}\item[{Event}]{event}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Passa alla scheda del cestino. 
+
+Cambia la visualizzazione per mostrare la lista del cestino.
+
+\begin{DoxyPrecond}{Precondition}
+Nessuna. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La scheda del cestino è visibile. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Evento che attiva l\textquotesingle{}azione. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a62ae8336a3e6427ce803d8609e4d8b38}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!onCancelButton@{onCancelButton}}
+\index{onCancelButton@{onCancelButton}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{onCancelButton()}{onCancelButton()}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a62ae8336a3e6427ce803d8609e4d8b38} 
+void com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+on\+Cancel\+Button (\begin{DoxyParamCaption}\item[{Action\+Event}]{event}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Annulla l\textquotesingle{}operazione di modifica di un contatto. 
+
+Questo metodo nasconde i form di creazione o modifica e mostra la tabella principale. Serve per annullare l\textquotesingle{}operazione di modifica o di creazione.
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & L\textquotesingle{}evento che attiva la funzione (click di "{}\+Indietro"{}).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+Il form di modifica o creazione è visibile. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+I form di modifica o creazione vengono nascosti, e la tabella principale viene ripristinata. 
+\end{DoxyPostcond}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a34ba3d6cffba6fb9277106934bd5a0af}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!onContactBookButton@{onContactBookButton}}
+\index{onContactBookButton@{onContactBookButton}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{onContactBookButton()}{onContactBookButton()}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a34ba3d6cffba6fb9277106934bd5a0af} 
+void com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+on\+Contact\+Book\+Button (\begin{DoxyParamCaption}\item[{Action\+Event}]{event}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Mostra la rubrica principale senza filtri. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & L\textquotesingle{}evento che attiva la funzione (click su "{}\+Mostra Rubrica"{}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+la rubrica è filtrata 
+
+La rubrica principale viene mostrata con tutti i contatti 
+\end{DoxyPrecond}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a72b7d4cc21cd319eb8a6412233c0f6d5}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!onContactBookTab@{onContactBookTab}}
+\index{onContactBookTab@{onContactBookTab}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{onContactBookTab()}{onContactBookTab()}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a72b7d4cc21cd319eb8a6412233c0f6d5} 
+void com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+on\+Contact\+Book\+Tab (\begin{DoxyParamCaption}\item[{Event}]{event}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Passa alla scheda della rubrica principale. 
+
+Cambia la visualizzazione per mostrare la lista della rubrica principale.
+
+\begin{DoxyPrecond}{Precondition}
+Nessuna. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La scheda della rubrica principale è visibile. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Evento che attiva l\textquotesingle{}azione. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a46c885e5ff199ed6d4567bfb749b12d0}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!onCreateButtonAction@{onCreateButtonAction}}
+\index{onCreateButtonAction@{onCreateButtonAction}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{onCreateButtonAction()}{onCreateButtonAction()}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a46c885e5ff199ed6d4567bfb749b12d0} 
+void com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+on\+Create\+Button\+Action (\begin{DoxyParamCaption}\item[{Action\+Event}]{event}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Gestisce l\textquotesingle{}azione del pulsante "{}\+Crea Contatto"{}. 
+
+Mostra il FORM per creare un nuovo contatto e nasconde la tabella dei contatti.
+
+\begin{DoxyPrecond}{Precondition}
+L\textquotesingle{}interfaccia deve essere già inizializzata. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La finestra di creazione del contatto è visibile. 
+\end{DoxyPostcond}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a7fece83a3ea2b3b3071e1c0af39da2c3}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!onDisplayContactButton@{onDisplayContactButton}}
+\index{onDisplayContactButton@{onDisplayContactButton}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{onDisplayContactButton()}{onDisplayContactButton()}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a7fece83a3ea2b3b3071e1c0af39da2c3} 
+void com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+on\+Display\+Contact\+Button (\begin{DoxyParamCaption}\item[{Action\+Event}]{event}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Visualizza i dettagli di un contatto selezionato. 
+
+Mostra tutte le informazioni di un contatto creato, che può trovarsi nella Rubrica Principale, nei Contatti di Emergenza o nel Cestino
+
+\begin{DoxyPrecond}{Precondition}
+Deve essere selezionato un contatto valido. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La schermata di visualizzazione dei dettagli è visibile. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Evento che attiva l\textquotesingle{}azione (click su "{}\+Visualizza Contatto"{}). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a6c869970b6663243f2373d9ce6a43e54}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!onEditContactButton@{onEditContactButton}}
+\index{onEditContactButton@{onEditContactButton}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{onEditContactButton()}{onEditContactButton()}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a6c869970b6663243f2373d9ce6a43e54} 
+void com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+on\+Edit\+Contact\+Button (\begin{DoxyParamCaption}\item[{Action\+Event}]{event}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Gestisce l\textquotesingle{}evento del pulsante per la modifica di un contatto. 
+
+Questo metodo viene invocato quando l\textquotesingle{}utente seleziona un contatto dalla rubrica principale e clicca sul pulsante di modifica. Rende visibile il form di modifica e compila i campi con i dettagli del contatto selezionato.
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & L\textquotesingle{}evento che attiva la funzione (click di "{}\+Modifica"{}).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+Il contatto selezionato deve essere presente nella rubrica principale. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Il form di modifica diventa visibile e i campi possono essere modificati. 
+\end{DoxyPostcond}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ac1cc27fde20a76b72f3ae8cfebf8af3f}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!onExportFIle@{onExportFIle}}
+\index{onExportFIle@{onExportFIle}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{onExportFIle()}{onExportFIle()}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ac1cc27fde20a76b72f3ae8cfebf8af3f} 
+void com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+on\+Export\+FIle (\begin{DoxyParamCaption}\item[{Action\+Event}]{event}{}\end{DoxyParamCaption}) throws IOException\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Esporta la rubrica in un file "{}\+Contatti.\+csv"{}. 
+
+I contatti vengono esportati in un file .csv \begin{DoxyPrecond}{Precondition}
+sono presenti contatti nella rubrica 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+il file "{}\+Contatti.\+csv"{} viene creato o sovrascritto e popolato dai contatti presenti in rubrica 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a23d1f5973f5c89fe25207eabf008edd1}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!onFavButton@{onFavButton}}
+\index{onFavButton@{onFavButton}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{onFavButton()}{onFavButton()}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a23d1f5973f5c89fe25207eabf008edd1} 
+void com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+on\+Fav\+Button (\begin{DoxyParamCaption}\item[{Action\+Event}]{event}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Visualizza i contatti preferiti nella rubrica principale. 
+
+Questo metodo aggiorna la rubrica principale con i contatti che sono contrassegnati come preferiti.
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & L\textquotesingle{}evento che attiva la funzione (click su "{}\+Filtra Preferiti"{}).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+La lista dei contatti preferiti deve essere disponibile. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La tabella viene aggiornata con i contatti preferiti. 
+\end{DoxyPostcond}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a47ce4beb19fcefeb71807cf5b324352b}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!onGoBackButton@{onGoBackButton}}
+\index{onGoBackButton@{onGoBackButton}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{onGoBackButton()}{onGoBackButton()}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a47ce4beb19fcefeb71807cf5b324352b} 
+void com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+on\+Go\+Back\+Button (\begin{DoxyParamCaption}\item[{Action\+Event}]{event}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Torna alla visualizzazione della tabella principale. 
+
+Cambia la vista attuale per ritornare alla tabella di origine.
+
+\begin{DoxyPrecond}{Precondition}
+Deve essere attiva una vista dettagli di un contatto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La tabella principale è visibile. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Evento che attiva l\textquotesingle{}azione. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_abb337213042eef3a0471e4031073f7dd}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!onImportButton@{onImportButton}}
+\index{onImportButton@{onImportButton}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{onImportButton()}{onImportButton()}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_abb337213042eef3a0471e4031073f7dd} 
+void com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+on\+Import\+Button (\begin{DoxyParamCaption}\item[{Action\+Event}]{event}{}\end{DoxyParamCaption}) throws IOException, File\+Not\+Found\+Exception, \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1exceptions_1_1_full_group_exception}{Full\+Group\+Exception}}, \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1exceptions_1_1_invalid_contact_exception}{Invalid\+Contact\+Exception}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Importa la rubrica da un file CSV. 
+
+i contatti della rubrica importata saranno aggiunti a quelli della rubrica attuale (se presenti) e inseriti nelle corrispondenti sezioni
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em IOException} & \\
+\hline
+{\em File\+Not\+Found\+Exception} & \\
+\hline
+{\em Full\+Group\+Exception} & \\
+\hline
+{\em Invalid\+Contact\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyPrecond}{Precondition}
+esiste un file Contatti.\+csv 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+la rubrica viene aggiornata con i nuovi contatti (aggiunti ai precedenti se presenti) e organizzati 
+\end{DoxyPostcond}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a2a2be1e6dd7ea72cf098184448d882a9}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!onLoadImage@{onLoadImage}}
+\index{onLoadImage@{onLoadImage}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{onLoadImage()}{onLoadImage()}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a2a2be1e6dd7ea72cf098184448d882a9} 
+void com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+on\+Load\+Image (\begin{DoxyParamCaption}\item[{Action\+Event}]{event}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metodo per l\textquotesingle{}inserimento di un\textquotesingle{}immagine. 
+
+Permette di inserire un\textquotesingle{}immagine da un file presente sul dispositivo e adattarla a forma di cerchio
+
+\begin{DoxyPrecond}{Precondition}
+utente sta creando o modificando un contatto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+viene inserita l\textquotesingle{}immagine al contatto. 
+\end{DoxyPostcond}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a1c0c1a38eaeec6a4b6c40ae46926bbd1}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!onMoveToBinButton@{onMoveToBinButton}}
+\index{onMoveToBinButton@{onMoveToBinButton}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{onMoveToBinButton()}{onMoveToBinButton()}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a1c0c1a38eaeec6a4b6c40ae46926bbd1} 
+void com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+on\+Move\+To\+Bin\+Button (\begin{DoxyParamCaption}\item[{Action\+Event}]{event}{}\end{DoxyParamCaption}) throws \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1exceptions_1_1_full_group_exception}{Full\+Group\+Exception}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sposta un contatto nel cestino. 
+
+Rimuove un contatto dalla rubrica o dalla lista di emergenza e lo aggiunge al cestino.
+
+\begin{DoxyPrecond}{Precondition}
+Deve essere selezionato un contatto valido. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Il contatto è spostato nel cestino. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Evento che attiva l\textquotesingle{}azione (click di "{}\+Sposta nel Cestino"{}). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aaf268b699e4693ea59653d2b4e6a95b1}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!onRemoveBinButton@{onRemoveBinButton}}
+\index{onRemoveBinButton@{onRemoveBinButton}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{onRemoveBinButton()}{onRemoveBinButton()}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aaf268b699e4693ea59653d2b4e6a95b1} 
+void com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+on\+Remove\+Bin\+Button (\begin{DoxyParamCaption}\item[{Action\+Event}]{event}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Rimuove definitivamente un contatto dal cestino. 
+
+Elimina definitivamente un contatto
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & L\textquotesingle{}evento che attiva la funzione (click di "{}\+Rimuovi Definitivamente"{}).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+Il contatto selezionato deve essere presente nella tabella dei contatti eliminati. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Il contatto viene rimosso definitivamente dal cestino e dalla lista dei contatti. 
+\end{DoxyPostcond}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a0d11704da43897787c784592ade38866}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!onRemoveFromEL@{onRemoveFromEL}}
+\index{onRemoveFromEL@{onRemoveFromEL}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{onRemoveFromEL()}{onRemoveFromEL()}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a0d11704da43897787c784592ade38866} 
+void com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+on\+Remove\+From\+EL (\begin{DoxyParamCaption}\item[{Action\+Event}]{event}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Rimuove un contatto dalla lista di emergenza. 
+
+Questo metodo rimuove un contatto selezionato dalla lista di emergenza ({\ttfamily emergency\+List}) e aggiorna la tabella corrispondente.
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & L\textquotesingle{}evento che attiva la funzione (clic di "{}\+Rimuovi dai Contatti di Emergenza"{}).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+Il contatto selezionato deve essere presente nella lista di emergenza. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Il contatto viene rimosso dalla lista di emergenza e la tabella viene aggiornata. 
+\end{DoxyPostcond}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a6ed3a41b3ee141194d9ec333b3192fe3}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!onRestoreButton@{onRestoreButton}}
+\index{onRestoreButton@{onRestoreButton}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{onRestoreButton()}{onRestoreButton()}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a6ed3a41b3ee141194d9ec333b3192fe3} 
+void com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+on\+Restore\+Button (\begin{DoxyParamCaption}\item[{Action\+Event}]{event}{}\end{DoxyParamCaption}) throws \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1exceptions_1_1_full_group_exception}{Full\+Group\+Exception}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ripristina un contatto dal cestino. 
+
+Ripristina un contatto dal cestino, rimuovendolo da quest\textquotesingle{}ultimo e aggiungendolo alla rubrica principale.
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & L\textquotesingle{}evento che attiva la funzione (click di "{}\+Ripristina Contatto"{}).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+Il contatto selezionato deve essere presente nel cestino. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Il contatto viene ripristinato e la tabella viene aggiornata. 
+\end{DoxyPostcond}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a4b96f676f40ff0204c37f3f6a766ac69}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!onSaveContactButton@{onSaveContactButton}}
+\index{onSaveContactButton@{onSaveContactButton}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{onSaveContactButton()}{onSaveContactButton()}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a4b96f676f40ff0204c37f3f6a766ac69} 
+void com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+on\+Save\+Contact\+Button (\begin{DoxyParamCaption}\item[{Action\+Event}]{event}{}\end{DoxyParamCaption}) throws \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1exceptions_1_1_invalid_contact_exception}{Invalid\+Contact\+Exception}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Salva un nuovo contatto nella rubrica. 
+
+Raccoglie i dati inseriti nel form, crea un oggetto {\ttfamily Contact}, lo aggiunge alla rubrica e aggiorna la lista osservabile per riflettere i cambiamenti. Nel caso in cui il contatto non sia valido o la rubrica sia piena, vengono mostrati degli alert.
+
+\begin{DoxyPrecond}{Precondition}
+Tutti i campi obbligatori del modulo (nome e cognome) devono essere compilati correttamente 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Il nuovo contatto è aggiunto alla rubrica e visibile nella tabella.
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Evento che attiva l\textquotesingle{}azione (click su "{}\+Salva Contatto"{}) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a51cb48f127913317040115f140da6343}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!onSaveEditButton@{onSaveEditButton}}
+\index{onSaveEditButton@{onSaveEditButton}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{onSaveEditButton()}{onSaveEditButton()}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a51cb48f127913317040115f140da6343} 
+void com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+on\+Save\+Edit\+Button (\begin{DoxyParamCaption}\item[{Action\+Event}]{event}{}\end{DoxyParamCaption}) throws \mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1exceptions_1_1_invalid_contact_exception}{Invalid\+Contact\+Exception}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Salva le modifiche apportate al contatto selezionato. 
+
+Questo metodo aggiorna i dettagli del contatto con i valori inseriti nel form di modifica. Successivamente aggiorna la rubrica principale con le informazioni modificate.
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & L\textquotesingle{}evento che attiva la funzione (click di "{}\+Salva"{}).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+Il contatto selezionato deve essere presente nella rubrica principale. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Le modifiche vengono salvate e la tabella viene aggiornata. 
+\end{DoxyPostcond}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_abd482b9364fb24ca9c7f984bb59442e5}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!onSearchButtonAction@{onSearchButtonAction}}
+\index{onSearchButtonAction@{onSearchButtonAction}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{onSearchButtonAction()}{onSearchButtonAction()}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_abd482b9364fb24ca9c7f984bb59442e5} 
+void com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+on\+Search\+Button\+Action (\begin{DoxyParamCaption}\item[{Action\+Event}]{event}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Gestisce la ricerca dei contatti. 
+
+Questo metodo filtra i contatti in base al testo inserito nell\textquotesingle{}apposito campo di ricerca, e aggiorna la tabella principale con i risultati.
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & L\textquotesingle{}evento che attiva la funzione (click di "{}\+Cerca"{}).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+La rubrica deve avere almeno un contatto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La tabella dei contatti viene aggiornata con i risultati della ricerca. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ac6e24260fb268922a7d1ecc051f52873}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!addressLabel@{addressLabel}}
+\index{addressLabel@{addressLabel}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{addressLabel}{addressLabel}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ac6e24260fb268922a7d1ecc051f52873} 
+Label com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+address\+Label\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a0e5c84cc7236493e4359da84fe7e724f}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!addressLabel2@{addressLabel2}}
+\index{addressLabel2@{addressLabel2}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{addressLabel2}{addressLabel2}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a0e5c84cc7236493e4359da84fe7e724f} 
+Label com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+address\+Label2\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ad1fdf2a9b207598099deb06e8453caa2}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!addressLabel21@{addressLabel21}}
+\index{addressLabel21@{addressLabel21}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{addressLabel21}{addressLabel21}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ad1fdf2a9b207598099deb06e8453caa2} 
+Label com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+address\+Label21\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aa307cd6867629b80da2618deeab9bcfc}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!addressTextField@{addressTextField}}
+\index{addressTextField@{addressTextField}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{addressTextField}{addressTextField}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aa307cd6867629b80da2618deeab9bcfc} 
+Text\+Field com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+address\+Text\+Field\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a83ec1d480aaae6e7bb5fe1378afcb392}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!addressTextField1@{addressTextField1}}
+\index{addressTextField1@{addressTextField1}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{addressTextField1}{addressTextField1}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a83ec1d480aaae6e7bb5fe1378afcb392} 
+Text\+Field com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+address\+Text\+Field1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a28fa5ad1354f226d6c8a1bbca487b50c}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!AddToELButton@{AddToELButton}}
+\index{AddToELButton@{AddToELButton}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{AddToELButton}{AddToELButton}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a28fa5ad1354f226d6c8a1bbca487b50c} 
+Button com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+Add\+To\+ELButton\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a266ba0e6a29da464f694ebfc534228bb}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!bin@{bin}}
+\index{bin@{bin}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{bin}{bin}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a266ba0e6a29da464f694ebfc534228bb} 
+\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_bin}{Bin}} com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+bin\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aa609a90e9e09344f3ef84b8691a22745}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!binTab@{binTab}}
+\index{binTab@{binTab}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{binTab}{binTab}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aa609a90e9e09344f3ef84b8691a22745} 
+Tab com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+bin\+Tab\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aad37719540ec00c20d92332322d1ac75}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!CancelButton@{CancelButton}}
+\index{CancelButton@{CancelButton}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{CancelButton}{CancelButton}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aad37719540ec00c20d92332322d1ac75} 
+Button com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+Cancel\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a5245793f4abe31a267784894c4dc7e2e}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!CancelButton1@{CancelButton1}}
+\index{CancelButton1@{CancelButton1}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{CancelButton1}{CancelButton1}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a5245793f4abe31a267784894c4dc7e2e} 
+Button com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+Cancel\+Button1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a9f043dcf727551fca0c038ef11439383}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!contactBook@{contactBook}}
+\index{contactBook@{contactBook}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{contactBook}{contactBook}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a9f043dcf727551fca0c038ef11439383} 
+\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact_book}{Contact\+Book}} com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+contact\+Book\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a6b7a040670e5140c8d6ad05a106ea779}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!ContactBookButton@{ContactBookButton}}
+\index{ContactBookButton@{ContactBookButton}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{ContactBookButton}{ContactBookButton}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a6b7a040670e5140c8d6ad05a106ea779} 
+Button com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+Contact\+Book\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a613513872a7545555e562f7437b4b22d}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!contactBookTab@{contactBookTab}}
+\index{contactBookTab@{contactBookTab}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{contactBookTab}{contactBookTab}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a613513872a7545555e562f7437b4b22d} 
+Tab com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+contact\+Book\+Tab\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a9e869df059f725b98852d08da9331fe1}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!contactImage@{contactImage}}
+\index{contactImage@{contactImage}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{contactImage}{contactImage}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a9e869df059f725b98852d08da9331fe1} 
+Image\+View com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+contact\+Image\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_af7b8ebdb2f4319f085f995ee2454d912}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!contactImage1@{contactImage1}}
+\index{contactImage1@{contactImage1}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{contactImage1}{contactImage1}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_af7b8ebdb2f4319f085f995ee2454d912} 
+Image\+View com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+contact\+Image1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aba0cd713fd7794fb30839e6ff08d2c36}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!contactImageBin@{contactImageBin}}
+\index{contactImageBin@{contactImageBin}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{contactImageBin}{contactImageBin}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aba0cd713fd7794fb30839e6ff08d2c36} 
+Image\+View com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+contact\+Image\+Bin\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ab6137d52c2a7e3d192788091b6e26884}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!contactImageEL@{contactImageEL}}
+\index{contactImageEL@{contactImageEL}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{contactImageEL}{contactImageEL}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ab6137d52c2a7e3d192788091b6e26884} 
+Image\+View com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+contact\+Image\+EL\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aa07e1a31841ab5ed0e314a748ae79af6}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!contactImageView@{contactImageView}}
+\index{contactImageView@{contactImageView}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{contactImageView}{contactImageView}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aa07e1a31841ab5ed0e314a748ae79af6} 
+Image\+View com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+contact\+Image\+View\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a2d891fa5ad86b6556955ca1b598ba3ab}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!ContactView@{ContactView}}
+\index{ContactView@{ContactView}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{ContactView}{ContactView}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a2d891fa5ad86b6556955ca1b598ba3ab} 
+Grid\+Pane com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+Contact\+View\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ac0cae0f8f240dcb7524754ef015560cc}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!ContactView1@{ContactView1}}
+\index{ContactView1@{ContactView1}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{ContactView1}{ContactView1}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ac0cae0f8f240dcb7524754ef015560cc} 
+Grid\+Pane com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+Contact\+View1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a56546aefcae006c72e37167bd945ae2b}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!ContactView11@{ContactView11}}
+\index{ContactView11@{ContactView11}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{ContactView11}{ContactView11}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a56546aefcae006c72e37167bd945ae2b} 
+Grid\+Pane com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+Contact\+View11\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a8e6ec3869a1223d4c2b4fb2dec53a77c}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!CreateButton@{CreateButton}}
+\index{CreateButton@{CreateButton}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{CreateButton}{CreateButton}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a8e6ec3869a1223d4c2b4fb2dec53a77c} 
+Button com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+Create\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_acbe5bfd85e475dbe3522ad56dce0ba24}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!CreateForm@{CreateForm}}
+\index{CreateForm@{CreateForm}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{CreateForm}{CreateForm}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_acbe5bfd85e475dbe3522ad56dce0ba24} 
+Grid\+Pane com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+Create\+Form\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_acc5974563ce603e01bf0107939aa1d2a}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!CreateForm1@{CreateForm1}}
+\index{CreateForm1@{CreateForm1}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{CreateForm1}{CreateForm1}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_acc5974563ce603e01bf0107939aa1d2a} 
+Grid\+Pane com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+Create\+Form1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a59d0450742e97109c6ee6a4dc6fb7025}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!editContactButton@{editContactButton}}
+\index{editContactButton@{editContactButton}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{editContactButton}{editContactButton}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a59d0450742e97109c6ee6a4dc6fb7025} 
+Button com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+edit\+Contact\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ab503a24a92cc862b45dd85c5decb903b}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!email1Label@{email1Label}}
+\index{email1Label@{email1Label}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{email1Label}{email1Label}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ab503a24a92cc862b45dd85c5decb903b} 
+Label com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+email1\+Label\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a864f6e401a9357e990c252742e6adf44}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!email1Label2@{email1Label2}}
+\index{email1Label2@{email1Label2}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{email1Label2}{email1Label2}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a864f6e401a9357e990c252742e6adf44} 
+Label com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+email1\+Label2\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a08d7e2752271912975ef33a4b5154dd8}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!email1Label21@{email1Label21}}
+\index{email1Label21@{email1Label21}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{email1Label21}{email1Label21}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a08d7e2752271912975ef33a4b5154dd8} 
+Label com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+email1\+Label21\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a66b2e25b2eb45db90468c9bff08c7bcb}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!email1TextField@{email1TextField}}
+\index{email1TextField@{email1TextField}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{email1TextField}{email1TextField}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a66b2e25b2eb45db90468c9bff08c7bcb} 
+Text\+Field com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+email1\+Text\+Field\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a0e62ef56dc03d537cebb088f6e75094d}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!email1TextField1@{email1TextField1}}
+\index{email1TextField1@{email1TextField1}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{email1TextField1}{email1TextField1}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a0e62ef56dc03d537cebb088f6e75094d} 
+Text\+Field com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+email1\+Text\+Field1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a588f1c362a03a57681f9c96f189730ed}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!email2Label@{email2Label}}
+\index{email2Label@{email2Label}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{email2Label}{email2Label}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a588f1c362a03a57681f9c96f189730ed} 
+Label com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+email2\+Label\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a2e96114d075f362a15c3e0bc1b22c721}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!email2Label2@{email2Label2}}
+\index{email2Label2@{email2Label2}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{email2Label2}{email2Label2}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a2e96114d075f362a15c3e0bc1b22c721} 
+Label com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+email2\+Label2\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a6dc2f13bd0c5336a6edcb896888d111d}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!email2Label21@{email2Label21}}
+\index{email2Label21@{email2Label21}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{email2Label21}{email2Label21}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a6dc2f13bd0c5336a6edcb896888d111d} 
+Label com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+email2\+Label21\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ae7c9bd730323505cc5be95f37786704c}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!email2TextField@{email2TextField}}
+\index{email2TextField@{email2TextField}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{email2TextField}{email2TextField}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ae7c9bd730323505cc5be95f37786704c} 
+Text\+Field com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+email2\+Text\+Field\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a13efe3f4b14e0e68a3f679c6e7a076f2}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!email2TextField1@{email2TextField1}}
+\index{email2TextField1@{email2TextField1}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{email2TextField1}{email2TextField1}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a13efe3f4b14e0e68a3f679c6e7a076f2} 
+Text\+Field com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+email2\+Text\+Field1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_acd117395d10327bb25c291fa0b9aaa6b}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!email3Label@{email3Label}}
+\index{email3Label@{email3Label}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{email3Label}{email3Label}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_acd117395d10327bb25c291fa0b9aaa6b} 
+Label com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+email3\+Label\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a5d8a6c21b55f6607de16f666358e66ad}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!email3Label2@{email3Label2}}
+\index{email3Label2@{email3Label2}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{email3Label2}{email3Label2}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a5d8a6c21b55f6607de16f666358e66ad} 
+Label com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+email3\+Label2\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a257806352a73877579bc56ff7fadc50d}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!email3Label21@{email3Label21}}
+\index{email3Label21@{email3Label21}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{email3Label21}{email3Label21}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a257806352a73877579bc56ff7fadc50d} 
+Label com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+email3\+Label21\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a6ab0d46c8f26cfa8e00ecc28116cd996}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!email3TextField@{email3TextField}}
+\index{email3TextField@{email3TextField}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{email3TextField}{email3TextField}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a6ab0d46c8f26cfa8e00ecc28116cd996} 
+Text\+Field com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+email3\+Text\+Field\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ab4ca02f2b00ef019c9901bd7e37b3da9}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!email3TextField1@{email3TextField1}}
+\index{email3TextField1@{email3TextField1}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{email3TextField1}{email3TextField1}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ab4ca02f2b00ef019c9901bd7e37b3da9} 
+Text\+Field com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+email3\+Text\+Field1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a299210f8723edeb7f16e833fedcb60f1}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!emergencyList@{emergencyList}}
+\index{emergencyList@{emergencyList}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{emergencyList}{emergencyList}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a299210f8723edeb7f16e833fedcb60f1} 
+\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_emergency_list}{Emergency\+List}} com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+emergency\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a8a8c547cae8e15ef6a0d8ff61f3c417d}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!emergencyTab@{emergencyTab}}
+\index{emergencyTab@{emergencyTab}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{emergencyTab}{emergencyTab}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a8a8c547cae8e15ef6a0d8ff61f3c417d} 
+Tab com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+emergency\+Tab\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aba9bc7084a18d544ad49a6f66055db1b}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!ExportButton@{ExportButton}}
+\index{ExportButton@{ExportButton}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{ExportButton}{ExportButton}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aba9bc7084a18d544ad49a6f66055db1b} 
+Button com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+Export\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a6fabc0cf598f525abae1f12428735267}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!FavButton@{FavButton}}
+\index{FavButton@{FavButton}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{FavButton}{FavButton}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a6fabc0cf598f525abae1f12428735267} 
+Button com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+Fav\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_afac7412a299a3b6573c2efe8f620e7ef}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!favoritesCheckBox@{favoritesCheckBox}}
+\index{favoritesCheckBox@{favoritesCheckBox}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{favoritesCheckBox}{favoritesCheckBox}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_afac7412a299a3b6573c2efe8f620e7ef} 
+Check\+Box com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+favorites\+Check\+Box\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a5e2a933ca658f49fb93627f286b671b0}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!favoritesCheckBox1@{favoritesCheckBox1}}
+\index{favoritesCheckBox1@{favoritesCheckBox1}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{favoritesCheckBox1}{favoritesCheckBox1}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a5e2a933ca658f49fb93627f286b671b0} 
+Check\+Box com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+favorites\+Check\+Box1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a6fa33ffda96167ba280788cd7cba4c6f}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!favoritesLabel@{favoritesLabel}}
+\index{favoritesLabel@{favoritesLabel}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{favoritesLabel}{favoritesLabel}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a6fa33ffda96167ba280788cd7cba4c6f} 
+Label com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+favorites\+Label\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a263ef7f8240f5bd3068b512a700892ae}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!favoritesLabel2@{favoritesLabel2}}
+\index{favoritesLabel2@{favoritesLabel2}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{favoritesLabel2}{favoritesLabel2}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a263ef7f8240f5bd3068b512a700892ae} 
+Label com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+favorites\+Label2\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a66663821088634368fa1062dee4c29fe}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!favoritesLabel21@{favoritesLabel21}}
+\index{favoritesLabel21@{favoritesLabel21}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{favoritesLabel21}{favoritesLabel21}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a66663821088634368fa1062dee4c29fe} 
+Label com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+favorites\+Label21\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ac3d1fdb98d684a6caafd8feba3c57a09}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!goBackButton@{goBackButton}}
+\index{goBackButton@{goBackButton}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{goBackButton}{goBackButton}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ac3d1fdb98d684a6caafd8feba3c57a09} 
+Button com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+go\+Back\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a26e6260c603c9e86fe9698810bb63cd0}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!goBackButton2@{goBackButton2}}
+\index{goBackButton2@{goBackButton2}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{goBackButton2}{goBackButton2}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a26e6260c603c9e86fe9698810bb63cd0} 
+Button com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+go\+Back\+Button2\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a38e57ee0d026cd297f6abd5845d00126}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!goBackButton21@{goBackButton21}}
+\index{goBackButton21@{goBackButton21}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{goBackButton21}{goBackButton21}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a38e57ee0d026cd297f6abd5845d00126} 
+Button com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+go\+Back\+Button21\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a0737553b65a05850f8cea05506edd667}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!ImageButton@{ImageButton}}
+\index{ImageButton@{ImageButton}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{ImageButton}{ImageButton}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a0737553b65a05850f8cea05506edd667} 
+Button com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+Image\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a3067be5c99a6d30055bd59f57bfd083a}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!ImageButton1@{ImageButton1}}
+\index{ImageButton1@{ImageButton1}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{ImageButton1}{ImageButton1}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a3067be5c99a6d30055bd59f57bfd083a} 
+Button com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+Image\+Button1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aa409fd6fc70c2d9f8e78cc254ed62cb4}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!ImportButton@{ImportButton}}
+\index{ImportButton@{ImportButton}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{ImportButton}{ImportButton}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aa409fd6fc70c2d9f8e78cc254ed62cb4} 
+Button com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+Import\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ab8a8053360837d8f9f422f8679c8507d}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!nameClm@{nameClm}}
+\index{nameClm@{nameClm}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{nameClm}{nameClm}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ab8a8053360837d8f9f422f8679c8507d} 
+Table\+Column$<$\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}},String$>$ com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+name\+Clm\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ae0867eddadc2447c4bdc8f9087fb299b}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!nameClm1@{nameClm1}}
+\index{nameClm1@{nameClm1}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{nameClm1}{nameClm1}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ae0867eddadc2447c4bdc8f9087fb299b} 
+Table\+Column$<$\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}}, String$>$ com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+name\+Clm1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ab51189012f2935536bbaede52bfb1815}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!nameClm2@{nameClm2}}
+\index{nameClm2@{nameClm2}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{nameClm2}{nameClm2}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ab51189012f2935536bbaede52bfb1815} 
+Table\+Column$<$\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}}, String$>$ com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+name\+Clm2\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a76cdcac30878a408cc05e4ae7b877f68}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!nameLabel@{nameLabel}}
+\index{nameLabel@{nameLabel}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{nameLabel}{nameLabel}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a76cdcac30878a408cc05e4ae7b877f68} 
+Label com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+name\+Label\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a0bf11c448183a4a9bb6c808e31d42720}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!nameLabel2@{nameLabel2}}
+\index{nameLabel2@{nameLabel2}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{nameLabel2}{nameLabel2}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a0bf11c448183a4a9bb6c808e31d42720} 
+Label com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+name\+Label2\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_abc612cfb62a77d7782a326ccf8040f35}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!nameLabel21@{nameLabel21}}
+\index{nameLabel21@{nameLabel21}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{nameLabel21}{nameLabel21}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_abc612cfb62a77d7782a326ccf8040f35} 
+Label com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+name\+Label21\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a8c4ec8e8327d1ed4cd474004f82450a4}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!nameTextField@{nameTextField}}
+\index{nameTextField@{nameTextField}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{nameTextField}{nameTextField}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a8c4ec8e8327d1ed4cd474004f82450a4} 
+Text\+Field com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+name\+Text\+Field\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a4a82b28a7831b974bb3cd8f028a1acbe}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!nameTextField1@{nameTextField1}}
+\index{nameTextField1@{nameTextField1}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{nameTextField1}{nameTextField1}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a4a82b28a7831b974bb3cd8f028a1acbe} 
+Text\+Field com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+name\+Text\+Field1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_afb9c549d5cc26f5c6d6dc9d0912b3c40}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!notesLabel@{notesLabel}}
+\index{notesLabel@{notesLabel}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{notesLabel}{notesLabel}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_afb9c549d5cc26f5c6d6dc9d0912b3c40} 
+Label com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+notes\+Label\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a5d3d9a076e5374a71cd28317c05d2118}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!notesLabel2@{notesLabel2}}
+\index{notesLabel2@{notesLabel2}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{notesLabel2}{notesLabel2}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a5d3d9a076e5374a71cd28317c05d2118} 
+Label com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+notes\+Label2\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_af16d3d30e1a54f1726fe011980c8dc21}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!notesLabel21@{notesLabel21}}
+\index{notesLabel21@{notesLabel21}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{notesLabel21}{notesLabel21}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_af16d3d30e1a54f1726fe011980c8dc21} 
+Label com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+notes\+Label21\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a5338be625640a17a3e9aae9d0e6fa307}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!notesTextField@{notesTextField}}
+\index{notesTextField@{notesTextField}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{notesTextField}{notesTextField}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a5338be625640a17a3e9aae9d0e6fa307} 
+Text\+Field com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+notes\+Text\+Field\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a8f853b121fb655b82021cf23f66215cb}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!notesTextField1@{notesTextField1}}
+\index{notesTextField1@{notesTextField1}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{notesTextField1}{notesTextField1}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a8f853b121fb655b82021cf23f66215cb} 
+Text\+Field com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+notes\+Text\+Field1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a131fa68d84926461554ce2796697ea71}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!number1Label@{number1Label}}
+\index{number1Label@{number1Label}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{number1Label}{number1Label}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a131fa68d84926461554ce2796697ea71} 
+Label com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+number1\+Label\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a1a22bd2ca35de8fc5b572e5b128053f8}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!number1Label2@{number1Label2}}
+\index{number1Label2@{number1Label2}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{number1Label2}{number1Label2}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a1a22bd2ca35de8fc5b572e5b128053f8} 
+Label com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+number1\+Label2\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a088cb0793100930d0b1b16d68542fb51}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!number1Label21@{number1Label21}}
+\index{number1Label21@{number1Label21}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{number1Label21}{number1Label21}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a088cb0793100930d0b1b16d68542fb51} 
+Label com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+number1\+Label21\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ad5d478db73da70ad2956269641204231}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!number1TextField@{number1TextField}}
+\index{number1TextField@{number1TextField}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{number1TextField}{number1TextField}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ad5d478db73da70ad2956269641204231} 
+Text\+Field com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+number1\+Text\+Field\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a3b52bb8ee4be1a4515a92e9195a4d80c}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!number1TextField1@{number1TextField1}}
+\index{number1TextField1@{number1TextField1}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{number1TextField1}{number1TextField1}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a3b52bb8ee4be1a4515a92e9195a4d80c} 
+Text\+Field com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+number1\+Text\+Field1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a28eb58ea232692c0efb98057452d3b53}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!number2Label@{number2Label}}
+\index{number2Label@{number2Label}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{number2Label}{number2Label}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a28eb58ea232692c0efb98057452d3b53} 
+Label com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+number2\+Label\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_af10217e66fcd388086cb486dbca926b0}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!number2Label2@{number2Label2}}
+\index{number2Label2@{number2Label2}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{number2Label2}{number2Label2}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_af10217e66fcd388086cb486dbca926b0} 
+Label com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+number2\+Label2\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ade8b8a19c5ba1e846294ed3bb1c3cc8e}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!number2Label21@{number2Label21}}
+\index{number2Label21@{number2Label21}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{number2Label21}{number2Label21}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ade8b8a19c5ba1e846294ed3bb1c3cc8e} 
+Label com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+number2\+Label21\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_acf3a81e7900b136c9fa6c9b7dbce8e1e}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!number2TextField@{number2TextField}}
+\index{number2TextField@{number2TextField}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{number2TextField}{number2TextField}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_acf3a81e7900b136c9fa6c9b7dbce8e1e} 
+Text\+Field com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+number2\+Text\+Field\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ac52d8c99ca0f38961c4e4b5be5d43989}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!number2TextField1@{number2TextField1}}
+\index{number2TextField1@{number2TextField1}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{number2TextField1}{number2TextField1}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ac52d8c99ca0f38961c4e4b5be5d43989} 
+Text\+Field com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+number2\+Text\+Field1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a54f2730a8fd3b37d41a3e8861214cb23}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!number3Label@{number3Label}}
+\index{number3Label@{number3Label}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{number3Label}{number3Label}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a54f2730a8fd3b37d41a3e8861214cb23} 
+Label com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+number3\+Label\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a2245052c74978ab1e1d2ae9c443c0ff3}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!number3Label2@{number3Label2}}
+\index{number3Label2@{number3Label2}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{number3Label2}{number3Label2}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a2245052c74978ab1e1d2ae9c443c0ff3} 
+Label com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+number3\+Label2\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a18f08cd8e6e2103974e6281971cfac3a}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!number3Label21@{number3Label21}}
+\index{number3Label21@{number3Label21}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{number3Label21}{number3Label21}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a18f08cd8e6e2103974e6281971cfac3a} 
+Label com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+number3\+Label21\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aab97ac18bc5177e372940a19cbd6e744}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!number3TextField@{number3TextField}}
+\index{number3TextField@{number3TextField}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{number3TextField}{number3TextField}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aab97ac18bc5177e372940a19cbd6e744} 
+Text\+Field com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+number3\+Text\+Field\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a62c46faac7fe911e5f1b74e922667a07}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!number3TextField1@{number3TextField1}}
+\index{number3TextField1@{number3TextField1}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{number3TextField1}{number3TextField1}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a62c46faac7fe911e5f1b74e922667a07} 
+Text\+Field com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+number3\+Text\+Field1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ac8f65e9783d2e8eb5d5f2964cd68520b}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!observableBin@{observableBin}}
+\index{observableBin@{observableBin}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{observableBin}{observableBin}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ac8f65e9783d2e8eb5d5f2964cd68520b} 
+Observable\+List$<$\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}}$>$ com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+observable\+Bin\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a46e2940e353ca9530b25b6e01d35d02c}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!observableContacts@{observableContacts}}
+\index{observableContacts@{observableContacts}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{observableContacts}{observableContacts}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a46e2940e353ca9530b25b6e01d35d02c} 
+Observable\+List$<$\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}}$>$ com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+observable\+Contacts\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a0fb9bb50f010e888a169759f3f087399}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!observableEL@{observableEL}}
+\index{observableEL@{observableEL}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{observableEL}{observableEL}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a0fb9bb50f010e888a169759f3f087399} 
+Observable\+List$<$\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}}$>$ com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+observable\+EL\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a7b91bb55bcbd641cbc68bb3f5dc8f29a}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!onMoveToBinButton@{onMoveToBinButton}}
+\index{onMoveToBinButton@{onMoveToBinButton}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{onMoveToBinButton}{onMoveToBinButton}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a7b91bb55bcbd641cbc68bb3f5dc8f29a} 
+Button com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+on\+Move\+To\+Bin\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aa3f851231674122bbcbe7bd56e5fcf7b}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!onRemoveBinButton@{onRemoveBinButton}}
+\index{onRemoveBinButton@{onRemoveBinButton}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{onRemoveBinButton}{onRemoveBinButton}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aa3f851231674122bbcbe7bd56e5fcf7b} 
+Button com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+on\+Remove\+Bin\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a2ddd43e32e6cccf2e0deb5358a4b6673}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!onRestoreButton@{onRestoreButton}}
+\index{onRestoreButton@{onRestoreButton}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{onRestoreButton}{onRestoreButton}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a2ddd43e32e6cccf2e0deb5358a4b6673} 
+Button com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+on\+Restore\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a87223072088b457443ddd15c37d2bdd8}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!pB@{pB}}
+\index{pB@{pB}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{pB}{pB}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a87223072088b457443ddd15c37d2bdd8} 
+\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_phone_book}{Phone\+Book}} com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+pB\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ab844aabb30606508b228c8bd9d7292dc}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!RemoveELButton@{RemoveELButton}}
+\index{RemoveELButton@{RemoveELButton}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{RemoveELButton}{RemoveELButton}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ab844aabb30606508b228c8bd9d7292dc} 
+Button com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+Remove\+ELButton\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_af85ff6bb014631f8c346c570be94e470}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!rubricaZone@{rubricaZone}}
+\index{rubricaZone@{rubricaZone}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{rubricaZone}{rubricaZone}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_af85ff6bb014631f8c346c570be94e470} 
+Anchor\+Pane com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+rubrica\+Zone\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ad60ab7b07c48ceac22d65e31cd895052}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!SaveContactButton@{SaveContactButton}}
+\index{SaveContactButton@{SaveContactButton}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{SaveContactButton}{SaveContactButton}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ad60ab7b07c48ceac22d65e31cd895052} 
+Button com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+Save\+Contact\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_af741cd886afe833b155d0515231653e6}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!SaveEditButton1@{SaveEditButton1}}
+\index{SaveEditButton1@{SaveEditButton1}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{SaveEditButton1}{SaveEditButton1}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_af741cd886afe833b155d0515231653e6} 
+Button com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+Save\+Edit\+Button1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a4f0292b2d3d9ec1695b6cf30160e7936}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!searchB@{searchB}}
+\index{searchB@{searchB}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{searchB}{searchB}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a4f0292b2d3d9ec1695b6cf30160e7936} 
+Text\+Field com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+searchB\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a6f5b36c175e940780c16896859f88970}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!SearchButton@{SearchButton}}
+\index{SearchButton@{SearchButton}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{SearchButton}{SearchButton}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a6f5b36c175e940780c16896859f88970} 
+Button com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+Search\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ae3e80c7370bd695349073c34549b017b}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!SearchButton1@{SearchButton1}}
+\index{SearchButton1@{SearchButton1}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{SearchButton1}{SearchButton1}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ae3e80c7370bd695349073c34549b017b} 
+Button com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+Search\+Button1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a29a51b234f2ea19793d8d93c8995895b}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!SearchButton2@{SearchButton2}}
+\index{SearchButton2@{SearchButton2}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{SearchButton2}{SearchButton2}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a29a51b234f2ea19793d8d93c8995895b} 
+Button com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+Search\+Button2\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a293d579a6623ea99c5859017ff9aa799}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!searchCB@{searchCB}}
+\index{searchCB@{searchCB}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{searchCB}{searchCB}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a293d579a6623ea99c5859017ff9aa799} 
+Text\+Field com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+search\+CB\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a1ee62f61be9e4f7bf24e96328a6ea8f9}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!searchEL@{searchEL}}
+\index{searchEL@{searchEL}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{searchEL}{searchEL}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a1ee62f61be9e4f7bf24e96328a6ea8f9} 
+Text\+Field com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+search\+EL\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aa33837495c562242879515ceca467bdb}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!surnameClm@{surnameClm}}
+\index{surnameClm@{surnameClm}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{surnameClm}{surnameClm}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aa33837495c562242879515ceca467bdb} 
+Table\+Column$<$\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}},String$>$ com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+surname\+Clm\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ab3fd5ad0d00ee34196e037396a769c2f}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!surnameClm1@{surnameClm1}}
+\index{surnameClm1@{surnameClm1}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{surnameClm1}{surnameClm1}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ab3fd5ad0d00ee34196e037396a769c2f} 
+Table\+Column$<$\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}}, String$>$ com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+surname\+Clm1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ab2f239056cab34b8bca4f562ee63d7aa}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!surnameClm2@{surnameClm2}}
+\index{surnameClm2@{surnameClm2}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{surnameClm2}{surnameClm2}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ab2f239056cab34b8bca4f562ee63d7aa} 
+Table\+Column$<$\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}}, String$>$ com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+surname\+Clm2\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_afad17d8de7ab2fea0493b832267b58a1}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!surnameLabel@{surnameLabel}}
+\index{surnameLabel@{surnameLabel}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{surnameLabel}{surnameLabel}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_afad17d8de7ab2fea0493b832267b58a1} 
+Label com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+surname\+Label\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a44269189d01463ca5cd758eff69d5240}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!surnameLabel2@{surnameLabel2}}
+\index{surnameLabel2@{surnameLabel2}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{surnameLabel2}{surnameLabel2}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a44269189d01463ca5cd758eff69d5240} 
+Label com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+surname\+Label2\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aef47297ffbbf407c969744c37091773e}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!surnameLabel21@{surnameLabel21}}
+\index{surnameLabel21@{surnameLabel21}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{surnameLabel21}{surnameLabel21}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_aef47297ffbbf407c969744c37091773e} 
+Label com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+surname\+Label21\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a11381b02a1778a2422dda0b1488a7f53}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!surnameTextField@{surnameTextField}}
+\index{surnameTextField@{surnameTextField}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{surnameTextField}{surnameTextField}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a11381b02a1778a2422dda0b1488a7f53} 
+Text\+Field com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+surname\+Text\+Field\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ae5a07b587b89f66d70743a871d08c05b}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!surnameTextField1@{surnameTextField1}}
+\index{surnameTextField1@{surnameTextField1}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{surnameTextField1}{surnameTextField1}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ae5a07b587b89f66d70743a871d08c05b} 
+Text\+Field com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+surname\+Text\+Field1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a818d1bc394cea5195a03cd8c3d5c7bbc}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!TableBin@{TableBin}}
+\index{TableBin@{TableBin}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{TableBin}{TableBin}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a818d1bc394cea5195a03cd8c3d5c7bbc} 
+Table\+View$<$\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}}$>$ com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+Table\+Bin\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ae52bb9b771a6c9205b7f174020deed54}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!TableBook@{TableBook}}
+\index{TableBook@{TableBook}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{TableBook}{TableBook}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_ae52bb9b771a6c9205b7f174020deed54} 
+Table\+View$<$\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}}$>$ com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+Table\+Book\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a8752c383621273019364fda044342ce4}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!TableEL@{TableEL}}
+\index{TableEL@{TableEL}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{TableEL}{TableEL}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a8752c383621273019364fda044342ce4} 
+Table\+View$<$\mbox{\hyperlink{classcom_1_1gruppo23_1_1phonebook_1_1model_1_1_contact}{Contact}}$>$ com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+Table\+EL\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a32c00a4880c548e752300be38e6c8452}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!ViewButton@{ViewButton}}
+\index{ViewButton@{ViewButton}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{ViewButton}{ViewButton}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a32c00a4880c548e752300be38e6c8452} 
+Button com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+View\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a1ffd68a7636c26eb4adb4dcd9dd44c29}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!ViewButton1@{ViewButton1}}
+\index{ViewButton1@{ViewButton1}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{ViewButton1}{ViewButton1}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a1ffd68a7636c26eb4adb4dcd9dd44c29} 
+Button com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+View\+Button1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a575ec95679983f805f1af0c06e96eaff}\index{com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}!ViewButton11@{ViewButton11}}
+\index{ViewButton11@{ViewButton11}!com.gruppo23.phonebook.controller.PhoneBookController@{com.gruppo23.phonebook.controller.PhoneBookController}}
+\doxysubsubsection{\texorpdfstring{ViewButton11}{ViewButton11}}
+{\footnotesize\ttfamily \label{classcom_1_1gruppo23_1_1phonebook_1_1controller_1_1_phone_book_controller_a575ec95679983f805f1af0c06e96eaff} 
+Button com.\+gruppo23.\+phonebook.\+controller.\+Phone\+Book\+Controller.\+View\+Button11\hspace{0.3cm}{\ttfamily [private]}}
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Rubrica\+Contatti\+Project/src/main/java/com/gruppo23/phonebook/controller/Phone\+Book\+Controller.\+java\end{DoxyCompactItemize}
+Rubrica\+Contatti\+Project/src/main/java/com/gruppo23/phonebook/controller/\mbox{\hyperlink{_phone_book_controller_8java}{Phone\+Book\+Controller.\+java}}\end{DoxyCompactItemize}
